@@ -1,5 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image'
 import '../../styles/ImageScroll.css'; // 必要なスタイルをインポート
 
 const ImageScroll = () => {
@@ -11,16 +12,16 @@ const ImageScroll = () => {
     React.useEffect(() => {
         setIsSticky(!inView); // 要素がビューポートに入ったらstickyを無効化
       }, [inView]);
-  const [leftContent, setLeftContent] = useState(<img className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{aspectRatio: "1 / 1",  objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png'/>);
+  const [leftContent, setLeftContent] = useState(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png' alt={''}/>);
 
   const [ref1, inView1] = useInView({ threshold: 0.8 });
   const [ref2, inView2] = useInView({ threshold: 0.8 });
   const [ref3, inView3] = useInView({ threshold: 0.8 });
 
   React.useEffect(() => {
-    if (inView1) setLeftContent(<img className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{aspectRatio: "1 / 1",  objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png'/>);
-    if (inView2) setLeftContent(<img className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{aspectRatio: "1 / 1",  objectFit: "cover" }} src='./images/shiosaki.png'/>);
-    if (inView3) setLeftContent(<img className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{aspectRatio: "1 / 1",  objectFit: "cover", objectPosition: '30%'  }} src='./images/ogino.png'/>);
+    if (inView1) setLeftContent(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png' alt={''}/>);
+    if (inView2) setLeftContent(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover" }} src='./images/shiosaki.png' alt={''}/>);
+    if (inView3) setLeftContent(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='./images/ogino.png' alt={''}/>);
   }, [inView1, inView2, inView3]);
 
   return (

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
             <li className="mb-4"><a href="#contact">話を聞いてみる</a></li>
             <li className="mb-4">
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="./images/instagram.png" alt="Instagram" className="w-6 h-6" />
+                <Image src="./images/instagram.png" alt="Instagram" className="w-6 h-6" />
               </a>
             </li>
             </ul>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 interface ImageSlideshowProps {
   images: string[];
@@ -9,7 +10,7 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({ images, currentImageInd
   return (
     <div className="relative w-1/2">
       {images.map((image, index) => (
-        <img
+        <Image
           key={image}
           src={image}
           alt={`Slide ${index}`}

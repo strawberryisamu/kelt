@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import '../../styles/CeoMessage.css'; // 必要なスタイルをインポート
+import Image from 'next/image'
 import { useInView } from 'react-intersection-observer';
 
 type CeoMessageProps = {
@@ -19,7 +20,7 @@ const CeoMessage: React.FC<CeoMessageProps> = ({ imageUrl, title, subtitle, chil
     return (
         <div ref={ref} className={`relative gap-2 flex w-full ceo-content  ${inView ? 'animate' : ''}`} >
             <div className="w-1/2 flex justify-center items-center left">
-                <img src={imageUrl} alt="Description" className="w-full h-auto" />
+                <Image src={imageUrl} alt="Description" className="w-full h-auto" />
             </div>
             <div className="w-1/2 pt-4 right">
                 <h2 className="mb-4 text-[5vw] md:text-[2vw]">{title}</h2>

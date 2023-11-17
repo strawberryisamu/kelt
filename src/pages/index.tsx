@@ -23,31 +23,31 @@ const Home = () => {
   const [windowHeight, setWindowHeight] = useState<number>(0);
 
   useEffect(() => {
-    const imageUrls = [
-      './images/akao.png',
-      './images/shiosaki.png',
-      './images/ogino.png',
-      './images/breakfast.png',
-      './images/ceomessage.png',
-      './images/challenge_many_things.png',
-      './images/firstView.png',
-      './images/fisherman_student.png',
-      './images/friends_forever.png',
-      './images/imai_rakugo.png',
-      './images/instagram.png',
-      './images/interaction_with_students.png',
-      './images/interest_in_1st.png',
-      './images/kelt_dry.png',
-      './images/kikyuu.png',
-      './images/murakami_job.png',
-      './images/breakfast.png',
-      './images/breakfast.png',
-    ];
+    // const imageUrls = [
+    //   './images/akao.png',
+    //   './images/shiosaki.png',
+    //   './images/ogino.png',
+    //   './images/breakfast.png',
+    //   './images/ceomessage.png',
+    //   './images/challenge_many_things.png',
+    //   './images/firstView.png',
+    //   './images/fisherman_student.png',
+    //   './images/friends_forever.png',
+    //   './images/imai_rakugo.png',
+    //   './images/instagram.png',
+    //   './images/interaction_with_students.png',
+    //   './images/interest_in_1st.png',
+    //   './images/kelt_dry.png',
+    //   './images/kikyuu.png',
+    //   './images/murakami_job.png',
+    //   './images/breakfast.png',
+    //   './images/breakfast.png',
+    // ];
     
-    imageUrls.forEach(url => {
-      const img = new Image();
-      img.src = url;
-    });
+    // imageUrls.forEach(url => {
+    //   const img = new Image();
+    //   img.src = url;
+    // });
     // モバイルデバイスかどうかをチェック
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
