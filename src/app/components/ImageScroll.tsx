@@ -13,9 +13,9 @@ const ImageScroll = () => {
       }, [inView]);
   const [leftContent, setLeftContent] = useState(<img className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{aspectRatio: "1 / 1",  objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png'/>);
 
-  const [ref1, inView1] = useInView({ threshold: 1 });
-  const [ref2, inView2] = useInView({ threshold: 1 });
-  const [ref3, inView3] = useInView({ threshold: 1 });
+  const [ref1, inView1] = useInView({ threshold: 0.8 });
+  const [ref2, inView2] = useInView({ threshold: 0.8 });
+  const [ref3, inView3] = useInView({ threshold: 0.8 });
 
   React.useEffect(() => {
     if (inView1) setLeftContent(<img className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{aspectRatio: "1 / 1",  objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png'/>);
@@ -28,7 +28,7 @@ const ImageScroll = () => {
       <div >
         {leftContent}
       </div>
-      <div ref={ref} style={{height: "240vh", width: "100%"}}>
+      <div style={{height: "250vh", width: "100%"}}>
         <div ref={ref1} className={'centered-content'} style={{ height: "80vh"}}>
         <h2>【思い切って利尻に飛び込んだ】</h2>
         <p>社会人になって数ヶ月、学生に比べると格段に短い夏休みですが今年も利尻に行きました。
