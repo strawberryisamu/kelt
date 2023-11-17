@@ -11,6 +11,7 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({ images, currentImageInd
     <div className="relative w-1/2">
       {images.map((image, index) => (
         <Image
+        width={500} height={500}
           key={image}
           src={image}
           alt={`Slide ${index}`}

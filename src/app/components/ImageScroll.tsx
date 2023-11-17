@@ -12,16 +12,16 @@ const ImageScroll = () => {
     React.useEffect(() => {
         setIsSticky(!inView); // 要素がビューポートに入ったらstickyを無効化
       }, [inView]);
-  const [leftContent, setLeftContent] = useState(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png' alt={''}/>);
+  const [leftContent, setLeftContent] = useState(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>);
 
   const [ref1, inView1] = useInView({ threshold: 0.8 });
   const [ref2, inView2] = useInView({ threshold: 0.8 });
   const [ref3, inView3] = useInView({ threshold: 0.8 });
 
   React.useEffect(() => {
-    if (inView1) setLeftContent(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='./images/akao.png' alt={''}/>);
-    if (inView2) setLeftContent(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover" }} src='./images/shiosaki.png' alt={''}/>);
-    if (inView3) setLeftContent(<Image className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='./images/ogino.png' alt={''}/>);
+    if (inView1) setLeftContent(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>);
+    if (inView2) setLeftContent(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover" }} src='/images/shiosaki.png' alt={''}/>);
+    if (inView3) setLeftContent(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='/images/ogino.png' alt={''}/>);
   }, [inView1, inView2, inView3]);
 
   return (

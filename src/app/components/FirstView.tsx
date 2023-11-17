@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import '@/styles/FirstView.css';
-import Image from 'next/image'
 
 // YouTube IFrame APIの型拡張
 declare global {
@@ -74,7 +73,7 @@ const FirstView: React.FC<FirstViewProps> = ({ windowHeight }) => {
         borderRadius: '10px',
         fontSize: '3vw',
         color: 'white',
-        zIndex:100,
+        zIndex:30,
       }}>
         京大昆布干しインターンシップ
       </h1>
@@ -90,10 +89,10 @@ const FirstView: React.FC<FirstViewProps> = ({ windowHeight }) => {
 
           padding: '15px',
           cursor: 'pointer',
-          zIndex: 100,
+          zIndex: 30,
         }}
       >
-        <Image src='./images/kkrn_icon_saisei_11.svg' alt="Play" style={{ width: '120px', height: '120px' }} />
+        <img src='./images/kkrn_icon_saisei_11.svg' alt="Play" style={{ width: '120px', height: '120px' }} />
       </button>
       {/* <img
         src="./images/firstView.png" // 画像のパスを指定

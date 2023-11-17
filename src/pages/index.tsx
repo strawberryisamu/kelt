@@ -120,13 +120,13 @@ const Home = () => {
         <CarouselType1Section 
         title='参加対象者'
         subtitle='こんな京大生におすすめ'
-        images={['images/interest_in_1st.png', 'images/challenge_many_things.png','images/friends_forever.png']}
+        images={['/images/interest_in_1st.png', '/images/challenge_many_things.png','/images/friends_forever.png']}
         descriptions={['一次産業や地方創生に興味がある','学生時代に色々な事に挑戦したい','一生付き合える最高の仲間が欲しい']}
         />
         <CarouselType1Section
         title='昆布干しインターンの魅力'
         subtitle=''
-        images={['images/fisherman_student.png', 'images/kelt_dry.png','images/breakfast.png']}
+        images={['/images/fisherman_student.png', '/images/kelt_dry.png','/images/breakfast.png']}
         descriptions={['非合理な自然と対峙する漁業の現場での、魅力的な漁師との協働','早朝に働いた後、振る舞って頂く朝食の格別な美味しさ','昆布干しに共に従事する島民や他の京大生との交流']}
         right={true}
         />
@@ -199,7 +199,7 @@ const Home = () => {
         <Grid>
           <Card
            title='【観光】気球係留体験の実施'
-           imageUrl='images/kikyuu.png'
+           imageUrl='/images/kikyuu.png'
           >
             <>
             気球部に所属する京都大学の学生が島民向けに気球係留体験を実施しました。<br /><br />
@@ -208,7 +208,7 @@ const Home = () => {
           </Card>
           <Card
            title='【教育】落語体験の実施'
-           imageUrl='images/imai_rakugo.png'
+           imageUrl='/images/imai_rakugo.png'
           >
             <>
             落語研究会に所属する京都大学の学生が、島の子どもたちに落語体験を実施しました。
@@ -219,7 +219,7 @@ const Home = () => {
           </Card>
           <Card
            title='【商工業】飲食店の支援'
-           imageUrl='images/murakami_job.png'
+           imageUrl='/images/murakami_job.png'
           >
             <>
             年間15万人の観光客が訪れる利尻島はまさに6-8月がその繁忙期。人手不足に困っている飲食店を支援しました。
@@ -230,7 +230,7 @@ const Home = () => {
           </Card>
           <Card
            title='【教育】利尻高校との交流'
-           imageUrl='images/interaction_with_students.png'
+           imageUrl='/images/interaction_with_students.png'
           >
             <>
             昆布干しに参加した京大生が、修学旅行で京都を訪問した利尻高校生をガイドとして案内しました。
