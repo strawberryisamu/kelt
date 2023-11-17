@@ -26,11 +26,12 @@ const ImageScroll = () => {
 
   return (
     <div className="container">
-      <div >
+      <div className='pc'>
         {leftContent}
       </div>
-      <div style={{height: "250vh", width: "100%"}}>
-        <div ref={ref1} className={'centered-content'} style={{ height: "80vh"}}>
+      <div style={{width: "100%"}}>
+        <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>
+        <div ref={ref1} className={'centered-content'} >
         <h2>【思い切って利尻に飛び込んだ】</h2>
         <p>社会人になって数ヶ月、学生に比べると格段に短い夏休みですが今年も利尻に行きました。
         今振り返ると学生最後の年、思い切って利尻に飛び込んで良かったと心から思います。</p>
@@ -40,8 +41,8 @@ const ImageScroll = () => {
         赤尾 奏音さん
         <br />（京都大学総合人間学部4回生、2021年度に参加）</p>
         </div>
-
-        <div ref={ref2} className={'centered-content'} style={{ height: "80vh" }}>
+        <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/shiosaki.png' alt={''}/>
+        <div ref={ref2} className={'centered-content'}>
         <h2>【京大入学前から昆布を干そうと思っていた】</h2>
         <p>京大生向けに利尻島での昆布干しバイトがあると知ったのは高校生の頃でした。そのときから昆布を干すという作業がなかなかできないものであるという理由で、京大に入ったら参加しようと心に決めていました。
         2021年度はコロナの影響で大学の講義がオンラインで行われるものも多く、この機会を逃したら参加するのは難しいだろうと考え、応募しました。</p>
@@ -50,8 +51,8 @@ const ImageScroll = () => {
         塩崎 翔大
         <br />（京都大学農学部1回生、2021年度に参加）</p>
         </div>
-
-        <div ref={ref3} className={'centered-content'} style={{ height: "80vh" }}>
+        <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='/images/ogino.png' alt={''}/>
+        <div ref={ref3} className={'centered-content'}>
         <h2>【昆布干しは今しかできないと思った】</h2>
         <p>「いま行かないと今後人生で昆布を干すことはない気がする」、そう思い立って参加を決めました。昆布干しは朝3時から。朝起きるのは大変でしたが、利尻島の朝の新鮮な空気を吸い込みながら、島の人たちと一緒に汗を流し交流も楽しみながら昆布干しをすることができました。
         　昆布干しで出逢う人たちは本当に暖かく、夏期だけ島に戻ってくるひとも、他の仕事の始業前に昆布を干すひとも、よそものである私たちをとてもやさしく迎え入れてくれました。漁師でないひとも日々天候を気にして昆布干しの有無を話題に出したり、自然とともに生きる島のひとの1日、１年、人生には”昆布”があることはとても新鮮に感じられました。</p>

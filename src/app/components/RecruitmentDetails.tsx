@@ -59,7 +59,7 @@ const RecruitmentDetails = () => {
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
                 <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">参加者</dt>
-                <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
+                <dd className="flex-grow border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
                     京都大学の学生orその知り合い

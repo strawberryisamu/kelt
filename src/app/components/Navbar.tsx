@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image'
+import '@/styles/Navbar.css'; // 必要なスタイルをインポート
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,11 +9,11 @@ const Navbar: React.FC = () => {
     <div className="fixed top-0 right-0 p-2 z-50">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative w-20 h-20 z-10 flex flex-col justify-center items-center bg-[#208d78] rounded gap-2"
+        className="navbar relative  z-10 flex flex-col justify-center items-center bg-[#208d78] rounded gap-2"
       >
-        <span className={`h-0.5 w-10 bg-white rounded transform transition duration-300 ease-in-out ${isOpen ? 'translate-y-2.5 rotate-45' : ''}`} />
-        <span className={`h-0.5 w-10 bg-white rounded transition duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`} />
-        <span className={`h-0.5 w-10 bg-white rounded transform transition duration-300 ease-in-out ${isOpen ? '-translate-y-2.5 -rotate-45' : ''}`} />
+        <span className={`h-0.5 bar bg-white rounded transform transition duration-300 ease-in-out ${isOpen ? 'translate-y-2.5 rotate-45' : ''}`} />
+        <span className={`h-0.5 bar bg-white rounded transition duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`} />
+        <span className={`h-0.5 bar bg-white rounded transform transition duration-300 ease-in-out ${isOpen ? '-translate-y-2.5 -rotate-45' : ''}`} />
       </button>
       <div
         className={`fixed top-0 left-0 w-full h-screen bg-[#db5518] transform transition duration-300 ease-in-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}

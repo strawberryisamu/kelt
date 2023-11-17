@@ -1,0 +1,21 @@
+.logo {
+    position: fixed;
+}
+
+.symbol {
+    height: 5rem;
+    width: 5rem;
+}
+
+@media(max-width: 768px){
+    .logo {
+        position: absolute;
+    }
+
+    .symbol {
+        background-color: aliceblue;
+        border-radius: 10%;
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+}

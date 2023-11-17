@@ -15,9 +15,9 @@ const MessageSection = () => {
 
   return (
     <section className={'relative md:pt-[55%]'} >
-      <div  className={`bg-white md:absolute text-black top-0 left-0 w-full h-full flex justify-center items-center  box-border `} style={{padding: '0 55px' }}>
+      <div  className={`bg-white md:absolute text-black top-0 left-0 w-full h-full flex justify-center items-center  box-border `} style={{padding: '0 10%' }}>
         <div ref={ref} className={`inline-block max-w-screen-md text-left align-baseline  md:[writing-mode:vertical-rl] duration-1000 message-section ${inView ? 'animate' : ''}`}>
-          <div className={`message-title` }>今しかできない、大切な何かを探して</div>
+          <div className={`message-title` }>今しかできない、<br className='mobile-only' /> 大切な何かを探して</div>
           <div className="message-content">
             <div className='md:ml-12 md:mb-0 mb-8'>大学生のうちにやっておくべきことは何ですか？<br />
             私たちは大学生のうちにしかできないことをやっておくべきと考えます。<br />

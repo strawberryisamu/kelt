@@ -49,9 +49,9 @@ const SectionWithBackground: React.FC<SectionWithBackgroundProps> = ({
     : {left: "-30%"};
 
   return (
-    <section className="relative " style={{zIndex: 2, ...Color}}>
-      <div className={`pt-[6.8376068376%] pb-[5.1282051282%] `}>
-        <div ref={ref} className={`top-0 left-0 ${back? 'visionsss': ''}` }style={{padding: '0 10%'}}>
+    <section className="relative pt-[6.8376068376%] pb-[5.1282051282%] " style={{}}>
+      <div className={``} style={{padding: '0 5% 10%', ...Color}}>
+        <div ref={ref} className={`top-0 left-0 ${back? 'visionsss': ''}` } style={{padding: '0 10%'}}>
             <h3  className={`animated-title ${inView ? 'animate' : ''}`}>{title}</h3>
             {subtitle && <p  className={`subtitle ${inView ? 'animate' : ''}`}>{subtitle}</p>}
             <div className={`absolute background ${inView ? 'visible' : ''}`} style={{ ...backgroundleft}} >

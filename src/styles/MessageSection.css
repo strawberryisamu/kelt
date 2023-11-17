@@ -11,14 +11,15 @@
 }
 
 .message-title {
-    font-size: 4vw;
+    font-size: 5vw;
     line-height: 1.3235294118;
     letter-spacing: 0.08em;
     margin: 0 0 5.3973013493vh;
 }
 
+
 .message-content {
-    font-size: 2vw;
+    font-size: 3vw;
     line-height: 1.7692307692;
     letter-spacing: 0.06em;
 }
@@ -33,6 +34,10 @@
         color: #333333;
         margin-left: 3em;
         margin-right: -0.8em;
+    }
+
+    .message-title .mobile-only {
+        display: none;
     }
     
     .message-content {
