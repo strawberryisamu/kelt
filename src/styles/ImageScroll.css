@@ -1,0 +1,28 @@
+.container {
+    position: relative;
+    display: flex;
+}
+
+.sticky-element {
+    height: 80vh; /* 高さはお好みで調整 */
+    position: -webkit-sticky; /* Safariのためのプレフィックス */
+    position: sticky;
+    top: 50px; /* スクロール位置で固定される位置 */
+    background-color: #f0f0f0; /* 背景色 */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 影を追加（オプショナル） */
+}
+
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.centered-content p {
+    font-size: 1vw;
+}

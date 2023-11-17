@@ -1,0 +1,106 @@
+/* styles/RecruitmentDetails.css */
+.inner {
+    margin: 0 auto;
+    /* 他のスタイル */
+}
+
+.outline_lists {
+    border-top: 1px solid #b6e3eb;
+    border-right: 1px solid #b6e3eb;
+    border-left: 1px solid #b6e3eb;
+    border-bottom: 0;
+}
+
+@media (min-width: 768px){
+    .outline_lists {
+        border-top: 1px solid #b6e3eb;
+        border-right: 1px solid #b6e3eb;
+        border-left: 1px solid #b6e3eb;
+        border-bottom: 0;
+    }
+}
+
+/* 追加されたフレックスボックス用のスタイル */
+.outline_list {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #b6e3eb;
+}
+
+@media(min-width: 768px) {
+    .outline_list {
+        /* 既存のスタイルに加えて */
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+/* .outline_list dt {
+    display: table-cell;
+    width: 235px;
+    background: #2cb4d6;
+    padding: 30px 0;
+    vertical-align: middle;
+    text-align: center;
+    padding: 30px 0;
+} */
+
+/* dt要素のスタイルを修正 */
+.outline_list dt {
+    display: table-cell;
+    width: 235px;
+    display: flex; /* flexboxを使用 */
+    align-items: center; /* 垂直中央揃え */
+    justify-content: center; /* 水平中央揃え */
+    color: #1F2937; /* テキスト色を設定 */
+    background: #2CB4D6; /* 背景色を設定 */
+    font-size: 16px; /* テキストのサイズを設定 */
+    line-height: 1; /* 行の高さをテキストのサイズに合わせてリセット */
+    padding: 0; /* 上下のパディングを0に設定 */
+}
+
+@media (max-width: 768px){
+    .outline_list dt{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+.outline_list dd {
+    display: table-cell;
+    border: 0;
+    background: #fff;
+    font-size: 15px;
+    font-size: .9375rem;
+    padding: 30px 0;
+    vertical-align: middle;
+
+}
+
+
+.outline_list ul.disc {
+    list-style-type: disc;
+    padding: 0 0 0 100px;
+}
+
+.outline_list li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+/* その他のスタイル */
