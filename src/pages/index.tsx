@@ -70,6 +70,7 @@ const Home = () => {
       <FloatingButton />
       <FirstView windowHeight={windowHeight} isMobile={isMobile} />
       <NewsSection />
+      <button> <Link href="/summercamp">サマーキャンプへ</Link> </button>
       <MessageSection/>
       <div id='ceo-message'>
         <SectionWithBackground
