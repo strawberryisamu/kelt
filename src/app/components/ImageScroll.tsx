@@ -30,7 +30,7 @@ const ImageScroll = () => {
         {leftContent}
       </div>
       <div style={{width: "100%"}}>
-        <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>
+      <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>
         <div ref={ref1} className={'centered-content'} >
         <h2>【思い切って利尻に飛び込んだ】</h2>
         <p>社会人になって数ヶ月、学生に比べると格段に短い夏休みですが今年も利尻に行きました。

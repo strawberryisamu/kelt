@@ -3,10 +3,13 @@ import '../styles/globals.css'; // 必要なスタイルをインポート
 import FirstView from '../app/components/FirstView';
 import Navbar from '../app/components/Navbar'; // ナビゲーションバーをインポート
 import Logo from '@/app/components/logo'
+import FloatingButton from '../app/components/FloatingButton';
+import NewsSection from '@/app/components/News';
 import MessageSection from '../app/components/MessageSection';
 import SectionWithBackground from '../app/components/SectionWithBackground';
 import CeoMessage from '../app/components/CeoMessage';
 import CarouselType1Section from '../app/components/CarouselType1';
+import Gallery from '@/app/components/Gallary';
 import LoadingScreen from '../app/components/LoadingScreen';
 import RecruitmentDetails from '../app/components/RecruitmentDetails';
 import Card from '../app/components/Card';
@@ -14,11 +17,11 @@ import Grid from '../app/components/Grid';
 import ImageScroll from '../app/components/ImageScroll';
 import ContactForm from '@/app/components/ContactForm';
 import Footer from '@/app/components/Footer';
+import Link from 'next/link';
 
 // #228ed4,#208d78,#db5518
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isPageReady, setIsPageReady] = useState(false);
   const pageContentClass = isLoading ? "opacity-0" : "fadeIn";
   const [windowHeight, setWindowHeight] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -64,110 +67,128 @@ const Home = () => {
     <div className={`font-serif text-gray-800 ${pageContentClass}`}>
       <Logo/>
       <Navbar /> {/* ナビゲーションバーを追加 */}
+      <FloatingButton />
       <FirstView windowHeight={windowHeight} isMobile={isMobile} />
+      <NewsSection />
       <MessageSection/>
-      <SectionWithBackground
-        title="代表メッセージ"
-        subtitle="本事業は、株式会社膳と株式会社文継の共同事業です"
-        backgroundColor="lightgray"
-        color='white'
-      >
-        <CeoMessage
-            imageUrl="/images/ceomessage.png"
-            title="利尻島は、若いうちに行け"
-            subtitle="今しかできない、大切な何かを求めて"
-        ><>
-          <h2 className=' text-[3vw] md:text-[1.2vw]'>株式会社 膳  　　代表取締役　小坂 善一　　*写真左側</h2>
-          <p>利尻島で20年間昆布漁師をしています。これから各産業で世界のリーダーになっていく京都大学の学生にこそ、学生の間に一次産業のド現場を見てほしいと思っています。心も体もしっかり鍛えますので、私の胸に飛び込んできてください。
-          </p>
-          <br />
-          <br />
-          <h2 className='text-[3vw] md:text-[1.2vw]'>株式会社 文継 　代表取締役　​大路 幸宗　　*写真右側</h2>
-          <p>京都大学文学部を卒業後、三菱商事に入社しました。社内外で様々な方と交流する中で現場を知らない人が多すぎることを問題視するようになりました。日々の食生活の根本を支えてくれている一次生産者と対峙し、自然に振り回され合理がまかり通らない生産現場を目の当たりにし、多くのことを感じてほしいと思っています。
-          </p>
-        </></CeoMessage>
-      </SectionWithBackground>
+      <div id='ceo-message'>
+        <SectionWithBackground
+          title="代表メッセージ"
+          subtitle="本事業は、株式会社膳と株式会社文継の共同事業です"
+          backgroundColor="lightgray"
+          color='white'
+        >
+          <CeoMessage
+              imageUrl="/images/ceomessage.png"
+              title="利尻島は、若いうちに行け"
+              subtitle="今しかできない、大切な何かを求めて"
+          ><>
+          <Link href="https://note.com/doors_hokkaido/n/n4026f2b09a77"><h2 className=' text-[3.3vw] md:text-[1.3vw]'>株式会社 膳  　　代表取締役　小坂 善一<span className='text-[1.7vw] md:text-[0.6vw]'>*写真左側</span></h2></Link>
+            <p>利尻島で20年間昆布漁師をしています。これから各産業で世界のリーダーになっていく京都大学の学生にこそ、学生の間に一次産業のド現場を見てほしいと思っています。心も体もしっかり鍛えますので、私の胸に飛び込んできてください。
+            </p>
 
-      <SectionWithBackground
-        title="利尻島昆布干しとは"
+
+          <Link href="https://bun-kei.com/company/"><h2 className='text-[3.3vw] md:text-[1.3vw]'>株式会社 文継 　代表取締役　​大路 幸宗<span className='text-[1.7vw] md:text-[0.6vw]'>*写真左側</span></h2></Link>
+            <p>京都大学文学部を卒業後、三菱商事に入社しました。社内外で様々な方と交流する中で現場を知らない人が多すぎることを問題視するようになりました。日々の食生活の根本を支えてくれている一次生産者と対峙し、自然に振り回され合理がまかり通らない生産現場を目の当たりにし、多くのことを感じてほしいと思っています。
+            </p>
+          </></CeoMessage>
+        </SectionWithBackground>
+      </div>
+
+      <div id='business-overview'>
+        <SectionWithBackground
+          title="利尻島昆布干しとは"
+          color='lightgray'
+        >
+          <div>
+          <p style={{paddingTop: 10, paddingBottom: 30}}>労働力不足という長年の課題を抱える利尻島の漁師のため、毎年6月〜7月の昆布漁最盛期に、京都大学の学生やその友人までを対象に2019年から実施している昆布干しのプロジェクトです。利尻島に住み込みで昆布干し作業に従事しながら漁師の親方の漁業に向き合う姿勢を学び、島民との様々な交流を通じて本州では得られない一生ものの経験をしていただきます。</p>
+          
+          <div className="hidden md:block">
+            <CarouselType1Section 
+            title='参加対象者'
+            subtitle='こんな京大生におすすめ'
+            images={['/images/interest_in_1st.png', '/images/challenge_many_things.png','/images/friends_forever.png']}
+            descriptions={['一次産業や地方創生に興味がある','学生時代に色々な事に挑戦したい','一生付き合える最高の仲間が欲しい']}
+            />
+          </div>
+          <div className="block md:hidden">
+          <Gallery images={[{src: '/images/interest_in_1st.png', alt:'recomenndation1'}, {src:'/images/challenge_many_things.png', alt: 'recomenndation2'},{src: '/images/friends_forever.png', alt: 'recomenndation3'}]} text={<><p>一次産業や地方創生に興味がある</p><p> 学生時代に色々な事に挑戦したい </p><p> 一生付き合える最高の仲間が欲しい</p></>} title="こんな京大生におすすめ" />
+          </div>
+
+          <div className="hidden md:block">
+            <CarouselType1Section
+            title='昆布干しインターンの魅力'
+            subtitle=''
+            images={['/images/fisherman_student.png', '/images/breakfast.png','/images/kelt_dry.png']}
+            descriptions={['非合理な自然と対峙する漁業の現場での、魅力的な漁師との協働','早朝に働いた後、振る舞って頂く朝食の格別な美味しさ','昆布干しに共に従事する島民や他の京大生との交流']}
+            right={true}
+            />
+          </div>
+          <div className="block md:hidden">
+            <Gallery images={[{src: '/images/fisherman_student.png', alt:'temptaion1'}, {src:'/images/breakfast.png', alt: 'temptaion2'},{src: '/images/kelt_dry.png', alt: 'temptaion3'}]} text={<><p>非合理な自然と対峙する漁業の現場での魅力的な漁師との協働</p><p> 早朝に働いた後振る舞って頂く朝食の格別な美味しさ </p> <p> 昆布干しに共に従事する島民や他の京大生との交流</p> </>} title="昆布干しバイトの魅力" />
+          </div>
+          </div>
+
+        </SectionWithBackground>
+        <SectionWithBackground
+          title="募集要項"
+          color='white'
+        >
+          <div>
+            <RecruitmentDetails/>
+          </div>
+        </SectionWithBackground>
+      </div>
+
+      <div id='accomplishment'>
+        <SectionWithBackground
+        title='実績'
         color='lightgray'
-      >
-        <div>
-        <p style={{paddingBottom: 30}}>労働力不足という長年の課題を抱える利尻島の漁師のため、毎年6月〜7月の昆布漁最盛期に、京都大学の学生やその友人までを対象に2019年から実施している昆布干しのプロジェクトです。利尻島に住み込みで昆布干し作業に従事しながら漁師の親方の漁業に向き合う姿勢を学び、島民との様々な交流を通じて本州では得られない一生ものの経験をしていただきます。</p>
-        <CarouselType1Section 
-        title='参加対象者'
-        subtitle='こんな京大生におすすめ'
-        images={['/images/interest_in_1st.png', '/images/challenge_many_things.png','/images/friends_forever.png']}
-        descriptions={['一次産業や地方創生に興味がある','学生時代に色々な事に挑戦したい','一生付き合える最高の仲間が欲しい']}
-        />
-        <CarouselType1Section
-        title='昆布干しインターンの魅力'
-        subtitle=''
-        images={['/images/fisherman_student.png', '/images/kelt_dry.png','/images/breakfast.png']}
-        descriptions={['非合理な自然と対峙する漁業の現場での、魅力的な漁師との協働','早朝に働いた後、振る舞って頂く朝食の格別な美味しさ','昆布干しに共に従事する島民や他の京大生との交流']}
-        right={true}
-        />
-        </div>
-
-      </SectionWithBackground>
-
-
-      <SectionWithBackground
-        title="募集要項"
-        color='white'
-      >
-        <div>
-          <RecruitmentDetails/>
-        </div>
-      </SectionWithBackground>
-
-      {/* <SectionWithBackground
-      title='実績'
-      backgroundColor='lightgray'
-      > */}
-      <SectionWithBackground
-      title='実績'
-      subtitle='利尻島昆布干しは、注目を浴びています'
-      color='lightgray'
-      >
-      <div className="grid gap-6 mb-8 grid-cols-1 ">
-        <Card
-           title='メディア掲載実績'
-          >
-            <>
-            北海道新聞、共同通信社、ザッツ京大、大和書房webメディアIAM他
-            </>
-          </Card>
-        </div>
-        <div className="grid gap-6 mb-8 grid-cols-1 md:grid-cols-3">
-        <Card
-           title='80人'
-           isCol={true}
-          >
-            <>
-            利尻島京大昆布干しは2019年に開始以来、毎年実施しています。これまでに延人数で約80人の大学生に参加いただきました。
-            </>
-          </Card>
+        >
+        <div className="grid mb-8 grid-cols-1 ">
           <Card
-           title='国内5大学、海外2大学'
-           isCol={true}
-          >
-            <>
-            京大生とその友人を対象にこれまで国内は京都大学・東京大学・東北大学・北海道大学・大阪大学、海外はロンドンやケニアの大学から参加をいただきました。
-            </>
-          </Card>
+            title_children={<><span className='text-[5vw] md:text-[2vw]'>メディア掲載</span></>}
+            isAccomplishment={true}
+            >
+              <span className='text-[6vw] md:text-[2vw]'>
+              北海道新聞　<span className='md:hidden'><br /></span>共同通信社　<span className='md:hidden'><br /></span>ザッツ京大　<span className='md:hidden'><br /></span>大和書房 <span className='md:hidden'><br /></span> webメディアIAM他
+              </span>
+            </Card>
+          </div>
+          <div className="grid gap-1 mb-8 grid-cols-1 md:grid-cols-3">
           <Card
-           title='200人'
-           isCol={true}
-          >
-            <>
-            京大OBを中心にこれまで多数の企業の方が、利尻島京大昆布干しを支援するため、来島くださりました。
-            <br />企業名：三菱商事、三井物産、住友商事、伊藤忠商事、資生堂、マッキンゼーアンドカンパニー、クボタ、JETRO・・・etc）
-            </>
-          </Card>
-        </div>
-      </SectionWithBackground>
+            title_children={<><span  className='text-[10vw] md:text-[2.8vw]'>80</span>人</>}
+            isCol={true}
+            isAccomplishment={true}
+            >
+              <>
+              利尻島京大昆布干しは2019年に開始以来、毎年実施しています。これまでに延人数で約80人の大学生に参加いただきました。
+              </>
+            </Card>
+            <Card
+            title_children={<>国内<span  className='text-[10vw] md:text-[2.8vw]'>5</span>大学 海外<span  className='text-[10vw] md:text-[2.8vw]'>2</span>大学</>}
+            isCol={true}
+            isAccomplishment={true}
+            >
+              <>
+              京大生とその友人を対象にこれまで国内は京都大学・東京大学・東北大学・北海道大学・大阪大学、海外はロンドンやケニアの大学から参加をいただきました。
+              </>
+            </Card>
+            <Card
+            title_children={<><span  className='text-[10vw] md:text-[2.8vw]'>200</span>人</>}
+            isCol={true}
+            isAccomplishment={true}
+            >
+              <>
+              京大OBを中心にこれまで多数の企業の方が、利尻島京大昆布干しを支援するため、来島くださりました。
+              <br />企業名：三菱商事、三井物産、住友商事、伊藤忠商事、資生堂、マッキンゼーアンドカンパニー、クボタ、JETRO・・・etc）
+              </>
+            </Card>
+          </div>
+        </SectionWithBackground>
+      </div>
 
+      
       <SectionWithBackground
       title='学生の活動実績'
       subtitle='昆布干し以外にも島の様々な産業と関わることができます。'
@@ -219,19 +240,22 @@ const Home = () => {
         </Grid>
       </SectionWithBackground>
 
+      <div id='comment-kyodaisei'>
+        <SectionWithBackground
+        title='京大生の声'
+        color='lightgray'
+        >
+          <ImageScroll/>
+        </SectionWithBackground>
+      </div>
 
-      <SectionWithBackground
-      title='京大生の声'
-      color='lightgray'
-      >
-        <ImageScroll/>
-      </SectionWithBackground>
-
-      <SectionWithBackground
-      title='話を聞いてみる'
-      >
-        <ContactForm/>
-      </SectionWithBackground>
+      <div id='contact'>
+        <SectionWithBackground
+        title='話を聞いてみる'
+        >
+          <ContactForm/>
+        </SectionWithBackground>
+      </div>
       <Footer/>
     </div>
   );

@@ -14,11 +14,12 @@
     font-size: 5vw;
     line-height: 1.3235294118;
     letter-spacing: 0.08em;
-    margin: 0 0 5.3973013493vh;
+
 }
 
 
 .message-content {
+    padding-top: 45px;
     font-size: 3vw;
     line-height: 1.7692307692;
     letter-spacing: 0.06em;
@@ -32,8 +33,7 @@
         font-size: 2.5vw;
         line-height: 1.4117647059;
         color: #333333;
-        margin-left: 3em;
-        margin-right: -0.8em;
+
     }
 
     .message-title .mobile-only {
@@ -42,8 +42,8 @@
     
     .message-content {
         padding-top: 45px;
-        margin-left: 3em;
-        font-size: 1.25vw;
+
+        font-size: 1.1vw;
         line-height: 2.25;
         color: #333333;
     }

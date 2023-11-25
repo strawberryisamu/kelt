@@ -25,8 +25,12 @@
     margin-left: 10%;
 }
 
+.centered-content h2 {
+    font-size: 1.9vw;
+}
+
 .centered-content p {
-    font-size: 1vw;
+    font-size: 1.1vw;
 }
 
 .mobile {
@@ -51,18 +55,18 @@
 
     .centered-content {
         position: relative;
-        height: 10vh;
+        height: 100%;
         margin-left: 0; /* 余白をリセット */
         width: 100%; /* コンテンツの幅を調整 */
-        margin: 30% 0;
+        margin: 10% 0;
     }
 
     .centered-content h2 {
-        font-size: 2vw;
+        font-size: 3.2vw;
     }
 
     .centered-content p {
-        font-size: 1.5vw;
+        font-size: 3vw;
     }
 
     .mobile {

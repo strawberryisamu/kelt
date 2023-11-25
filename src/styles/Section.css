@@ -176,14 +176,14 @@
 
 @media (max-width: 768px){
   .animated-title {
-    font-size: 1.2rem;
+    font-size: 5vw;
     margin-top: 6.9523809524%;
     margin-bottom: 2.1904761905%;
     z-index: 2;
   }
   .subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 25px;
+    font-size: 3vw;
+    margin-bottom: 5px;
     line-height: 1.5;
     z-index: 2;
   }

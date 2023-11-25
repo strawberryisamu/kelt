@@ -26,78 +26,13 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
+.p {
+  font-size: 1.1vw;
+}
+
+@media (min-width: 768px) {
+  .p {
+    font-size: 3vw;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  
 }
-.fade-in-1 {
-  animation: fadeInRight ;
-}
-.fade-in-2 {
-  animation: fadeInRight ;
-}
-/* 他の段落用のアニメーションを追加する場合は以下のようにスタイルを増やします。 */
-.fade-in-3 {
-  animation: fadeInRight ;
-} 
-.fade-in-4 {
-  animation: fadeInRight ;
-} 
-.fade-in-5 {
-  animation: fadeInRight ;
-} 
-.fade-in-6 {
-  animation: fadeInRight ;
-} 
-.fade-in-7 {
-  animation: fadeInRight ;
-} 
-
-/* 以下をグローバルスタイルに追加して縦書きスタイルを適用 */
-.vertical-text {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-/* モバイル版で横書きにするためのメディアクエリ */
-@media (max-width: 640px) {
-  .vertical-text {
-    writing-mode: horizontal-tb;
-    text-orientation: sideways-right;
-  }
-}
-
-/* 下線のアニメーション */
-@keyframes underlineAnimation {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* アニメーションを適用するクラス */
-.underline-animate {
-  display: inline-block;
-  border-bottom: 2px solid black;
-  animation: underlineAnimation 1s ease forwards;
-}
-
-/* スタイルシート (styles.css) */
-.fadeIn {
-  animation: fadeInAnimation 0.5s;
-}
-
-@keyframes fadeInAnimation {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-

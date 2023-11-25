@@ -62,7 +62,8 @@ const RecruitmentDetails = () => {
                 <dd className="flex-grow border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
-                    京都大学の学生orその知り合い
+                    京都大学の学生<br />
+                    ※アツい志望動機があれば他大学の学生も歓迎します
                     </li>
                   </ul>
                 </dd>
@@ -117,7 +118,7 @@ const RecruitmentDetails = () => {
                   </ul>
                   <ul className='disc'>
                     <li>
-                    昆布干しと昆布回収以外は自由時間
+                    昆布干しと昆布回収以外は自由時間です。
                     </li>
                   </ul>
                 </dd>
