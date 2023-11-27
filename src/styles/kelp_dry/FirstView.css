@@ -98,9 +98,9 @@
     .video {
       z-index: 10;
       position: absolute;
-      margin-top: 0;
+      margin-top: 20%;
       width: 100%;
-      height: 100%;
+      height: 75%;
     }
     .scrolldown-animation span {
       display: block;
