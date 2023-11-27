@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/globals.css'; // 必要なスタイルをインポート
-import FirstView from '../app/components/FirstView';
-import Navbar from '../app/components/Navbar'; // ナビゲーションバーをインポート
-import Logo from '@/app/components/logo'
-import FloatingButton from '../app/components/FloatingButton';
-import NewsSection from '@/app/components/News';
-import MessageSection from '../app/components/MessageSection';
-import SectionWithBackground from '../app/components/SectionWithBackground';
-import CeoMessage from '../app/components/CeoMessage';
-import CarouselType1Section from '../app/components/CarouselType1';
-import Gallery from '@/app/components/Gallary';
-import LoadingScreen from '../app/components/LoadingScreen';
-import RecruitmentDetails from '../app/components/RecruitmentDetails';
-import Card from '../app/components/Card';
-import Grid from '../app/components/Grid';
-import ImageScroll from '../app/components/ImageScroll';
-import ContactForm from '@/app/components/ContactForm';
-import Footer from '@/app/components/Footer';
+import FirstView from '../app/components/kelp_dry/FirstView';
+import Navbar from '../app/components/kelp_dry/Navbar'; // ナビゲーションバーをインポート
+import Logo from '@/app/components/kelp_dry/logo'
+import FloatingButton from '../app/components/kelp_dry/FloatingButton';
+import NewsSection from '@/app/components/kelp_dry/News';
+import MessageSection from '../app/components/kelp_dry/MessageSection';
+import SectionWithBackground from '../app/components/kelp_dry/SectionWithBackground';
+import CeoMessage from '../app/components/kelp_dry/CeoMessage';
+import CarouselType1Section from '../app/components/kelp_dry/CarouselType1';
+import Gallery from '@/app/components/kelp_dry/Gallary';
+import LoadingScreen from '../app/components/kelp_dry/LoadingScreen';
+import RecruitmentDetails from '../app/components/kelp_dry/RecruitmentDetails';
+import Card from '../app/components/kelp_dry/Card';
+import Grid from '../app/components/kelp_dry/Grid';
+import ImageScroll from '../app/components/kelp_dry/ImageScroll';
+import ContactForm from '@/app/components/kelp_dry/ContactForm';
+import Footer from '@/app/components/kelp_dry/Footer';
 import Link from 'next/link';
 
 // #228ed4,#208d78,#db5518
@@ -70,12 +70,12 @@ const Home = () => {
       <FloatingButton />
       <FirstView windowHeight={windowHeight} isMobile={isMobile} />
       <NewsSection />
-      <button> <Link href="/summercamp">サマーキャンプへ</Link> </button>
       <MessageSection/>
       <div id='ceo-message'>
         <SectionWithBackground
           title="代表メッセージ"
           subtitle="本事業は、株式会社膳と株式会社文継の共同事業です"
+          isHidden={false}
           backgroundColor="lightgray"
           color='white'
         >
@@ -84,12 +84,12 @@ const Home = () => {
               title="利尻島は、若いうちに行け"
               subtitle="今しかできない、大切な何かを求めて"
           ><>
-          <Link href="https://note.com/doors_hokkaido/n/n4026f2b09a77"><h2 className=' text-[3.3vw] md:text-[1.3vw]'>株式会社 膳  　　代表取締役　小坂 善一<span className='text-[1.7vw] md:text-[0.6vw]'>*写真左側</span></h2></Link>
+          <Link href="https://note.com/doors_hokkaido/n/n4026f2b09a77"><h2 className=' text-[3.3vw] md:text-[1.3vw]'>株式会社 膳  　　代表取締役　<span className="border-b-[1px] border-black">小坂 善一</span>  <span className='text-[1.7vw] md:text-[0.6vw]'>*写真左側</span></h2></Link>
             <p>利尻島で20年間昆布漁師をしています。これから各産業で世界のリーダーになっていく京都大学の学生にこそ、学生の間に一次産業のド現場を見てほしいと思っています。心も体もしっかり鍛えますので、私の胸に飛び込んできてください。
             </p>
 
 
-          <Link href="https://bun-kei.com/company/"><h2 className='text-[3.3vw] md:text-[1.3vw]'>株式会社 文継 　代表取締役　​大路 幸宗<span className='text-[1.7vw] md:text-[0.6vw]'>*写真左側</span></h2></Link>
+          <Link href="https://bun-kei.com/company/"><h2 className='text-[3.3vw] md:text-[1.3vw]'>株式会社 文継 　代表取締役　<span className="border-b-[1px] border-black">​大路 幸宗</span>  <span className='text-[1.7vw] md:text-[0.6vw]'>*写真右側</span></h2></Link>
             <p>京都大学文学部を卒業後、三菱商事に入社しました。社内外で様々な方と交流する中で現場を知らない人が多すぎることを問題視するようになりました。日々の食生活の根本を支えてくれている一次生産者と対峙し、自然に振り回され合理がまかり通らない生産現場を目の当たりにし、多くのことを感じてほしいと思っています。
             </p>
           </></CeoMessage>
@@ -107,7 +107,7 @@ const Home = () => {
           <div className="hidden md:block">
             <CarouselType1Section 
             title='参加対象者'
-            subtitle='こんな京大生におすすめ'
+            subtitle=''
             images={['/images/interest_in_1st.png', '/images/challenge_many_things.png','/images/friends_forever.png']}
             descriptions={['一次産業や地方創生に興味がある','学生時代に色々な事に挑戦したい','一生付き合える最高の仲間が欲しい']}
             />
@@ -118,7 +118,7 @@ const Home = () => {
 
           <div className="hidden md:block">
             <CarouselType1Section
-            title='昆布干しインターンの魅力'
+            title='昆布干しの魅力'
             subtitle=''
             images={['/images/fisherman_student.png', '/images/breakfast.png','/images/kelt_dry.png']}
             descriptions={['非合理な自然と対峙する漁業の現場での、魅力的な漁師との協働','早朝に働いた後、振る舞って頂く朝食の格別な美味しさ','昆布干しに共に従事する島民や他の京大生との交流']}
@@ -145,14 +145,30 @@ const Home = () => {
         <SectionWithBackground
         title='実績'
         color='lightgray'
+        backgroundColor='white'
         >
+          
         <div className="grid mb-8 grid-cols-1 ">
           <Card
             title_children={<><span className='text-[5vw] md:text-[2vw]'>メディア掲載</span></>}
             isAccomplishment={true}
             >
-              <span className='text-[6vw] md:text-[2vw]'>
-              北海道新聞　<span className='md:hidden'><br /></span>共同通信社　<span className='md:hidden'><br /></span>ザッツ京大　<span className='md:hidden'><br /></span>大和書房 <span className='md:hidden'><br /></span> webメディアIAM他
+              <span className='text-[6vw] md:text-[2vw] leading-[1.8]'>
+                <Link href="https://www.hokkaido-np.co.jp/article/884337/">
+                  <span className="border-b-[1px] border-black">北海道新聞</span>　
+                </Link>
+                <span className='md:hidden'><br /></span>
+                <Link href="https://prtimes.jp/main/html/rd/p/000000001.000107188.html">
+                  <span className="border-b-[1px] border-black">PRTIMES</span>　
+                </Link>
+                <span className='md:hidden'><br /></span>
+                <Link href="https://www.thats.pr.kyoto-u.ac.jp/2022/02/24/11932/">
+                  <span className="border-b-[1px] border-black">ザッツ京大</span>　
+                </Link>
+                <span className='md:hidden'><br /></span>
+                <Link href="https://iam-iam.jp/28909/">
+                  <span className="border-b-[1px] border-black">webメディア IAM他</span>
+                </Link>
               </span>
             </Card>
           </div>

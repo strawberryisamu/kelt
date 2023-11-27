@@ -1,0 +1,50 @@
+.message-section {
+    /* 以前のスタイル設定... */
+    opacity: 0;
+    margin: 0 auto;
+    padding-top: 3%;
+    transition: opacity 1s ease;
+}
+
+.message-section.animate {
+    opacity: 1;
+}
+
+.message-title {
+    font-size: 5vw;
+    line-height: 1.3235294118;
+    letter-spacing: 0.08em;
+
+}
+
+
+.message-content {
+    padding-top: 45px;
+    font-size: 3vw;
+    line-height: 1.7692307692;
+    letter-spacing: 0.06em;
+}
+
+
+/* 画面幅が大きい時のスタイル */
+@media (min-width: 768px) {
+
+    .message-title {
+        font-size: 2.5vw;
+        line-height: 1.4117647059;
+        color: #333333;
+
+    }
+
+    .message-title .mobile-only {
+        display: none;
+    }
+    
+    .message-content {
+        padding-top: 45px;
+
+        font-size: 1.1vw;
+        line-height: 2.25;
+        color: #333333;
+    }
+}

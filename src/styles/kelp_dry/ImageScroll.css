@@ -1,0 +1,79 @@
+.container {
+    position: relative;
+    display: flex;
+}
+
+.sticky-element {
+    height: 80vh; /* 高さはお好みで調整 */
+    position: -webkit-sticky; /* Safariのためのプレフィックス */
+    position: sticky;
+    top: 50px; /* スクロール位置で固定される位置 */
+    background-color: #f0f0f0; /* 背景色 */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 影を追加（オプショナル） */
+    transition: object-position 0.5s ease-in-out;
+}
+
+
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-left: 10%;
+}
+
+.centered-content h2 {
+    font-size: 1.9vw;
+}
+
+.centered-content p {
+    font-size: 1.1vw;
+}
+
+.mobile {
+    display: none;
+}
+
+.pc {
+    display: block;
+}
+
+@media (max-width: 930px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sticky-element {
+        position: relative; /* sticky positioning を無効化 */
+        height: auto; /* 高さを自動調整 */
+        top: 0; /* sticky の top 値をリセット */
+    }
+
+    .centered-content {
+        position: relative;
+        height: 100%;
+        margin-left: 0; /* 余白をリセット */
+        width: 100%; /* コンテンツの幅を調整 */
+        margin: 10% 0;
+    }
+
+    .centered-content h2 {
+        font-size: 3.2vw;
+    }
+
+    .centered-content p {
+        font-size: 3vw;
+    }
+
+    .mobile {
+        position: relative;
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+}
