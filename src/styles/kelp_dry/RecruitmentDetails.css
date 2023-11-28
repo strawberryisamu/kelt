@@ -51,9 +51,10 @@
     display: flex; /* flexboxを使用 */
     align-items: center; /* 垂直中央揃え */
     justify-content: center; /* 水平中央揃え */
-    color: #1F2937; /* テキスト色を設定 */
-    background: #2CB4D6; /* 背景色を設定 */
+    color: white; /* テキスト色を設定 */
+    background: #16202e; /* 背景色を設定 */
     font-size: 16px; /* テキストのサイズを設定 */
+    font-weight: normal;
     line-height: 1; /* 行の高さをテキストのサイズに合わせてリセット */
     padding: 0; /* 上下のパディングを0に設定 */
 }

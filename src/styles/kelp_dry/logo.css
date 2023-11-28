@@ -3,6 +3,8 @@
 }
 
 .symbol {
+    background-color: white;
+    border-radius: 10%;
     height: 5rem;
     width: 5rem;
 }

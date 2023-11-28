@@ -2,12 +2,11 @@
     position: fixed;
     right: 20px;
     bottom: 20px;
-    padding: 30px 20px;
-    background-color: #208d78; /* 例としての色 */
+    padding: 12px 12px;
+    background-color: #16202e; /* 例としての色 */
     color: white;
     border: none;
-    border-radius: 100%;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000; /* 他の要素より前面に表示 */

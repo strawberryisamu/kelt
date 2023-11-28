@@ -8,7 +8,7 @@ const RecruitmentDetails = () => {
       <div className="inner">
           <div className="outline_lists">
           <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">募集時期</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">募集時期</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -18,7 +18,7 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">参加者決定</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">参加者決定</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -28,17 +28,17 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">参加時期</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">参加時期</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
-                    ６月下旬〜８月上旬
+                    ６月中旬〜８月上旬
                     </li>
                   </ul>
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">最低従事期間</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">最低従事期間</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -48,7 +48,7 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">場所</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">場所</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -58,7 +58,7 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">参加者</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">参加者</dt>
                 <dd className="flex-grow border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -69,7 +69,7 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">仕事内容</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">仕事内容</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -84,7 +84,7 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">待遇</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">待遇</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>
@@ -104,7 +104,7 @@ const RecruitmentDetails = () => {
                 </dd>
             </dl>
             <dl className='outline_list clearfix flex flex-col md:flex-row'>
-                <dt className="flex-none bg-custom-blue p-2 text-center font-semibold">留意事項</dt>
+                <dt className="flex-none bg-custom-blue p-2 text-center">留意事項</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
                     <li>

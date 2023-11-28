@@ -30,7 +30,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   return (
     <div className="image-gallery">
       {images.map((image, index) => (
-        <Image width={500} height={500} key={index} src={image.src} alt={image.alt} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '55%' ,animationDelay: `${index * 500}ms`  }}/>
+        <Image width={500} height={500} key={index} src={image.src} alt={image.alt} className={`mobile w-[80%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '55%' ,animationDelay: `${index * 500}ms`  }}/>
       ))}
     </div>
   );

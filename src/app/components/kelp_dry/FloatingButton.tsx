@@ -14,7 +14,8 @@ const FloatingButton = () => {
       className="floating-button"
       onClick={scrollToContact}
     >
-      話を <br /> 聞いてみる
+      次回の利尻島京大昆布干しに<br />
+      興味がある方はこちら
     </button>
   );
 };

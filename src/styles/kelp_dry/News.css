@@ -3,7 +3,7 @@
     position: relative;
     max-width: 1000px;
     margin: auto;
-    padding-bottom: 90px;
+    padding-bottom: 0px;
     overflow: hidden; /* コンテナ外の要素は非表示に */
   }
   
@@ -25,7 +25,7 @@
 
   /* 最新情報の日付 */
   .news-date {
-    /* ここにスタイルを追加 */
+    margin-right: 1em;
   }
 
   /* 最新情報の説明 */

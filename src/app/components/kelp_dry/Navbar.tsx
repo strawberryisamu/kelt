@@ -23,14 +23,14 @@ const Navbar: React.FC = () => {
     <div className="fixed top-0 right-0 p-2 z-50">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="navbar relative  z-10 flex flex-col justify-center items-center bg-[#208d78] rounded gap-2"
+        className="navbar relative  z-10 flex flex-col justify-center items-center bg-[#16202e] rounded gap-2"
       >
         <span className={`h-0.5 bar bg-white rounded transform transition duration-300 ease-in-out ${isOpen ? 'translate-y-2.5 rotate-45' : ''}`} />
         <span className={`h-0.5 bar bg-white rounded transition duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`} />
         <span className={`h-0.5 bar bg-white rounded transform transition duration-300 ease-in-out ${isOpen ? '-translate-y-2.5 -rotate-45' : ''}`} />
       </button>
       <div
-        className={`fixed top-0 left-0 w-full  bg-[#db5518] transform transition duration-300 ease-in-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        className={`fixed top-0 left-0 w-full  bg-[#16202e] text-white transform transition duration-300 ease-in-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
       >
             <ul className="flex flex-col pt-5 pb-5 items-center justify-center h-full">
             <li className="mb-4"><a href="#ceo-message" onClick={() => handleNavClick('#ceo-message')}>代表メッセージ</a></li>

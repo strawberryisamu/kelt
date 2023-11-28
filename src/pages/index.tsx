@@ -90,7 +90,8 @@ const Home = () => {
 
 
           <Link href="https://bun-kei.com/company/"><h2 className='text-[3.3vw] md:text-[1.3vw]'>株式会社 文継 　代表取締役　<span className="border-b-[1px] border-black">​大路 幸宗</span>  <span className='text-[1.7vw] md:text-[0.6vw]'>*写真右側</span></h2></Link>
-            <p>京都大学文学部を卒業後、三菱商事に入社しました。社内外で様々な方と交流する中で現場を知らない人が多すぎることを問題視するようになりました。日々の食生活の根本を支えてくれている一次生産者と対峙し、自然に振り回され合理がまかり通らない生産現場を目の当たりにし、多くのことを感じてほしいと思っています。
+            <p>
+            京都大学文学部を卒業後、三菱商事に入社しました。政治家・官僚・商社マンなど様々な方と仕事をする中で、現場を知らずに物事を進める現実を問題視するようになりました。大学生には、自然に振り回され合理がまかり通らない生産現場、その現場で働く生産者の精神から、多くのことを感じてほしいと思っています。
             </p>
           </></CeoMessage>
         </SectionWithBackground>
@@ -174,7 +175,7 @@ const Home = () => {
           </div>
           <div className="grid gap-1 mb-8 grid-cols-1 md:grid-cols-3">
           <Card
-            title_children={<><span  className='text-[10vw] md:text-[2.8vw]'>80</span>人</>}
+            title_children={<>約<span  className='text-[20vw] md:text-[10vw] text-sky-600'>100</span>人</>}
             isCol={true}
             isAccomplishment={true}
             >
@@ -183,7 +184,7 @@ const Home = () => {
               </>
             </Card>
             <Card
-            title_children={<>国内<span  className='text-[10vw] md:text-[2.8vw]'>5</span>大学 海外<span  className='text-[10vw] md:text-[2.8vw]'>2</span>大学</>}
+            title_children={<>国内<span  className='text-[20vw] md:text-[10vw] text-sky-600'>5</span>　海外<span  className='text-[20vw] md:text-[10vw] text-sky-600'>2</span>　大学</>}
             isCol={true}
             isAccomplishment={true}
             >
@@ -192,7 +193,7 @@ const Home = () => {
               </>
             </Card>
             <Card
-            title_children={<><span  className='text-[10vw] md:text-[2.8vw]'>200</span>人</>}
+            title_children={<><span  className='text-[20vw] md:text-[10vw] text-sky-600'>200</span>人</>}
             isCol={true}
             isAccomplishment={true}
             >
@@ -269,7 +270,9 @@ const Home = () => {
       <div id='contact'>
         <SectionWithBackground
         title='話を聞いてみる'
+        subtitle='次回の利尻島京大昆布干しに興味がある方はこちら'
         >
+          <p>募集の案内など昆布干しに関するメルマガを発信しますので、登録お願いします。募集を見逃したくない方は登録がおすすめです！</p>
           <ContactForm/>
         </SectionWithBackground>
       </div>

@@ -46,8 +46,8 @@ const SectionWithBackground: React.FC<SectionWithBackgroundProps> = ({
     : {left: "-30%"};
 
   return (
-    <section className="relative pt-[6.8376068376%] pb-[5.1282051282%] " style={{}}>
-      <div className={``} style={{padding: '0 5% 10%', ...Color}}>
+    <section className="relative pb-[5.1282051282%] " style={{}}>
+      <div className={``} style={{padding: '0 0% 10%', ...Color}}>
       {isHidden? <></>
       :<div className={`background ${inView ? 'visible' : ''}`} style={{ ...backgroundleft}} >
           <div style={{...slideFromleft , backgroundColor: 'lightgray'}}></div>
