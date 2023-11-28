@@ -9,15 +9,19 @@
     font-size: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /* 他の要素より前面に表示 */
+
+  }
+
+  .fixed {
+    position: absolute;
   }
   
   /* 画面サイズが小さい場合のスタイル調整 */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .floating-button {
       right: 10px;
       bottom: 10px;
-      font-size: 14px;
+      font-size: 8px;
       padding: 20px 10px;
     }
   }

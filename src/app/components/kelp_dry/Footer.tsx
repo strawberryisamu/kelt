@@ -5,7 +5,7 @@ import React from "react";
 
 function Footer (){
     return (
-        <footer className="footer-002">
+        <footer id ='footer' className="footer-002">
             <a href="#">
                 京大昆布干しバイト
                 {/* <svg className="footer-002__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1722.9 411.2">
