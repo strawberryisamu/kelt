@@ -12,9 +12,7 @@
 
   }
 
-  .fixed {
-    position: absolute;
-  }
+
   
   /* 画面サイズが小さい場合のスタイル調整 */
   @media (max-width: 768px) {

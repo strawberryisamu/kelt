@@ -36,7 +36,7 @@ const FloatingButton = () => {
 
   return (
     <button
-      className={`floating-button z-50 ${isFixed ? 'fixed' : ''}`}
+      className={`floating-button z-50`}
       onClick={scrollToContact}
       style={{...buttonStyle}}
     >
