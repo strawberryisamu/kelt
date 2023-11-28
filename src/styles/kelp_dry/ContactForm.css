@@ -1,6 +1,6 @@
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+
     padding: 20px;
   }
   
@@ -154,4 +154,12 @@
     border-top: 2px solid black;
     border-right: 2px solid black;
     content: '';
+}
+
+.newsletter-checkbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
