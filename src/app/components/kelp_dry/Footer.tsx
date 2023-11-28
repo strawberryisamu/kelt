@@ -24,13 +24,13 @@ function Footer (){
             <nav className="footer-002__list">
                 <ul className="flex gap-5">
                     <li className="">
-                        <a href="http://rishiri-zen.jp/">
+                        <a href="https://bun-kei.com/">
                             <Image src="/images/bunkei.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%] rounded-md  `} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                         </a>
                     </li>
                     <li className="">
-                        <a href="https://bun-kei.com/">
+                        <a href="http://rishiri-zen.jp/">
                             <Image src="/images/zen.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%] rounded-md  `} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                         </a>
