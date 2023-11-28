@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 interface HowAttendeesFeelProps {
+    id?: string;
     title: string;
     description1: string;
     description2: string;
@@ -13,10 +14,12 @@ interface HowAttendeesFeelProps {
     imageAlt2: string;
 }
 
-const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ title, body1, description1,description2, body2, imageSrc1, imageAlt1, imageSrc2, imageAlt2 }) => {
+const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, description1,description2, body2, imageSrc1, imageAlt1, imageSrc2, imageAlt2 }) => {
     return (
-        <div className="flex flex-col">
-            <h1 className="text-2xl font-bold">{title}</h1>
+        <div id={id} className="flex flex-col">
+            <div className='flex justify-center'>
+                <h1 className="text-2xl font-bold">{title}</h1>
+            </div>
             <div className="flex">
                 <div className='flex-1 flex-col'>
                     <div className="w-full">

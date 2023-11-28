@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import '../styles/globals.css'; // 必要なスタイルをインポート
+import Header from '@/app/components/summer_camp/Header';
 import FirstView from '../app/components/summer_camp/FirstView';
 import LoadingScreen from '@/app/components/kelp_dry/LoadingScreen';
 import News from '@/app/components/summer_camp/News';
@@ -67,12 +68,14 @@ const Home = () => {
   };
 
   const galleryImages = generateGalleryImages(10);
-
+  
   return (
     <div className={`${pageContentClass}`}>
+      <Header />
       <FirstView windowHeight={windowHeight}/>
       <News/>
       <WhyYouParticipate1
+      id='Why You Participate'
       title='Why You Participate' 
       content={<>
       <h2>#1 Richest nature and culture</h2>
@@ -103,6 +106,7 @@ const Home = () => {
       imageWidth='40%'
       />
       <HowAttendeesFeel
+      id='How Attendees Feel'
       title='How attendees feel'
       body1='Natural wonders. Unexpected Summer festivals. Kelp-cutting. A paradise for cyclists. Chatting with highschoolers that have never talked to a foreigner. Singing Beatles songs until late at night inside a traditional Japanese house. This, and much more, is what Rishiri offered to me.
       I wanted to experience a new way of living, and I got that and much more. I met unforgettable people and made unforgettable memories - the too-good-to-post-on-Instagram kind.
@@ -123,6 +127,7 @@ const Home = () => {
       />
       <Gallery images={galleryImages} />
       <WhyYouParticipate1
+        id="What's Rishiri"
         title='' 
         content={<>
         <h2>What's Rishiri and us?</h2>
@@ -135,16 +140,19 @@ const Home = () => {
       <RishiriWithNumbers
         images={[ 
           {
-            src: '/images/kelt_dry.png',
-            alt: 'kelp_dry',
+            src: '/images/183.png',
+            alt: '183',
+            objectPosition: '50%'
           },
           {
-            src: '/images/kelt_dry.png',
-            alt: 'kelp_dry',
+            src: '/images/4hours.png',
+            alt: '4hours',
+            objectPosition: '20%'
           },
           {
-            src: '/images/kelt_dry.png',
-            alt: 'kelp_dry',
+            src: '/images/tourists.png',
+            alt: 'tourists',
+            objectPosition: '50%'
           },
         ]}
       />
@@ -164,6 +172,7 @@ const Home = () => {
         </div>
       </section>
       <WhyYouParticipate1
+        id="Who Organizes"
         title='' 
         content={<>
         <h2>Who organizes?</h2>
@@ -210,8 +219,8 @@ const Home = () => {
                 <Image 
                   src='/images/oji.png' 
                   alt='oji' 
-                  width={500} 
-                  height={500} 
+                  width={800} 
+                  height={800} 
                   className={`w-[100%] rounded-md border-2 border-gray-300 `} 
                   style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'left' }} 
                 />
@@ -230,7 +239,7 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div className='w-full'>
+        <div id="Who Should Participate" className='w-full'>
           <h2>Who Should Participate</h2>
           <div className='flex'>
             <div className='w-[70%] flex-wrap'>
@@ -291,7 +300,7 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div className='w-full'>
+        <div id="Details" className='w-full'>
           <h2>Details</h2>
           <div className='flex'>
             <div className='w-[70%] flex-wrap'>
@@ -336,136 +345,208 @@ const Home = () => {
             <div className="py-5">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> What is a SAAS platform?</span>
+                  <span> What is the official language?</span>
                   <span className="transition group-open:rotate-180">
                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                   </span>
                 </summary>
                 <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  SAAS platform is a cloud-based software service that allows users to access
-                  and use a variety of tools and functionality.
+                  The official language is English, and the staff members are proficient in both Japanese and English.
                 </p>
               </details>
             </div>
             <div className="py-5">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> How does  billing work?</span>
+                  <span> What should I pack?</span>
                   <span className="transition group-open:rotate-180">
                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                   </span>
                 </summary>
                 <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  We offers a variety of billing options, including monthly and annual subscription plans,
-                  as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit
-                  card or other secure online payment method.
+                  ・Cash (for souvenirs and dining expenses)
+                  ・Passport (with visa)
+                  ・Clothing  (Washing machine available. If you plan to cycle or hike, comfortable clothing and shoes are recommended.)
+                  Personal water bottle (Natural water from Rishiri Island can be consumed)
+                  ・Laptop
+                  ・Charger
+                  ・Writing utensils
+                  ・Necessary medications
+
+                  A detailed packing list will be provided after your application is confirmed.
                 </p>
               </details>
             </div>
             <div className="py-5">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> Can I get a refund for my subscription?</span>
+                  <span> What is the transportation option to Rishiri Island?</span>
                   <span className="transition group-open:rotate-180">
                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                   </span>
                 </summary>
                 <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  We offers a 30-day money-back guarantee for most of its subscription plans. If you are not
-                  satisfied with your subscription within the first 30 days, you can request a full refund. Refunds
-                  for subscriptions that have been active for longer than 30 days may be considered on a case-by-case
-                  basis.
+                  There are options to travel by either plane or ferry, but we recommend using a flight. Details will be provided after your application is confirmed.
                 </p>
               </details>
             </div>
             <div className="py-5">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> How do I cancel my subscription?</span>
+                  <span> What is the weather like in Rishiri?</span>
                   <span className="transition group-open:rotate-180">
                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                   </span>
                 </summary>
                 <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  To cancel your We subscription, you can log in to your account and navigate to the
-                  subscription management page. From there, you should be able to cancel your subscription and stop
-                  future billing.
+                  Summer on Rishiri Island is often sunny with an average temperature of 20 degrees Celsius, and it's generally dry. However, mornings and evenings can be chilly, so please make sure to bring some jackets and long-sleeved clothing with you.
                 </p>
               </details>
             </div>
             <div className="py-5">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> Can I try this platform for free?</span>
+                  <span> What is the food like?</span>
                   <span className="transition group-open:rotate-180">
                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                   </span>
                 </summary>
                 <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  We offers a free trial of its platform for a limited time. During the trial period,
-                  you will have access to a limited set of features and functionality, but you will not be charged.
+                  Participants will have the opportunity to cook together, dine at nearby restaurants, and enjoy a barbecue. Rishiri Island, known for its thriving fishing industry, offers an abundance of delicious seafood, which is deeply intertwined with the island's culture.
+                  Please note that providing a dedicated menu for vegetarians may be challenging due to the island's culinary culture.
                 </p>
               </details>
             </div>
             <div className="py-5">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> How do I access documentation?</span>
+                  <span> Do I need to bring a backpack, or can I bring a rolling suitcase on the summer camp?</span>
                   <span className="transition group-open:rotate-180">
                     <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                   </span>
                 </summary>
                 <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  Documentation is available on the company's website and can be accessed by
-                  logging in to your account. The documentation provides detailed information on how to use the platform,
-                  as well as code examples and other resources.
+                  You can leave your luggage at the accommodation, so feel free to choose either option.
                 </p>
               </details>
             </div>
-            <div className="py-5">
-              <details className="group">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> How do I contact support?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                  </span>
-                </summary>
-                <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  If you need help with the platform or have any other questions, you can contact the
-                  company's support team by submitting a support request through the website or by emailing
-                  support@We.com.
-                </p>
-              </details>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="Contact/Apply Now" className="px-4 md:px-8 2xl:px-16">
+          <div className="mx-auto md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
+            <div className="flex pb-7 md:pb-9 mt-7 md:-mt-1.5">
+              <h4 className="mx-auto text-2xl 2xl:text-3xl font-bold text-heading">
+                Contact/Apply Now
+              </h4>
             </div>
-            <div className="py-5">
-              <details className="group">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> Do you offer any discounts or promotions?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                  </span>
-                </summary>
-                <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  We may offer discounts or promotions from time to time. To stay up-to-date on the latest
-                  deals and special offers, you can sign up for the company's newsletter or follow it on social media.
-                </p>
-              </details>
-            </div>
-            <div className="py-5">
-              <details className="group">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span> How do we compare to other similar services?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                  </span>
-                </summary>
-                <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  This platform is a highly reliable and feature-rich service that offers a wide range
-                  of tools and functionality. It is competitively priced and offers a variety of billing options to
-                  suit different needs and budgets.
-                </p>
-              </details>
-            </div>
+            <form className="w-full mx-auto flex flex-col justify-center" noValidate>
+              <div className="flex flex-col space-y-5">
+                <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 gap-4">
+                  <div className="w-full md:w-1/2">
+                    <label
+                      htmlFor="name"
+                      className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                    >
+                      Your Name (required)
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      className="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                      autoComplete="off"
+                      spellCheck="false"
+                      aria-invalid="false"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
+                    <label
+                      htmlFor="email"
+                      className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                    >
+                      Your Email (required)
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Enter Your Email"
+                      className="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                      autoComplete="off"
+                      spellCheck="false"
+                      aria-invalid="false"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 gap-4">
+                  <div className="w-full md:w-1/2">
+                    <label
+                      htmlFor="age"
+                      className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                    >
+                      Age
+                    </label>
+                    <input
+                      id="age"
+                      name="age"
+                      type="text"
+                      placeholder="Enter Your Age"
+                      className="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                      autoComplete="off"
+                      spellCheck="false"
+                      aria-invalid="false"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
+                    <label
+                      htmlFor="country"
+                      className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                    >
+                      Country
+                    </label>
+                    <input
+                      id="country"
+                      name="country"
+                      type="text"
+                      placeholder="Enter Your Country"
+                      className="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                      autoComplete="off"
+                      spellCheck="false"
+                      aria-invalid="false"
+                    />
+                  </div>
+                </div>
+                <div className="relative mb-4">
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-600 font-semibold text-sm leading-none mb-3"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    className="px-4 py-3 flex items-center w-full appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 bg-white border border-gray-300 focus:shadow focus:outline-none focus:border-heading placeholder-body"
+                    autoComplete="off"
+                    spellCheck="false"
+                    rows={4}
+                    placeholder="Write your message here"
+                  ></textarea>
+                </div>
+                <div className="relative justify-center flex">
+                  <button
+                    data-variant="flat"
+                    className="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -473,5 +554,7 @@ const Home = () => {
     </div>
   );
 };
+
+
 
 export default Home;

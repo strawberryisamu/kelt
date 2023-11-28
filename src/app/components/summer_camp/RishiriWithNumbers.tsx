@@ -4,6 +4,7 @@ import Image from 'next/image';
 interface ImageProps {
     src: string;
     alt: string;
+    objectPosition?: string;
 }
 
 interface RishiriWithNumbersProps {
@@ -21,7 +22,7 @@ const RishiriWithNumbers: React.FC<RishiriWithNumbersProps> = ({ images }) => {
                                 <p>{`Text ${index + 1}`}</p>
                             </div>
                             <Image src={image.src} alt={image.alt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
-                            style={{ aspectRatio: "2 / 3", objectFit: "cover", objectPosition: 'right' }} />
+                            style={{ aspectRatio: "2 / 3", objectFit: "cover", objectPosition:` ${image.objectPosition}` }} />
                         </div>
                     ))}
                 </div>

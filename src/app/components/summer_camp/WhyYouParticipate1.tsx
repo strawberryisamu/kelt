@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import Image from 'next/image';
 
 interface WhyYouParticipate1Props {
+    id?: string;
     title?: string;
     content?: ReactNode;
     isRight?: boolean;
@@ -11,6 +12,7 @@ interface WhyYouParticipate1Props {
 }
 
 const WhyYouParticipate1: React.FC<WhyYouParticipate1Props> = ({
+    id = '',
     title = '',
     content = '',
     isRight = false,
@@ -19,7 +21,7 @@ const WhyYouParticipate1: React.FC<WhyYouParticipate1Props> = ({
     imageAlt = '画像の説明',
 }) => {
     return (
-        <section style={{ display: 'flex' }}>
+        <section id={id} style={{ display: 'flex' }}>
             {isRight ? (
                 <>
                     <div style={{ flex: `1 1` }}>
