@@ -7,6 +7,12 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '640px', // ここを変更
+      md: '765px', // ここは追加
+      lg: '1024px',// ここは追加
+      xl: '1280px'// ここは追加
+    },
     extend: {
       keyframes: {
         loading17: {

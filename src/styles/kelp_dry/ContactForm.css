@@ -1,7 +1,7 @@
 .contact-form {
     max-width: 600px;
 
-    padding: 20px;
+    padding: 20px 0px;
   }
   
   .contact-form h2 {
@@ -17,6 +17,12 @@
     margin-top: 10px;
     display: flex;
     align-items: center;
+  }
+
+  @media screen and (max-width: 765px) {
+    .contact-form p{
+      font-size: 12px;
+    }
   }
   
   .contact-info i {
@@ -100,7 +106,7 @@
     width: 2.8em;
     height: 2.8em;
     border-radius: 0 3px 3px 0;
-    background-color: #16202e;
+    background-color: #2a599e;
 }
 
 .selectbox-001::after {
@@ -128,7 +134,7 @@
 }
 
 .selectbox-001 select:focus {
-    outline: 2px solid #16202e;
+    outline: 2px solid #2a599e;
 }
 
 .button-001 {
@@ -138,10 +144,10 @@
     width: 230px;
     height: 2.8em;
     padding: .9em 2em;
-    border: 1px solid #16202e;
+    border: 1px solid #2a599e;
     border-radius: 5px;
     background-color: #fff;
-    border-color: #16202e;
+    border-color: #2a599e;
     background-color: #d3d3d3;
     font-size: 1em;
 }

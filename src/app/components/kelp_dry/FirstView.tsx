@@ -71,9 +71,11 @@ const FirstView: React.FC<FirstViewProps> = ({ windowHeight, isMobile }) => {
         <img src='./images/kkrn_icon_saisei_11.svg' alt="Play" style={{ width: '120px', height: '120px' }} />
       </button>
       </div>
-      <h1 className='title'>
-        京大昆布干しバイト
+      <div className='title'>
+      <h1 className='text-[18px] md:text-[45px]'>
+        利尻島京大昆布干しバイト
       </h1>
+      </div>
       <div id="scroll-down-prompt" className="scrolldown-animation">
         <span>Scroll</span>
         <div className="arrow"></div>

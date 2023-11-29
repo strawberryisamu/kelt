@@ -11,7 +11,7 @@ interface DescriptionListProps {
   const DescriptionList: React.FC<DescriptionListProps> = ({ title, subtitle, descriptions, currentImageIndex, onDescriptionClick }) => {
 
     return (
-      <div className="w-1/2 flex flex-col justify-around " style={{backgroundColor: 'lightgray'}}>
+      <div className="w-full flex flex-col justify-around " style={{backgroundColor: 'lightgray'}}>
         <h2 style={{}}>{title}</h2>
         <h3>{subtitle}</h3>
         {descriptions.map((description, index) => (

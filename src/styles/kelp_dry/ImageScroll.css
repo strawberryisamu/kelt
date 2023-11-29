@@ -4,16 +4,30 @@
 }
 
 .sticky-element {
-    height: 80vh; /* 高さはお好みで調整 */
     position: -webkit-sticky; /* Safariのためのプレフィックス */
     position: sticky;
-    top: 50px; /* スクロール位置で固定される位置 */
-    background-color: #f0f0f0; /* 背景色 */
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 影を追加（オプショナル） */
-    transition: object-position 0.5s ease-in-out;
+    top: 100px; /* スクロール位置で固定される位置 */
+    height: 80vh; /* 要素の高さ */
+    padding: 0px;
 }
 
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
 
 
 .centered-content {
@@ -21,13 +35,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    margin-left: 10%;
+    height: 80vh; /* 要素の高さ */
 }
 
-.centered-content h2 {
-    font-size: 1.9vw;
-}
 
 .centered-content p {
     font-size: 1.1vw;
@@ -41,10 +51,40 @@
     display: block;
 }
 
+.description {
+    width: 55% ;
+    padding-left: 5%;
+}
+
+@media screen and (max-width: 770px) {
+    .description {
+        width: 100%;
+        padding-left: 0;
+    }    
+    .mobile {
+        position: relative;
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+}
+
 @media (max-width: 930px) {
     .container {
         flex-direction: column;
         align-items: center;
+    }
+    .description {
+        width: 100%;
+        padding-left: 0;
+    }    
+    .mobile {
+        position: relative;
+        display: block;
+    }
+    .pc {
+        display: none;
     }
 
     .sticky-element {
@@ -69,11 +109,4 @@
         font-size: 3vw;
     }
 
-    .mobile {
-        position: relative;
-        display: block;
-    }
-    .pc {
-        display: none;
-    }
 }

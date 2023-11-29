@@ -3,7 +3,7 @@
     right: 20px;
     bottom: 20px;
     padding: 12px 12px;
-    background-color: #16202e; /* 例としての色 */
+    background-color: #2a599e; /* 例としての色 */
     color: white;
     border: none;
     font-size: 12px;
@@ -15,7 +15,7 @@
 
   
   /* 画面サイズが小さい場合のスタイル調整 */
-  @media (max-width: 768px) {
+  @media (max-width: 765px) {
     .floating-button {
       right: 10px;
       bottom: 10px;

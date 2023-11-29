@@ -1,47 +1,61 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, use, useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { CSSTransition } from 'react-transition-group';
 import Image from 'next/image'
 import '@/styles/kelp_dry/ImageScroll.css'; // 必要なスタイルをインポート
 
 const ImageScroll = () => {
-    const [isSticky, setIsSticky] = useState(true);
-    const [ref, inView] = useInView({
-      threshold: 1, // 50%の要素が見えたらトリガー
-    });
+  const [ref1, inView1] = useInView({ threshold: 0.7});
+  const [ref2, inView2] = useInView({ threshold: 0.7});
+  const [ref3, inView3] = useInView({ threshold: 0.7});
+  useEffect(() => { 
 
-    React.useEffect(() => {
-        setIsSticky(!inView); // 要素がビューポートに入ったらstickyを無効化
-      }, [inView]);
-  const [leftContent, setLeftContent] = useState(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>);
-
-  const [ref1, inView1] = useInView({ threshold: 0.8 });
-  const [ref2, inView2] = useInView({ threshold: 0.8 });
-  const [ref3, inView3] = useInView({ threshold: 0.8 });
-
-  React.useEffect(() => {
-    if (inView1) setLeftContent(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>);
-    if (inView2) setLeftContent(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover" }} src='/images/shiosaki.png' alt={''}/>);
-    if (inView3) setLeftContent(<Image width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 ${isSticky ? 'sticky-element' : ''}`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='/images/ogino.png' alt={''}/>);
-  }, [inView1, inView2, inView3]);
+  } ,[]);
 
   return (
     <div className="container">
-      <div className='pc'>
-        {leftContent}
-      </div>
-      <div style={{width: "100%"}}>
-      <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>
-        <div ref={ref1} className={'centered-content'} >
-        <h2>【思い切って利尻に飛び込んだ】</h2>
-        <p>社会人になって数ヶ月、学生に比べると格段に短い夏休みですが今年も利尻に行きました。
-        今振り返ると学生最後の年、思い切って利尻に飛び込んで良かったと心から思います。</p>
-        <h2>【利尻に来るには好奇心だけで充分】</h2>
-        <p>利尻での経験が今の仕事に直接役立っているということではありません。これから先、役に立つ日が来るかも今はわかりません。それでも、役に立つ・立たないという土俵を超えて、利尻の山と海に囲まれた毎日は純粋に楽しく、新しい出会いに溢れていました。利尻が気になる、とりあえず暮らしてみたい、その好奇心だけで利尻に来るには充分だと思います。
-        <br />
-        赤尾 奏音さん
-        <br />（京都大学総合人間学部4回生、2021年度に参加）</p>
+      <div className='flex-1 pc'>
+        <div className=' sticky-element'>
+          <CSSTransition in={inView1} timeout={500} classNames="fade" unmountOnExit>
+            <div className="absolute h-[100%] w-[100%]">
+              <div className='flex flex-col items-center justify-center h-[100%] w-[100%]'>
+                <Image width={500} height={500} className="mx-0 rounded-md border-2 border-gray-300" style={{ aspectRatio: "1 / 1", objectFit: "cover" ,objectPosition: 'right' }} src='/images/akao.png' alt=''/>
+              </div>
+            </div>
+          </CSSTransition>
+          <CSSTransition in={inView2} timeout={500} classNames="fade" unmountOnExit>
+            <div className="absolute h-[100%] w-[100%]">
+              <div className='flex items-center justify-center h-[100%] w-[100%]'>
+                <Image width={500} height={500} className="mx-0 rounded-md border-2 border-gray-300" style={{ aspectRatio: "1 / 1", objectFit: "cover" }} src='/images/shiosaki.png' alt=''/>
+              </div>
+            </div>
+          </CSSTransition>
+          <CSSTransition in={inView3} timeout={500} classNames="fade" unmountOnExit>
+            <div className="absolute h-[100%] w-[100%]">
+              <div className='flex items-center justify-center h-[100%] w-[100%]'>
+                <Image width={500} height={500} className="mx-0 rounded-md border-2 border-gray-300" style={{ aspectRatio: "1 / 1", objectFit: "cover" }} src='/images/ogino.png' alt=''/>
+              </div>
+            </div>
+          </CSSTransition>
         </div>
-        <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/shiosaki.png' alt={''}/>
+      </div>
+      <div className='description'>
+        <div className='flex items-center justify-center w-[100%] mt-10'>
+          <Image width={500} height={500} className={`mobile w-[70%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/akao.png' alt={''}/>
+        </div>
+        <div ref={ref1} className={'centered-content'} >
+            <h2>【思い切って利尻に飛び込んだ】</h2>
+            <p>社会人になって数ヶ月、学生に比べると格段に短い夏休みですが今年も利尻に行きました。
+            今振り返ると学生最後の年、思い切って利尻に飛び込んで良かったと心から思います。</p>
+            <h2>【利尻に来るには好奇心だけで充分】</h2>
+            <p>利尻での経験が今の仕事に直接役立っているということではありません。これから先、役に立つ日が来るかも今はわかりません。それでも、役に立つ・立たないという土俵を超えて、利尻の山と海に囲まれた毎日は純粋に楽しく、新しい出会いに溢れていました。利尻が気になる、とりあえず暮らしてみたい、その好奇心だけで利尻に来るには充分だと思います。
+            <br />
+            赤尾 奏音さん
+            <br />（京都大学総合人間学部4回生、2021年度に参加）</p>
+        </div>
+        <div className='flex items-center justify-center w-[100%]'>
+          <Image width={500} height={500} className={`mobile w-[70%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'right' }} src='/images/shiosaki.png' alt={''}/>
+        </div>
         <div ref={ref2} className={'centered-content'}>
         <h2>【京大入学前から昆布を干そうと思っていた】</h2>
         <p>京大生向けに利尻島での昆布干しバイトがあると知ったのは高校生の頃でした。そのときから昆布を干すという作業がなかなかできないものであるという理由で、京大に入ったら参加しようと心に決めていました。
@@ -51,7 +65,9 @@ const ImageScroll = () => {
         塩崎 翔大
         <br />（京都大学農学部1回生、2021年度に参加）</p>
         </div>
-        <Image width={500} height={500} className={`mobile w-[100%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='/images/ogino.png' alt={''}/>
+        <div className='flex items-center justify-center w-[100%]'>
+          <Image width={500} height={500} className={`mobile w-[70%] rounded-md border-2 border-gray-300`} style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: '30%' }} src='/images/ogino.png' alt={''}/>
+        </div>
         <div ref={ref3} className={'centered-content'}>
         <h2>【昆布干しは今しかできないと思った】</h2>
         <p>「いま行かないと今後人生で昆布を干すことはない気がする」、そう思い立って参加を決めました。昆布干しは朝3時から。朝起きるのは大変でしたが、利尻島の朝の新鮮な空気を吸い込みながら、島の人たちと一緒に汗を流し交流も楽しみながら昆布干しをすることができました。

@@ -33,7 +33,7 @@ const Header: React.FC = () => {
     useEffect(() => {
         function mediaQueriesWin() {
             const width = window.innerWidth;
-            if (width <= 768) {
+            if (width <= 765) {
                 const hasChildLinks = document.querySelectorAll('.has-child > a');
                 hasChildLinks.forEach((link) => {
                     link.addEventListener('click', (event) => {
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
         <header id="header" className={headerClass}>
 
                 <div className='flex-1 flex title' >
-                    <h1 >Summer Camp in Rishiri </h1>
+                    <h1 className=''>Summer Camp in Rishiri </h1>
                 </div>
                 <div className='summer_camp_header'>
                     <nav>

@@ -1,13 +1,13 @@
 .navbar {
-    width: 5rem;
-    height: 5rem;
+    height: 3.8rem;
+    width: 3.8rem;
 }
 
 .bar {
     width: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 765px) {
     .navbar {
         width:3rem;
         height:3rem;

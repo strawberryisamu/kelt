@@ -169,7 +169,7 @@ nav li.has-child ul li a:active{
 
 /*==768px以下の形状*/
 
-@media screen and (max-width:768px){
+@media screen and (max-width:765px){
   nav{
     padding: 0;
   }

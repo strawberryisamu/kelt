@@ -33,7 +33,7 @@
 }
 
 /* 画面幅が大きい時のスタイル */
-@media (max-width: 768px) {
+@media (max-width: 765px) {
     .ceo-content {
         flex-direction: column;
         height: auto;

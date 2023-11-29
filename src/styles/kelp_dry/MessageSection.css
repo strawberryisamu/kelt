@@ -28,7 +28,7 @@
 
 
 /* 画面幅が大きい時のスタイル */
-@media (min-width: 768px) {
+@media (min-width: 765px) {
 
     .message-title {
         font-size: 2.5vw;

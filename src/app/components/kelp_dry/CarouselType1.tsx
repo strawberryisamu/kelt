@@ -25,12 +25,14 @@ const ParentComponent: React.FC<ParentComponentProps> = ({ title, subtitle, imag
     setCurrentImageIndex(index);
   };
 
-  const rightPosition = right ? {paddingLeft: "20%"} :{ paddingRight: "20%" }
+  const rightPosition = right ? {paddingLeft: "0%"} :{ paddingRight: "0%" }
   return (
-    <div className="flex h-full gap-3" style={{paddingBottom: 30, width: "100%", ...rightPosition}}>
-      { !right && <DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} />}
-      <ImageSlideshow images={images} currentImageIndex={currentImageIndex} />
-      { right && <DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} />}
+    <div className="flex h-[350px]" style={{ width: "100%", ...rightPosition}}>
+      { !right && <div className='flex-1 flex flex-col items-center justify-center'><DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} /></div>}
+      <div className='w-[60%] '>
+        <ImageSlideshow images={images} currentImageIndex={currentImageIndex} />
+      </div>
+      { right &&  <div className='flex-1'><DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} /></div>}
     </div>
   );
 };

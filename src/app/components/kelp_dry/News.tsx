@@ -19,18 +19,20 @@ const NewsSection = () => {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row bg-[lightgray] px-20 pt-5 pb-5">
-      <div className="md:w-1/4">
-        <h2 className="text-lg font-bold">最新情報</h2>
-      </div>
-      <div className="md:w-3/4">
-        <div className="slideshow-container">
-          {newsItems.map((item, index) => (
-              <div className='flex'>
-                <p className="news-date">{item.date}</p>
-                <p className="news-description flex-1">{item.description}</p>
-              </div>
-          ))}
+    <section className="bg-[lightgray] pt-5 pb-5">
+      <div className='px-10 flex flex-col md:flex-row'>
+        <div className="md:w-1/4">
+          <h2 className="text-lg font-bold">最新情報</h2>
+        </div>
+        <div className="md:w-3/4">
+          <div className="slideshow-container">
+            {newsItems.map((item, index) => (
+                <div className='flex'>
+                  <p className="news-date">{item.date}</p>
+                  <p className="news-description flex-1">{item.description}</p>
+                </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

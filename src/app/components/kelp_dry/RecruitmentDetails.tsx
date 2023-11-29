@@ -4,10 +4,10 @@ import '@/styles/kelp_dry/RecruitmentDetails.css'; // 必要なスタイルを�
 
 const RecruitmentDetails = () => {
   return (
-    <div className="relative inner mx-auto p-4 font-sans">
+    <div className="relative pt-4 pb-4 font-sans">
       <div className="inner">
           <div className="outline_lists">
-          <dl className='outline_list clearfix flex flex-col md:flex-row'>
+            <dl className='outline_list clearfix flex flex-col md:flex-row'>
                 <dt className="flex-none bg-custom-blue p-2 text-center">募集時期</dt>
                 <dd className="flex-grow p-2 border-t border-b md:border-l md:border-r border-custom-blue">
                   <ul className='disc'>
