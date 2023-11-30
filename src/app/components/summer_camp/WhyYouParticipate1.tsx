@@ -25,7 +25,7 @@ const WhyYouParticipate1: React.FC<WhyYouParticipate1Props> = ({
     return (
         <section id={id} className='flex flex-col pb-5'>
             {title && !onImage && (<div className='flex justify-center'>
-                <h1 className="text-2xl font-bold">{title}</h1>
+                <h1 className="font-bold text-5xl mt-5 tracking-tight">{title}</h1>
             </div>)}
             <div className='flex pt-10'>
                 {isRight ? (

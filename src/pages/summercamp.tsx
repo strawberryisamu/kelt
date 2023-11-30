@@ -52,7 +52,9 @@ const Home = () => {
 
 
   if (isLoading) {
-    return <LoadingScreen />;
+    return (
+      <LoadingScreen />
+    );
   }
 
   const generateGalleryImages = (count: number): { src: string, alt: string }[] => {
@@ -132,7 +134,7 @@ const Home = () => {
           id="What's Rishiri"
           title='' 
           content={<>
-          <h2>What's Rishiri and us?</h2>
+          <h2 className='font-bold text-5xl mt-5 tracking-tight'>What's Rishiri and us?</h2>
           </>}
           imageSrc='/images/rishiri_from_above.png'
           imageAlt='rishiri_from_above'
@@ -177,7 +179,7 @@ const Home = () => {
           id="Who Organizes"
           title='' 
           content={<>
-          <h2>Who organizes?</h2>
+          <h2 className='font-bold text-5xl mt-5 tracking-tight'>Who organizes?</h2>
           </>}
           imageSrc='/images/bird.png'
           imageAlt='bird'
@@ -185,7 +187,7 @@ const Home = () => {
         />
         <section>
           <div className=''>
-            <div>
+            <div className='font-bold text-5xl mt-5 tracking-tight text-center'>
               A Message from Organizer
             </div>
             <div className='flex'>
@@ -213,7 +215,7 @@ const Home = () => {
         </section>
         <section>
           <div className=''>
-            <div>
+            <div className='font-bold text-5xl mt-5 tracking-tight text-center'>
               A Message from Supervisor 
             </div>
             <div className='flex'>
@@ -242,7 +244,7 @@ const Home = () => {
         </section>
         <section>
           <div id="Who Should Participate" className='w-full'>
-            <h2>Who Should Participate</h2>
+            <h2 className='font-bold text-5xl mt-5 tracking-tight text-center'>Who Should Participate</h2>
             <div className='flex'>
               <div className='w-[70%] flex-wrap'>
                 <div>
@@ -303,7 +305,7 @@ const Home = () => {
         </section>
         <section>
           <div id="Details" className='w-full'>
-            <h2>Details</h2>
+            <h2 className='font-bold text-5xl mt-5 tracking-tight text-center'>Details</h2>
             <div className='flex'>
               <div className='w-[70%] flex-wrap'>
                 <div>
@@ -334,7 +336,7 @@ const Home = () => {
           </div>
         </section>
         <section>
-          <div className="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
+          <div className="max-w-screen-xl mx-auto px-5 min-h-sceen ">
             <div className="flex flex-col items-center">
               <h2 className="font-bold text-5xl mt-5 tracking-tight">
                 FAQ
@@ -436,10 +438,10 @@ const Home = () => {
           </div>
         </section>
         <section>
-          <div id="Contact/Apply Now" className="px-4 md:px-8 2xl:px-16">
+          <div id="Contact/Apply Now" className="px-4 md:px-8 2xl:px-16 mb-5">
             <div className="mx-auto md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
-              <div className="flex pb-7 md:pb-9 mt-7 md:-mt-1.5">
-                <h4 className="mx-auto text-2xl 2xl:text-3xl font-bold text-heading">
+              <div className="flex items-center justify-center pb-7 md:pb-9 mt-7 md:-mt-1.5">
+                <h4 className="font-bold text-5xl mt-5 tracking-tight">
                   Contact/Apply Now
                 </h4>
               </div>

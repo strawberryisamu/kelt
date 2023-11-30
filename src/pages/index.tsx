@@ -18,6 +18,7 @@ import ImageScroll from '../app/components/kelp_dry/ImageScroll';
 import ContactForm from '@/app/components/kelp_dry/ContactForm';
 import Footer from '@/app/components/kelp_dry/Footer';
 import Link from 'next/link';
+import Head from 'next/head';
 
 // #228ed4,#208d78,#db5518
 const Home = () => {
@@ -168,8 +169,10 @@ const Home = () => {
                 </Link>
                 <span className='md:hidden'><br /></span>
                 <Link href="https://iam-iam.jp/28909/">
-                  <span className="border-b-[1px] border-black">webメディア IAM他</span>
-                </Link>
+                  <span className="border-b-[1px] border-black">webメディア IAM</span>
+                </Link>　
+                <span className='md:hidden'><br /></span>
+                他
               </span>
             </Card>
           </div>

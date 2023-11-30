@@ -14,7 +14,6 @@ const MapComponent = () => {
         style={{zIndex: 10}}
         allowFullScreen
         loading="lazy" 
-        pointer-events= 'auto'
         referrerPolicy="no-referrer-when-downgrade"
       >
         </iframe>

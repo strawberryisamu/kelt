@@ -10,7 +10,7 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({ images, currentImageInd
   return (
     <div className=' h-[100%] w-[100%] relative'>
       {images.map((image, index) => (
-        <div className='absolute  h-[100%] w-[100%] flex items-center justify-center'>
+        <div key={index} className='absolute  h-[100%] w-[100%] flex items-center justify-center'>
           <div className='relative h-[80%] w-[80%] '>
             <Image
               layout='fill' 

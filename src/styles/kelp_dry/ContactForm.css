@@ -97,7 +97,6 @@
 .selectbox-001::after {
     position: absolute;
     content: '';
-    pointer-events: none;
 }
 
 .selectbox-001::before {
