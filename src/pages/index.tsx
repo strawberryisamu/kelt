@@ -155,23 +155,27 @@ const Home = () => {
             title_children={<><span className='text-[5vw] md:text-[2vw]'>メディア掲載</span></>}
             isAccomplishment={true}
             >
-              <span className='text-[6vw] md:text-[2vw] leading-[1.8]'>
+              <span className='text-[6vw] md:text-[2vw] leading-[1.8] '>
                 <Link href="https://www.hokkaido-np.co.jp/article/884337/">
-                  <span className="border-b-[1px] border-black">北海道新聞</span>　
+                  <span className="border-b-[1px] border-black">北海道新聞</span>
                 </Link>
-                <span className='md:hidden'><br /></span>
+                <span className='hidden md:inline'>　</span>
+                <span className='inline md:hidden'><br /></span>
                 <Link href="https://prtimes.jp/main/html/rd/p/000000001.000107188.html">
-                  <span className="border-b-[1px] border-black">PRTIMES</span>　
+                  <span className="border-b-[1px] border-black">PRTIMES</span>
                 </Link>
-                <span className='md:hidden'><br /></span>
+                <span className='hidden md:inline'>　</span>
+                <span className='inline md:hidden'><br /></span>
                 <Link href="https://www.thats.pr.kyoto-u.ac.jp/2022/02/24/11932/">
-                  <span className="border-b-[1px] border-black">ザッツ京大</span>　
+                  <span className="border-b-[1px] border-black">ザッツ京大</span>
                 </Link>
-                <span className='md:hidden'><br /></span>
+                <span className='hidden md:inline'>　</span>
+                <span className='inline md:hidden'><br /></span>
                 <Link href="https://iam-iam.jp/28909/">
                   <span className="border-b-[1px] border-black">webメディア IAM</span>
-                </Link>　
-                <span className='md:hidden'><br /></span>
+                </Link>
+                <span className='hidden md:inline'>　</span>
+                <span className='inline md:hidden'><br /></span>
                 他
               </span>
             </Card>
@@ -187,7 +191,7 @@ const Home = () => {
               </>
             </Card>
             <Card
-            title_children={<>国内<span  className='text-[20vw] md:text-[10vw] text-sky-600'>5</span>　海外<span  className='text-[20vw] md:text-[10vw] text-sky-600'>2</span>　大学</>}
+            title_children={<><span className='text-[0.8em]'>国内</span><span  className='text-[20vw] md:text-[10vw] text-sky-600'>5</span>　<span className='text-[0.8em]'>海外</span><span  className='text-[20vw] md:text-[10vw] text-sky-600'>2</span>　<span className='text-[0.8em]'>大学</span></>}
             isCol={true}
             isAccomplishment={true}
             >

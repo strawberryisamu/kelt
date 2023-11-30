@@ -11,9 +11,10 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({ images, currentImageInd
     <div className=' h-[100%] w-[100%] relative'>
       {images.map((image, index) => (
         <div key={index} className='absolute  h-[100%] w-[100%] flex items-center justify-center'>
-          <div className='relative h-[80%] w-[80%] '>
+          <div className='relative h-[70%] w-[70%] '>
             <Image
-              layout='fill' 
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               key={image}
               src={image}
               alt={`Slide ${index}`}

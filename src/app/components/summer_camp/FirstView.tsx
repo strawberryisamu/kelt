@@ -41,7 +41,7 @@ const FirstView: React.FC<Props> = (p: Props) => {
           >
             <img src='./images/kkrn_icon_saisei_11.svg' alt="Play" style={{ width: '120px', height: '120px' }} />
           </button>
-              <Image layout='fill' objectFit='cover' src={item.src} alt={item.alt} />
+              <Image fill sizes='100vw' objectFit='cover' src={item.src} alt={item.alt} />
           </div>
         ))}
       </div>
