@@ -34,7 +34,10 @@ const config: Config = {
       textOrientation: {
         upright: 'upright',
       },
-
+      fontFamily: {
+        reggae: ['Reggae One'],
+        surfer: ['Original Surfer'],
+      },
     },
   },
   variants: {

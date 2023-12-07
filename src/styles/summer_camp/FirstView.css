@@ -3,6 +3,14 @@
     height: inherit;
     overflow: hidden; /* コンテナ外の要素は非表示に */
   }
+
+.first_title {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  z-index: 30;
+  text-align: center;
+}
   
   /* 各スライド */
 .slide {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Image from 'next/image';
 
 interface ImageProps {
@@ -9,19 +9,22 @@ interface ImageProps {
 
 interface RishiriWithNumbersProps {
     images: ImageProps[];
+    texts: ReactNode[];
 }
 
-const RishiriWithNumbers: React.FC<RishiriWithNumbersProps> = ({ images }) => {
+const RishiriWithNumbers: React.FC<RishiriWithNumbersProps> = ({ images , texts}) => {
     return (
         <section>
-            <div className="">
+            <div>
                 <div className="flex">
                     {images.map((image, index) => (
                         <div className="flex-1" key={index}>
-                            <div className='absolute'>
-                                <p>{`Text ${index + 1}`}</p>
+                            <div className='absolute w-[33.333333%] px-5'>
+                                <div className='absolute mt-5'>
+                                    {texts[index]}
+                                </div>
                             </div>
-                            <Image src={image.src} alt={image.alt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                            <Image src={image.src} alt={image.alt} width={500} height={500} className={` w-[100%] `} 
                             style={{ aspectRatio: "2 / 3", objectFit: "cover", objectPosition:` ${image.objectPosition}` }} />
                         </div>
                     ))}

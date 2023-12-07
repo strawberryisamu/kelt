@@ -1,0 +1,11 @@
+.wave {
+    height: 80px;
+    background-color: aliceblue;
+}
+
+canvas{
+    position: absolute;
+    bottom: -60px;
+    left:0;
+    width: 100%;
+}

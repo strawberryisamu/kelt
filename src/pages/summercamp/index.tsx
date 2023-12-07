@@ -1,0 +1,177 @@
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import '@/styles/globals.css'; // 必要なスタイルをインポート
+import Layout from '@/app/components/summer_camp/layout';
+import News from '@/app/components/summer_camp/News';
+import Gallery from '@/app/components/summer_camp/Gallery';
+import Wave from '@/app/components/summer_camp/wave';
+import RishiriWithNumbers from '@/app/components/summer_camp/RishiriWithNumbers';
+import Details from '@/app/components/summer_camp/Details';
+import Contact from '@/app/components/summer_camp/Contact';
+import FAQ from '@/app/components/summer_camp/FAQ';
+
+const imgItems = [
+  {src: '/images/friends.png', alt: 'friends'},
+  {src: '/images/rishiri_mountain.png', alt: 'first_view_1'},
+  {src: '/images/sunrise.png', alt: 'first_view_1'},
+  {src: '/images/night_sky.png', alt: 'first_view_1'},
+];
+
+// #228ed4,#208d78,#db5518
+const Home = () => {
+
+  const generateGalleryImages = (count: number): { src: string, alt: string }[] => {
+    const galleryImages = [];
+
+    for (let i = 1; i <= count; i++) {
+      galleryImages.push({
+        src: `/images/gellery${i}.png`,
+        alt: `gelery${i}`,
+      });
+    }
+
+    return galleryImages;
+  };
+
+  const galleryImages = generateGalleryImages(10);
+  
+  return (
+    <Layout title='Rishiri Island Summer Camp' subtitle='In the northern edge of Japan, an unseen world awaits you.' imgItems={imgItems}>
+        <News/>
+        <section id='Why You Participate'>
+          <div className="pb-[5%]" >
+            <div className="px-[10%] ">
+              <div className="mb-[5%] pt-[10%]">
+                <h2 className='text-5xl text-center mb-5'>DISCOVER THE MAGIC OF RISHIRI ISLAND <br />  A UNIQUE SUMMER CAMP EXPERIENCE</h2>
+                <p className='text-2xl text-center'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
+                  Our summer camp offers an extraordinary opportunity for young minds to immerse themselves in the age-old art of Kelp drying and the rich cultural heritage of this serene island. 
+                  Here’s what makes our camp a must-visit:
+                </p>
+              </div>
+              <div className="block2 ">
+                  <div className="flex flex-col justify-center items-center gap-5">
+                    <div className='flex relative items-center justify-center w-[70%] h-[300px]'>
+                      <Image 
+                      src='/images/cycling.png' 
+                      alt="cycling "
+                      fill
+                      style={{aspectRatio: "1/1", objectFit: 'cover'}}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className='rounded-md '
+                      />
+                    </div>
+                    <div className='text-center w-[95%]'>
+                      <p className='text-5xl'>Join a Global Community</p>
+                      <p className='text-xl mt-5'>Connect with peers from around the world. Our camp is a melting pot of cultures, offering a unique chance to forge international friendships and cultural understanding.</p>
+                    </div>
+                  </div>
+                  <div className="flex justify-around items-start mt-5">
+                    <div className="flex-[1_1_33.3333%] flex flex-col justify-center items-start gap-5">
+                      <div className='flex relative items-center justify-center w-[95%] h-[300px]'>
+                        <Image               
+                          fill
+                          style={{aspectRatio: "1/1", objectFit: 'cover'}}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          src='/images/rishiri_over_view.png' 
+                          alt="over_view" 
+                          className='rounded-md '
+                        />
+                      </div>
+                      <div className='text-center w-[95%]'>
+                        <p className='text-5xl'>Engage in Diverse Activities</p>
+                        <p className='text-xl mt-5'>YOUR CHOICE: 30+ activities await! From hiking and kayaking to creative arts, our camp offers endless adventures amidst Rishiri's stunning nature.</p>
+                      </div>
+                    </div>
+                    <div className="flex-[1_1_33.3333%] flex flex-col justify-center items-start gap-5">
+                      <div className='flex relative items-center justify-center w-[95%] h-[300px]'>
+                        <Image 
+                        src='/images/introduce.png' 
+                        alt='introduce'
+                        fill
+                        style={{aspectRatio: "1/1", objectFit: 'cover'}}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className='rounded-md'
+                        />
+                      </div>
+                      <div className='text-center w-[95%]'>
+                        <p className='text-5xl'>Learn the Art of Kombu Drying</p>
+                        <p className='text-xl mt-5'>Discover the island's heritage through Kombu drying. Engage in this traditional craft, and unveil the secrets of this ancient practice, integral to Rishiri's culture.</p>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Wave 
+        index={3}
+        color='#2a599e'
+        />
+        <Gallery images={galleryImages} />
+        <Wave 
+        index={2}
+        color='#2a599e'
+        />
+        <section id="What's Rishiri">
+          <RishiriWithNumbers
+            images={[ 
+              {
+                src: '/images/183.png',
+                alt: '183',
+                objectPosition: '50%'
+              },
+              {
+                src: '/images/tourists.png',
+                alt: 'tourists',
+                objectPosition: '50%'
+              },
+              {
+                src: '/images/4hours.png',
+                alt: '4hours',
+                objectPosition: '20%'
+              },
+            ]}
+            texts={[
+                <><h1 className='md:text-[10vw]'>183㎢ </h1><br />
+                  <p className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%]'>Rishiri Island has an area of 183㎢ and is registered as a national park.  
+                  </p>
+                </> ,
+                <><h1 className='md:text-[8vw]'>150,000 tourists </h1><br />
+                  <p className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[30%]'>during summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
+                  </p>
+                </>,
+                <><h1 className='md:text-[8.5vw]'>4 hours </h1><br />
+                  <p className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[25%] '>Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo. 
+                  </p>
+                </>,
+            ]}
+          />
+        </section>
+        <section>
+          <div className='relative'>
+            <div className='absolute w-[50%] ml-[50%] mt-[5%]'>
+              <p className='md:text-[2.5vw] md:bg-white md:bg-opacity-60'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
+            </div>
+            <Image 
+              src='/images/kelp_dry.png' 
+              alt='kelp_dry' 
+              width={500} 
+              height={500} 
+              className={`w-[100%]`} 
+              style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }} 
+            />
+          </div>
+        </section>
+
+        <Details/>
+        <FAQ/>
+        <Contact/>
+        </Layout>
+  );
+};
+
+
+
+export default Home;

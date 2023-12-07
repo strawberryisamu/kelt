@@ -78,22 +78,28 @@ const Header: React.FC = () => {
                 <div className='flex-1 flex title' >
                     <h1 className=''>Summer Camp in Rishiri </h1>
                 </div>
-                <div className='summer_camp_header'>
+                <div className='summer_camp_header hidden lg:block'>
                     <nav>
                         <ul id="g-navi">
-                            <li><a href="#Top">Top</a></li>
+                            <li><a href="/summercamp">Top</a></li>
                             <li className="has-child">
                                 <a href="#">About Rishiri and Us</a>
                                 <ul>
-                                    <li><a href="#Why You Participate">Why You Participate</a></li>
-                                    <li><a href="#How Attendees Feel">How Attendees Feel</a></li>
-                                    <li><a href="#What's Rishiri">What's Rishiri</a></li>
-                                    <li><a href="#Who Organizes">Who Organizes</a></li>
-                                    <li><a href="#Who Should Participate">Who Should Participate</a></li>
+                                    <li><a href="/summercamp#Why You Participate">Why You Participate</a></li>
+                                    <li><a href="/summercamp#What's Rishiri">What's Rishiri</a></li>
+                                    <li><a href="/summercamp/participant_testimonials">Participant Testimonials</a></li>
+                                    <li><a href="/summercamp/message_from_the_organizers">Message from the Organizers</a></li>
+                                    <li><a href="/summercamp/target_participants">Target Participants</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#Details">Details</a></li>
-                            <li><a href="#Contact/Apply Now">Contact/Apply Now</a></li>
+                            <li className="has-child">
+                                <a href="#">Details</a>
+                                <ul>
+                                    <li><a href="/summercamp#Details">Details</a></li>
+                                    <li><a href="/summercamp#FAQ">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/summercamp#Contact/Apply Now">Contact/Apply Now</a></li>
                         </ul>
                     </nav>
                 </div>

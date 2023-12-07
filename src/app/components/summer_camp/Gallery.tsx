@@ -22,7 +22,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[0].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -34,7 +34,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[1].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -46,7 +46,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[2].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -60,7 +60,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[3].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -72,7 +72,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[4].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -84,7 +84,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[5].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -96,7 +96,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[6].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -110,7 +110,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[7].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -122,7 +122,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[8].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%] `} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
@@ -134,7 +134,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
                                 alt={images[9].alt} 
                                 width={500} 
                                 height={500} 
-                                className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                                className={`w-[100%]`} 
                                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}
                             />
                         </div>
