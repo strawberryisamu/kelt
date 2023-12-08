@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Contact = () => {
-    const [IsMobile, setIsMobile] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect (() => {
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -11,7 +11,7 @@ const Contact = () => {
     }, []);
     return (
         <section>
-            <div id="Contact/Apply Now" className={`'relative pb-5 mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+            <div id="Contact/Apply Now" className={`'relative pb-5 mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
                     backgroundImage: 'url(./images/sea_kayack.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 

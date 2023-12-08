@@ -21,7 +21,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children , title, subtitle, imgItems}) => {
     const [windowHeight, setWindowHeight] = useState<number>(0);
-    const [IsMobile, setIsMobile] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         // モバイルデバイスかどうかをチェック

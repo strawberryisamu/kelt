@@ -23,7 +23,7 @@ const imgItems = [
 
 // #228ed4,#208d78,#db5518
 const Home = () => {
-  const [IsMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect (() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -171,7 +171,7 @@ const Home = () => {
               },
             ]}
             texts={[
-              IsMobile ?
+              isMobile ?
                 (<div className='text-[8vw]  text-yellow-500 ' >
                     <div className=' absolute text-[30vw]  pt-[30%]'>183</div>
                     <div className=' absolute text-[15vw] pt-[100%] pl-[25%]'>㎢  </div>
@@ -181,7 +181,7 @@ const Home = () => {
                     <div className=' absolute pt-[100%] pl-[25%]'>㎢  </div>
                 </div>),
 
-              IsMobile ?
+              isMobile ?
                 <div className=' text-[8vw] font-thin text-white ' >
                     <div className=' text-[20vw] absolute pl-[10%]'>150,000 </div>
                     <div className=' absolute pl-[50%] pt-[30%]'>tourists </div>
@@ -191,7 +191,7 @@ const Home = () => {
                     <div className=' absolute pt-[100%] pl-[15%]'>tourists </div>
                 </div>,
 
-                IsMobile ?
+                isMobile ?
                 <div className='text-[8vw] font-thin text-white '>
                     <div className=' text-[30vw] absolute text-yellow-500 pb-[10%] pl-[15%]'>4 </div>
                     <div className=' text-[15vw] absolute text-yellow-500 pt-[70%] pl-[25%]'>hours </div>
@@ -202,21 +202,21 @@ const Home = () => {
                 </div>,
             ]}
             descriptions={[
-                  IsMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
+                  isMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div> 
                   : <div className='text-[2vw] md:text-[1.7vw] bg-white md:bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div>,
 
-                  IsMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[10%] ml-[15%] w-[70%]'>
+                  isMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[10%] ml-[15%] w-[70%]'>
                     During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
                   </div> :
                   <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
                     During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
                   </div>,
 
-                  IsMobile ? 
+                  isMobile ? 
                   <div className='text-[3vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
                     Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
                   </div> :
@@ -256,7 +256,7 @@ const Home = () => {
         />
         </div> */}
         <section>
-          <div id='participant_testimonials' className={`'relative  bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+          <div id='participant_testimonials' className={`'relative  bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
                     backgroundImage: 'url(./images/rishiri_from_above.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
@@ -290,7 +290,7 @@ const Home = () => {
         />
 
         <section>
-          <div id='message_from_the_organizers' className={`'relative mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+          <div id='message_from_the_organizers' className={`'relative mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
                     backgroundImage: 'url(./images/bird.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
@@ -304,7 +304,7 @@ const Home = () => {
         </section>
         <MessageFromTheOrganizers/>
         <section>
-          <div id='target_participants'  className={`'relative mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+          <div id='target_participants'  className={`'relative mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
                     backgroundImage: 'url(./images/firstView.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
@@ -318,7 +318,7 @@ const Home = () => {
         </section>
         <TargetParticipants/>
           <section>
-                <div id='Details' className={`'relative mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                <div id='Details' className={`'relative mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                     style={{
                         backgroundImage: 'url(./images/shimarisu.png)', 
                         backgroundColor: 'rgba(255, 255, 255, 0.5)', 

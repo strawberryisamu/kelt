@@ -9,10 +9,10 @@ interface Props {
 }
 
 const Gallery: React.FC<Props> = (props: Props) => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const [IsMobile, setIsMobile] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect (() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if(isMobile) {
         setIsMobile(true);
       }
@@ -22,7 +22,7 @@ const Gallery: React.FC<Props> = (props: Props) => {
 
     return (
         <section className='w-full'>
-            {IsMobile ? (
+            {isMobile ? (
                 <div className="w-full">
                     <div className="grid grid-cols-2 ">
                         {images.map((image, index) => (
