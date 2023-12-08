@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Footer from '@/app/components/summer_camp/Footer';
-import Layout from '@/app/components/summer_camp/layout';
-
-const imgItems = [
-  {src: '/images/friends.png', alt: 'friends'},
-  {src: '/images/rishiri_mountain.png', alt: 'first_view_1'},
-  {src: '/images/sunrise.png', alt: 'first_view_1'},
-  {src: '/images/night_sky.png', alt: 'first_view_1'},
-];
 
 const MessageFromTheOrganizers: React.FC = () => {
   return (
-    <Layout title='Message From Organizers' subtitle='' imgItems={imgItems}>
+    <div>
         <section>
-          <div className='pt-[5%]'>
+          <div className=''>
             <div className='font-bold text-5xl mt-5 tracking-tight text-center'>
               Organizer
             </div>
@@ -74,7 +65,7 @@ const MessageFromTheOrganizers: React.FC = () => {
             </div>
           </div>
         </section> 
-      </Layout>
+        </div>
   );
 };
 

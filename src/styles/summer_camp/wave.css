@@ -9,3 +9,12 @@ canvas{
     left:0;
     width: 100%;
 }
+
+@media(max-width: 768px){
+    .wave{
+        height: 40px;
+    }
+    canvas{
+        bottom: -30px;
+    }
+}

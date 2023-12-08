@@ -87,9 +87,9 @@ const Header: React.FC = () => {
                                 <ul>
                                     <li><a href="/summercamp#Why You Participate">Why You Participate</a></li>
                                     <li><a href="/summercamp#What's Rishiri">What's Rishiri</a></li>
-                                    <li><a href="/summercamp/participant_testimonials">Participant Testimonials</a></li>
-                                    <li><a href="/summercamp/message_from_the_organizers">Message from the Organizers</a></li>
-                                    <li><a href="/summercamp/target_participants">Target Participants</a></li>
+                                    <li><a href="/summercamp#participant_testimonials">Participant Testimonials</a></li>
+                                    <li><a href="/summercamp#message_from_the_organizers">Message from the Organizers</a></li>
+                                    <li><a href="/summercamp#target_participants">Target Participants</a></li>
                                 </ul>
                             </li>
                             <li className="has-child">

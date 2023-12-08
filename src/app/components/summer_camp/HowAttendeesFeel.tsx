@@ -16,8 +16,8 @@ interface HowAttendeesFeelProps {
 
 const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, description1,description2, body2, imageSrc1, imageAlt1, imageSrc2, imageAlt2 }) => {
     return (
-        <div id={id} className="pb-[10%] pt-[5%]">
-            <h1 className="font-bold text-5xl mt-5 tracking-tight text-center">{title}</h1>
+        <div id={id} className="pb-[10%] ">
+            {/* <h1 className="font-bold text-5xl mt-5 tracking-tight text-center">{title}</h1> */}
             <div className="flex flex-col md:flex-row pt-10">
                 <div className='flex-1 flex flex-col mx-10 pb-[5%]'>
                     <div className="pb-5">

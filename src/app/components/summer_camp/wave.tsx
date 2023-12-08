@@ -4,9 +4,10 @@ import '@/styles/summer_camp/wave.css';
 interface WaveProps {
     color: string;
     index: number;
+    height: number;
 }
 
-const Wave: React.FC<WaveProps> = ({ color, index }) => {
+const Wave: React.FC<WaveProps> = ({ color, index , height}) => {
     const requestId = useRef<number>();
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const info = useRef({ seconds: 0, t: 0 });
@@ -64,7 +65,7 @@ const Wave: React.FC<WaveProps> = ({ color, index }) => {
 
         const handleResize = () => {
             canvas.width = document.documentElement.clientWidth;
-            canvas.height = 200;
+            canvas.height = height;
         };
         window.addEventListener('resize', handleResize);
         handleResize();

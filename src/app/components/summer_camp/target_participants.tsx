@@ -13,9 +13,9 @@ const imgItems = [
 ];
 
 // #228ed4,#208d78,#db5518
-const TargetPArticipants = () => {
+const TargetParticipants = () => {
   return (
-    <Layout title='Target Participants' subtitle='' imgItems={imgItems}>
+    <div>
         <section>
           <div id="Who Should Participate" className='w-full pt-[5%] '>
             <div className='flex justify-center'>
@@ -48,10 +48,10 @@ const TargetPArticipants = () => {
             </div>
           </div>
         </section>
-    </Layout>
+        </div>
   );
 };
 
 
 
-export default TargetPArticipants;
+export default TargetParticipants;
