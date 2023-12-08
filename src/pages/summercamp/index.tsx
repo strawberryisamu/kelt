@@ -55,7 +55,7 @@ const Home = () => {
             <div className="px-[10%] ">
               <div className="mb-[5%] pt-[10%]">
                 <h2 className='text-3xl md:text-5xl text-center mb-5'>DISCOVER THE MAGIC OF RISHIRI ISLAND <br />  A UNIQUE SUMMER CAMP EXPERIENCE</h2>
-                <p className='text-2xl text-center'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
+                <p className='text-2xl text-center leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
                   Our summer camp offers an extraordinary opportunity for young minds to immerse themselves in the age-old art of Kelp drying and the rich cultural heritage of this serene island. 
                   Here’s what makes our camp a must-visit:
                 </p>
@@ -75,7 +75,7 @@ const Home = () => {
                     </div>
                     <div className='text-center w-[95%]'>
                       <p className='text-3xl md:text-5xl'>Join a Global Community</p>
-                      <p className='text-xl mt-5'>Connect with peers from around the world. Our camp is a melting pot of cultures, offering a unique chance to forge international friendships and cultural understanding.</p>
+                      <p className='text-xl mt-5 leading-relaxed'>Connect with peers from around the world. Our camp is a melting pot of cultures, offering a unique chance to forge international friendships and cultural understanding.</p>
                     </div>
                   </div>
                   </FadeInElement>
@@ -94,7 +94,7 @@ const Home = () => {
                       </div>
                       <div className='text-center w-[95%]'>
                         <p className='text-3xl md:text-5xl'>Engage in Diverse Activities</p>
-                        <p className='text-xl mt-5'>YOUR CHOICE: 30+ activities await! From hiking and kayaking to creative arts, our camp offers endless adventures amidst Rishiri's stunning nature.</p>
+                        <p className='text-xl mt-5 leading-relaxed'>YOUR CHOICE: 30+ activities await! From hiking and kayaking to creative arts, our camp offers endless adventures amidst Rishiri's stunning nature.</p>
                       </div>
                     </div>
                     </FadeInElement>
@@ -112,7 +112,7 @@ const Home = () => {
                       </div>
                       <div className='text-center w-[95%]'>
                         <p className='text-3xl md:text-5xl'>Learn the Art of Kelp Drying</p>
-                        <p className='text-xl mt-5'>Discover the island's heritage through Kombu drying. Engage in this traditional craft, and unveil the secrets of this ancient practice, integral to Rishiri's culture.</p>
+                        <p className='text-xl mt-5 leading-relaxed'>Discover the island's heritage through Kombu drying. Engage in this traditional craft, and unveil the secrets of this ancient practice, integral to Rishiri's culture.</p>
                       </div>
                     </div>
                     </FadeInElement>
@@ -229,7 +229,7 @@ const Home = () => {
         <section>
           <div className='relative'>
             <div className='absolute w-[70%] ml-[25%] mt-[5%]'>
-              <p className='md:text-[2.5vw] text-[3vw] bg-white bg-opacity-60 px-5'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
+              <p className='md:text-[2.5vw] text-[3vw] bg-white bg-opacity-60 px-10 text-center'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
             </div>
             <Image 
               src='/images/kelp_dry.png' 

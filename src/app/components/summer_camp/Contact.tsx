@@ -11,7 +11,7 @@ const Contact = () => {
     }, []);
     return (
         <section>
-            <div id="Contact/Apply Now" className={`'relative pb-5 mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
+            <div id="Contact/Apply Now" className={`relative pb-[5%] pt-[5%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
                     backgroundImage: 'url(./images/sea_kayack.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
