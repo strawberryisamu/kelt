@@ -1,6 +1,4 @@
 .contact-form {
-    max-width: 600px;
-
     padding: 20px 0px;
   }
   
@@ -21,7 +19,7 @@
 
   @media screen and (max-width: 765px) {
     .contact-form p{
-      font-size: 12px;
+      font-size: 3vw;
     }
   }
   

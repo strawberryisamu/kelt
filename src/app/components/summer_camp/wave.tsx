@@ -94,7 +94,7 @@ const Wave: React.FC<WaveProps> = ({ color, index }) => {
 
 
     return (
-        <div className="wave relative">
+        <div className="wave relative" style={{zIndex: 10}}>
             <canvas ref={canvasRef} id={`waveCanvas${index}`}></canvas>
         </div>
     );

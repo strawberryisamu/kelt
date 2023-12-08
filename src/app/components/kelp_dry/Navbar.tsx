@@ -46,16 +46,16 @@ const Navbar: React.FC = () => {
               </a>
             </li>
 
-            <ul className="flex gap-5 pt-2 w-[35%] md:w-[15%]">
-                <li className="bg-white" style={{borderRadius: '5%'}}>
+            <ul className="flex pt-3 gap-5 w-[35%] md:w-[15%]">
+                <li className=" flex-1 rounded-md" style={{backgroundColor: 'lightgray'}} >
                     <a href="https://bun-kei.com/">
-                        <Image src="/images/bunkei.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%] rounded-md  `} 
+                        <Image src="/images/bunkei.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%]`} 
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                     </a>
                 </li>
-                <li className="">
-                    <a href="http://rishiri-zen.jp/">
-                        <Image src="/images/zen.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%] rounded-md  `} 
+                <li className=" flex-1 rounded-md" style={{backgroundColor: 'lightgray'}}>
+                    <a href="http://rishiri-zen.jp/ ">
+                        <Image src="/images/zen_transparent.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%]`} 
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                     </a>
                 </li>

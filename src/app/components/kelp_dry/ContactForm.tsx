@@ -26,44 +26,53 @@ function ContactForm() {
   return (
     <div className="contact-form">
 
-      <div className="contact-info">
-        <div className='flex'>
-          <p className='flex-2'>所在地:　</p>
-          <div className='flex-1'>
-            <p>〒097-0401 北海道利尻郡利尻町南124</p>
+      <div className="contact-info flex flex-col md:flex-row justify-center items-center md:w-[90%] mx-auto">
+        <div className='flex-1 flex flex-col '>
+          <div className='flex'>
+            <p className='flex-2'>所在地:　</p>
+            <div className='flex-1'>
+              <p>〒097-0401 北海道利尻郡利尻町南124</p>
+            </div>
+          </div>
+          <div className='flex ]'>
+            <p className='flex-2'>メールアドレス:　</p>
+            <div className='flex-1'>
+              <p>yukimune.oji@bun-kei.com</p>
+            </div>
           </div>
         </div>
-        <div className='flex'>
-          <p className='flex-2'>メールアドレス:　</p>
-          <div className='flex-1'>
-            <p>yukimune.oji@bun-kei.com</p>
-          </div>
+        <div className='flex-1'>
+          <MapComponent/>
         </div>
-        <MapComponent/>
       </div>
       <form>
-        <div className='flex'>
-          <input type="text" id="first-name" placeholder="姓" />
-          <input type="text" id="last-name" placeholder="名" />
+        <div className='w-[80%] mx-auto'>
+          <div className='flex gap-5'>
+            <input type="text" id="first-name" placeholder="姓" />
+            <input type="text" id="last-name" placeholder="名" />
+          </div>
+          <input type="email" id="email" placeholder="メールアドレス" required />
+          <textarea id="message" placeholder="お問い合わせ内容"></textarea>
         </div>
-        <input type="email" id="email" placeholder="メールアドレス" required />
-        <textarea id="message" placeholder="お問い合わせ内容"></textarea>
-        <div className="category-selector">
-          <label className="selectbox-001">
-            <select>
-              <option>大学生/大学院生</option>
-              <option>官公庁/自治体</option>
-              <option>メディア/取材依頼</option>
-            </select>
-          </label>
+
+        <div className='flex flex-col items-center'>
+          <div className="category-selector">
+            <label className="selectbox-001">
+              <select>
+                <option>大学生/大学院生</option>
+                <option>官公庁/自治体</option>
+                <option>メディア/取材依頼</option>
+              </select>
+            </label>
+          </div>
+          <div >
+            <label className='flex items-center justify-center mt-2 '>
+              <input className='flex-1 m-0' type="checkbox"  />
+              <p className='flex-3 m-0'>メルマガに登録する</p>
+            </label>
+          </div>
+          <button className="button-001">送信</button>
         </div>
-        <div className="newsletter-checkbox">
-          <label className='flex'>
-            <input className='flex-1' type="checkbox"  />
-            <p className='flex-3'>メルマガに登録する</p>
-          </label>
-        </div>
-        <button className="button-001">送信</button>
       </form>
     </div>
   );

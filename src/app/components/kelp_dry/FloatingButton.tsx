@@ -35,14 +35,25 @@ const FloatingButton = () => {
   const buttonStyle = isFixed ? { bottom: `${buttonHeight}px` } : {};
 
   return (
-    <button
-      className={`floating-button z-50`}
-      onClick={scrollToContact}
-      style={{...buttonStyle}}
-    >
-      次回の利尻島京大昆布干しに<br />
-      興味がある方はこちら
-    </button>
+    <div className='flex flex-col justify-center items-center fixed z-50 right-2 bottom-5 md:right-10 md:bottom-10 gap-3'>
+      <button
+        className={`floating-button-to-summer-camp `}
+        onClick={() => window.location.href = '/summercamp'}
+        style={{...buttonStyle}}
+      >
+        サマーキャンプに <br /> 興味のある方は<br />
+        こちらへ
+      </button>
+      <button
+        className={`floating-button `}
+        onClick={scrollToContact}
+        style={{...buttonStyle}}
+      >
+        次回の <br /> 利尻島京大昆布干しは<br />
+        こちらへ
+      </button>
+    </div>
+
   );
 };
 

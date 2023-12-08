@@ -3,11 +3,15 @@ import React from 'react';
 const Contact = () => {
     return (
         <section>
-            <div id="Contact/Apply Now" className="px-4 md:px-8 2xl:px-16 pt-[10%] mb-[10%]">
+            <div id="Contact/Apply Now" className="px-4 md:px-8 2xl:px-16 pt-[10%] pb-[10%]" style={{backgroundImage: 'url(./images/sea_kayack.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundColor: 'rgba(255, 255, 255, 0.5)', backgroundBlendMode :'lighten'}}>
+
                 <div className="mx-auto md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
                     <div className="flex items-center justify-center pb-7 md:pb-9 mt-7 md:-mt-1.5">
-                        <h4 className="font-bold text-5xl mt-5 tracking-tight">
+                        <h4 className="font-bold text-5xl mt-5 tracking-tight hidden md:block text-center">
                             Contact/Apply Now
+                        </h4>
+                        <h4 className="font-bold text-5xl mt-5 tracking-tight block md:hidden text-center">
+                            Contact <br /> Apply Now
                         </h4>
                     </div>
                     <form className="w-full mx-auto flex flex-col justify-center" noValidate>
@@ -16,7 +20,7 @@ const Contact = () => {
                                 <div className="w-full md:w-1/2">
                                     <label
                                         htmlFor="name"
-                                        className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                                        className="block font-semibold text-sm leading-none mb-3 cursor-pointer"
                                     >
                                         Your Name (required)
                                     </label>
@@ -34,7 +38,7 @@ const Contact = () => {
                                 <div className="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
                                     <label
                                         htmlFor="email"
-                                        className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                                        className="block font-semibold text-sm leading-none mb-3 cursor-pointer"
                                     >
                                         Your Email (required)
                                     </label>
@@ -54,7 +58,7 @@ const Contact = () => {
                                 <div className="w-full md:w-1/2">
                                     <label
                                         htmlFor="age"
-                                        className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                                        className="block font-semibold text-sm leading-none mb-3 cursor-pointer"
                                     >
                                         Age
                                     </label>
@@ -72,7 +76,7 @@ const Contact = () => {
                                 <div className="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
                                     <label
                                         htmlFor="country"
-                                        className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
+                                        className="block font-semibold text-sm leading-none mb-3 cursor-pointer"
                                     >
                                         Country
                                     </label>
@@ -91,7 +95,7 @@ const Contact = () => {
                             <div className="relative mb-4">
                                 <label
                                     htmlFor="message"
-                                    className="block text-gray-600 font-semibold text-sm leading-none mb-3"
+                                    className="block font-semibold text-sm leading-none mb-3"
                                 >
                                     Message
                                 </label>

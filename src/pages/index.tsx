@@ -182,7 +182,7 @@ const Home = () => {
           </div>
           <div className="grid gap-1 mb-8 grid-cols-1 md:grid-cols-3">
           <Card
-            title_children={<>約<span  className='text-[20vw] md:text-[10vw] text-sky-600'>100</span>人</>}
+            title_children={<><span  className='text-[20vw] md:text-[10vw] text-sky-600'>100</span>人</>}
             isCol={true}
             isAccomplishment={true}
             >

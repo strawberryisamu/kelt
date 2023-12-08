@@ -134,18 +134,29 @@ const Home = () => {
               },
             ]}
             texts={[
-                <><h1 className='md:text-[10vw]'>183㎢ </h1><br />
-                  <p className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%]'>Rishiri Island has an area of 183㎢ and is registered as a national park.  
-                  </p>
-                </> ,
-                <><h1 className='md:text-[8vw]'>150,000 tourists </h1><br />
-                  <p className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[30%]'>during summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
-                  </p>
-                </>,
-                <><h1 className='md:text-[8.5vw]'>4 hours </h1><br />
-                  <p className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[25%] '>Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo. 
-                  </p>
-                </>,
+                <div className='text-[8vw]  text-yellow-500 ' >
+                    <div className=' absolute text-[20vw]  pt-[30%]'>183</div>
+                    <div className=' absolute pt-[100%] pl-[25%]'>㎢  </div>
+                </div>,
+                <div className=' text-[8vw] font-thin text-white ' >
+                    <div className=' text-[9vw] absolute pt-[20%]'>150,000 </div>
+                    <div className=' absolute pt-[100%] pl-[15%]'>tourists </div>
+                </div>,
+                <div className='text-[8vw] font-thin text-white '>
+                    <div className=' text-[20vw] absolute text-yellow-500 pb-[10%] pl-[5%]'>4 </div>
+                    <div className=' absolute text-yellow-500 pt-[80%] pl-[25%]'>hours </div>
+                </div>,
+            ]}
+            descriptions={[
+                  <div className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%] px-2'>
+                    Rishiri Island has an area of 183㎢ and is registered as a national park.
+                  </div>,
+                  <div className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%] px-2'>
+                    During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
+                  </div>,
+                  <div className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%] px-2'>
+                    Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
+                  </div>
             ]}
           />
         </section>

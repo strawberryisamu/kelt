@@ -18,7 +18,7 @@ interface Props {
 const FirstView: React.FC<Props> = (props: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const redirectToYouTube = () => {
-    window.location.href = 'https://www.youtube.com/watch?v=pupRPedUdQM&pp=ygUV5piG5biD5bmy44GX44CA5paH57aZ';
+    window.location.href = 'https://www.youtube.com/watch?v=OwnvAiztuXo';
   };
 
   useEffect(() => {

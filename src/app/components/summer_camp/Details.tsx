@@ -4,11 +4,23 @@ const Details = () => {
     return (
         <section>
             <div id="Details" className='w-full px-4 md:px-8 mb-[5%] pt-[10%]'>
-                <h2 className='font-bold text-5xl mt-5 mb-[80px] text-center'>Details</h2>
-                <div className='flex mx-auto lg:w-3/5 2xl:w-4/6 h-full ltr:md:ml-7 rtl:md:mr-7 ltr:lg:pl-7 rtl:lg:pr-7'>
-                    <div className='flex-wrap '>
-                        <div>
-                            <p className='block text-gray-600 font-semibold text-sm leading-none mb-3'>
+                <h2 className='font-bold text-5xl mt-5 mb-[30px] text-center'>Details</h2>
+                <div className='flex flex-col md:flex-row gap-5 mx-auto w-full lg:w-3/5 2xl:w-4/6 h-full ltr:md:ml-7 rtl:md:mr-7 ltr:lg:pl-7 rtl:lg:pr-7'>
+                    <div className='flex-1'>
+                        <div className='relative w-full md:h-full h-[200px]'>
+                            <Image 
+                                src='/images/shimarisu.png'
+                                alt="cycling "
+                                fill
+                                style={{aspectRatio: "1/1", objectFit: 'cover'}}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className='rounded-md '
+                            />
+                        </div>
+                    </div>
+                    <div className='flex-1'>
+                        <div className='m-auto'>
+                                <p>
                                 Date XX/XX-XX/XX
                                 </p><p>
                                 <br />Target Age 18-25
@@ -26,16 +38,6 @@ const Details = () => {
                                 <br />Deadline of application XX/XX
                             </p>
                         </div>
-                    </div>
-                    <div className='flex-1 flex relative items-center justify-center '>
-                      <Image 
-                      src='/images/shimarisu.png'
-                      alt="cycling "
-                      fill
-                      style={{aspectRatio: "1/1", objectFit: 'cover'}}
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className='rounded-md '
-                      />
                     </div>
                     {/* <div className='flex-1'>
                         <Image 
