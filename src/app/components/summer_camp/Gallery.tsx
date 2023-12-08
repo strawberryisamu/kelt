@@ -9,10 +9,10 @@ interface Props {
 }
 
 const Gallery: React.FC<Props> = (props: Props) => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const [IsMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect (() => {
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if(isMobile) {
         setIsMobile(true);
       }

@@ -21,12 +21,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children , title, subtitle, imgItems}) => {
     const [windowHeight, setWindowHeight] = useState<number>(0);
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [IsMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         // モバイルデバイスかどうかをチェック
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
         const setRealViewportHeight = (): void => {
             const realViewportHeight: number = window.innerHeight;
             setWindowHeight(realViewportHeight);

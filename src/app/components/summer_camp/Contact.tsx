@@ -4,10 +4,10 @@ const Contact = () => {
     const [IsMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect (() => {
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if(isMobile) {
-        setIsMobile(true);
-      }
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if(isMobile) {
+            setIsMobile(true);
+        }
     }, []);
     return (
         <section>

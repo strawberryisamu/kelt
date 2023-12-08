@@ -23,10 +23,10 @@ const imgItems = [
 
 // #228ed4,#208d78,#db5518
 const Home = () => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const [IsMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect (() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if(isMobile) {
       setIsMobile(true);
     }
