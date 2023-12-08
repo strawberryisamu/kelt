@@ -5,7 +5,7 @@ const FAQ = () => {
         <section>
             <div id="FAQ" className="max-w-screen-xl mx-auto px-5 min-h-sceen pt-[10%] pb-[5%]">
                 <div className="flex flex-col items-center">
-                    <h2 className="font-bold text-5xl mt-5 tracking-tight">
+                    <h2 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight">
                         FAQ
                     </h2>
                 </div>

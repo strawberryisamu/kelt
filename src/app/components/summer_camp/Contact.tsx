@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Contact = () => {
+    const [IsMobile, setIsMobile] = useState<boolean>(false);
+
+    useEffect (() => {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if(isMobile) {
+        setIsMobile(true);
+      }
+    }, []);
     return (
         <section>
-            <div id="Contact/Apply Now" className="px-4 md:px-8 2xl:px-16 pt-[10%] pb-[10%]" style={{backgroundImage: 'url(./images/sea_kayack.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundColor: 'rgba(255, 255, 255, 0.5)', backgroundBlendMode :'lighten'}}>
-
+            <div id="Contact/Apply Now" className={`'relative pb-5 mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                style={{
+                    backgroundImage: 'url(./images/sea_kayack.png)', 
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+                    backgroundBlendMode :'lighten'
+                }}
+            >
                 <div className="mx-auto md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
                     <div className="flex items-center justify-center pb-7 md:pb-9 mt-7 md:-mt-1.5">
-                        <h4 className="font-bold text-5xl mt-5 tracking-tight hidden md:block text-center">
+                        <h4 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight hidden md:block text-center">
                             Contact/Apply Now
                         </h4>
-                        <h4 className="font-bold text-5xl mt-5 tracking-tight block md:hidden text-center">
+                        <h4 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight block md:hidden text-center">
                             Contact <br /> Apply Now
                         </h4>
                     </div>
                     <form className="w-full mx-auto flex flex-col justify-center" noValidate>
-                        <div className="flex flex-col space-y-5">
+                        <div className="flex flex-col space-y-5 mx-5">
                             <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 gap-4">
                                 <div className="w-full md:w-1/2">
                                     <label
@@ -112,7 +125,7 @@ const Contact = () => {
                             <div className="relative justify-center flex">
                                 <button
                                     data-variant="flat"
-                                    className="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
+                                    className="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white mx-20 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
                                     type="submit"
                                 >
                                     Submit

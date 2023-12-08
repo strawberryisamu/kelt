@@ -42,12 +42,12 @@ const FirstView: React.FC<Props> = (props: Props) => {
             <h1 className={`text-[7vw] md:text-[6vw] ${index === 3 ? 'text-[white]' : ''}`} >
               {props.title} 
             </h1>
+            <p className={`md:text-[3vw]  ${index === 3 ? 'text-[white]' : ''}`}>{props.subtitle}</p>
             <button
               onClick={redirectToYouTube}
             >
               <img src='/images/kkrn_icon_saisei_11.svg' alt="Play" style={{ width: '120px', height: '120px' }} />
             </button>
-            <p className={`md:text-[3vw] ${index === 3 ? 'text-[white]' : ''}`}>{props.subtitle}</p>
           </div>
               <Image fill sizes='100vw' objectFit='cover' src={item.src} alt={item.alt} />
           </div>

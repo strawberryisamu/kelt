@@ -12,9 +12,9 @@ canvas{
 
 @media(max-width: 768px){
     .wave{
-        height: 40px;
+        height: 0px;
     }
     canvas{
-        bottom: -30px;
+        bottom: -35px;
     }
 }

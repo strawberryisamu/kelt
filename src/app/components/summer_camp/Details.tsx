@@ -1,42 +1,32 @@
 import Image from 'next/image';
 
 const Details = () => {
-    return (
-        <section>
-            <div id="Details" className='w-full px-4 md:px-8 mb-[5%] pt-[10%]'>
-                <h2 className='font-bold text-5xl mt-5 mb-[30px] text-center'>Details</h2>
+        return (
+            <section>
+                <div id="Details" className='w-full px-4 md:px-8 mb-[5%] pt-[10%]'>
+                {/* <h2 className='font-bold text-3xl md:text-5xl mt-5 mb-[30px] text-center'>Details</h2> */}
                 <div className='flex flex-col md:flex-row gap-5 mx-auto w-full lg:w-3/5 2xl:w-4/6 h-full ltr:md:ml-7 rtl:md:mr-7 ltr:lg:pl-7 rtl:lg:pr-7'>
                     <div className='flex-1'>
-                        <div className='relative w-full md:h-full h-[200px]'>
-                            <Image 
-                                src='/images/shimarisu.png'
-                                alt="cycling "
-                                fill
-                                style={{aspectRatio: "1/1", objectFit: 'cover'}}
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className='rounded-md '
-                            />
-                        </div>
-                    </div>
-                    <div className='flex-1'>
-                        <div className='m-auto'>
-                                <p>
-                                Date XX/XX-XX/XX
-                                </p><p>
-                                <br />Target Age 18-25
-                                </p><p>
-                                <br />Capacity XX people
-                                </p><p>
-                                <br />Actual Cost XXX
-                                </p><p>
-                                (Not included Transportation to and from island)
-                                </p><p>
-                                <br />Accommodation XXX
-                                </p><p>
-                                ( The participants live under the same roof)
-                                </p><p>
-                                <br />Deadline of application XX/XX
-                            </p>
+                        <div className='text-center'>
+                                <p className='text-xl md:text-3xl font-bold'>Date</p>
+                                <p className='text-lg'>XX/XX-XX/XX</p>
+                                <br />
+                                <p className='text-xl md:text-3xl font-bold'>Target Age</p>
+                                <p className='text-lg'>18-25</p>
+                                <br />
+                                <p className='text-xl md:text-3xl font-bold'>Capacity</p>
+                                <p className='text-lg'>XX people</p>
+                                <br />
+                                <p className='text-xl md:text-3xl font-bold'>Actual Cost</p>
+                                <p className='text-lg'>XXX</p>
+                                <p className='text-lg'>(Not included Transportation to and from island)</p>
+                                <br />
+                                <p className='text-xl md:text-3xl font-bold'>Accommodation</p>
+                                <p className='text-lg'>XXX</p>
+                                <p className='text-lg'>(The participants live under the same roof)</p>
+                                <br />
+                                <p className='text-xl md:text-3xl font-bold'>Deadline of application</p>
+                                <p className='text-lg'>XX/XX</p>
                         </div>
                     </div>
                     {/* <div className='flex-1'>
@@ -49,9 +39,9 @@ const Details = () => {
                         />
                     </div> */}
                 </div>
-            </div>
-        </section>
-    );
-};
+                </div>
+                </section>
+                );
+            };
 
 export default Details;

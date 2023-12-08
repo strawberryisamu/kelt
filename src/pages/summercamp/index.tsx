@@ -23,6 +23,14 @@ const imgItems = [
 
 // #228ed4,#208d78,#db5518
 const Home = () => {
+  const [IsMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect (() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if(isMobile) {
+      setIsMobile(true);
+    }
+  }, []);
 
   const generateGalleryImages = (count: number): { src: string, alt: string }[] => {
     const galleryImages = [];
@@ -66,13 +74,13 @@ const Home = () => {
                       />
                     </div>
                     <div className='text-center w-[95%]'>
-                      <p className='text-5xl'>Join a Global Community</p>
+                      <p className='text-3xl md:text-5xl'>Join a Global Community</p>
                       <p className='text-xl mt-5'>Connect with peers from around the world. Our camp is a melting pot of cultures, offering a unique chance to forge international friendships and cultural understanding.</p>
                     </div>
                   </div>
                   </FadeInElement>
-                  <FadeInElement>
                   <div className="flex md:flex-row flex-col justify-around items-start mt-5 gap-5">
+                    <FadeInElement>
                     <div className="flex-1 flex flex-col justify-center items-start gap-5">
                       <div className='flex relative items-center justify-center w-[95%] h-[300px]'>
                         <Image               
@@ -85,10 +93,12 @@ const Home = () => {
                         />
                       </div>
                       <div className='text-center w-[95%]'>
-                        <p className='text-5xl'>Engage in Diverse Activities</p>
+                        <p className='text-3xl md:text-5xl'>Engage in Diverse Activities</p>
                         <p className='text-xl mt-5'>YOUR CHOICE: 30+ activities await! From hiking and kayaking to creative arts, our camp offers endless adventures amidst Rishiri's stunning nature.</p>
                       </div>
                     </div>
+                    </FadeInElement>
+                    <FadeInElement>
                     <div className="flex-1 flex flex-col justify-center items-start gap-5">
                       <div className='flex relative items-center justify-center w-[95%] h-[300px]'>
                         <Image 
@@ -101,12 +111,12 @@ const Home = () => {
                         />
                       </div>
                       <div className='text-center w-[95%]'>
-                        <p className='text-5xl'>Learn the Art of Kombu Drying</p>
+                        <p className='text-3xl md:text-5xl'>Learn the Art of Kelp Drying</p>
                         <p className='text-xl mt-5'>Discover the island's heritage through Kombu drying. Engage in this traditional craft, and unveil the secrets of this ancient practice, integral to Rishiri's culture.</p>
                       </div>
                     </div>
+                    </FadeInElement>
                   </div>
-                  </FadeInElement>
               </div>
             </div>
           </div>
@@ -119,13 +129,13 @@ const Home = () => {
           height={200}
         />
         </div>
-        <div className='block md:hidden'>
+        {/* <div className='block md:hidden'>
         <Wave 
           index={1}
           color='#2a599e'
-          height={100}
+          height={50}
         />
-        </div>
+        </div> */}
         <Gallery images={galleryImages} />
         <div className='hidden md:block'>
         <Wave 
@@ -134,13 +144,13 @@ const Home = () => {
           height={200}
         />
         </div>
-        <div className='block md:hidden'>
+        {/* <div className='block md:hidden'>
         <Wave 
           index={2}
           color='black'
           height={100}
         />
-        </div>
+        </div> */}
         <section id="What's Rishiri">
           <RishiriWithNumbers
             images={[ 
@@ -161,27 +171,56 @@ const Home = () => {
               },
             ]}
             texts={[
-                <div className='text-[8vw]  text-yellow-500 ' >
+              IsMobile ?
+                (<div className='text-[8vw]  text-yellow-500 ' >
+                    <div className=' absolute text-[30vw]  pt-[30%]'>183</div>
+                    <div className=' absolute text-[15vw] pt-[100%] pl-[25%]'>㎢  </div>
+                </div> ):
+                (<div className='text-[8vw]  text-yellow-500 ' >
                     <div className=' absolute text-[20vw]  pt-[30%]'>183</div>
                     <div className=' absolute pt-[100%] pl-[25%]'>㎢  </div>
-                </div>,
+                </div>),
+
+              IsMobile ?
+                <div className=' text-[8vw] font-thin text-white ' >
+                    <div className=' text-[20vw] absolute pl-[10%]'>150,000 </div>
+                    <div className=' absolute pl-[50%] pt-[30%]'>tourists </div>
+                </div> :
                 <div className=' text-[8vw] font-thin text-white ' >
                     <div className=' text-[9vw] absolute pt-[20%]'>150,000 </div>
                     <div className=' absolute pt-[100%] pl-[15%]'>tourists </div>
                 </div>,
+
+                IsMobile ?
+                <div className='text-[8vw] font-thin text-white '>
+                    <div className=' text-[30vw] absolute text-yellow-500 pb-[10%] pl-[15%]'>4 </div>
+                    <div className=' text-[15vw] absolute text-yellow-500 pt-[70%] pl-[25%]'>hours </div>
+                </div> :
                 <div className='text-[8vw] font-thin text-white '>
                     <div className=' text-[20vw] absolute text-yellow-500 pb-[10%] pl-[5%]'>4 </div>
                     <div className=' absolute text-yellow-500 pt-[80%] pl-[25%]'>hours </div>
                 </div>,
             ]}
             descriptions={[
-                  <div className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%] px-2'>
+                  IsMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
+                    Rishiri Island has an area of 183㎢ and is registered as a national park.
+                  </div> 
+                  : <div className='text-[2vw] md:text-[1.7vw] bg-white md:bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div>,
-                  <div className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%] px-2'>
+
+                  IsMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[10%] ml-[15%] w-[70%]'>
+                    During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
+                  </div> :
+                  <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
                     During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
                   </div>,
-                  <div className='md:text-[1.7vw] md:bg-white md:bg-opacity-60 mt-[60%] px-2'>
+
+                  IsMobile ? 
+                  <div className='text-[3vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
+                    Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
+                  </div> :
+                  <div className='text-[2vw] md:text-[1.7vw] bg-white md:bg-opacity-60 mt-[60%] px-5 pt-2 pb-2  text-center'>
                     Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
                   </div>
             ]}
@@ -189,8 +228,8 @@ const Home = () => {
         </section>
         <section>
           <div className='relative'>
-            <div className='absolute w-[50%] ml-[50%] mt-[5%]'>
-              <p className='md:text-[2.5vw] md:bg-white md:bg-opacity-60'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
+            <div className='absolute w-[70%] ml-[25%] mt-[5%]'>
+              <p className='md:text-[2.5vw] text-[3vw] bg-white bg-opacity-60 px-5'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
             </div>
             <Image 
               src='/images/kelp_dry.png' 
@@ -209,17 +248,23 @@ const Home = () => {
           height={200}
         />
         </div>
-        <div className='block md:hidden'>
+        {/* <div className='block md:hidden'>
         <Wave 
           index={3}
           color='#2a599e'
           height={100}
         />
-        </div>
+        </div> */}
         <section>
-          <div id='participant_testimonials' className='relative ' style={{backgroundImage: 'url(./images/rishiri_from_above.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundColor: 'rgba(255, 255, 255, 0.5)', backgroundBlendMode :'lighten'}}>
+          <div id='participant_testimonials' className={`'relative  bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                style={{
+                    backgroundImage: 'url(./images/rishiri_from_above.png)', 
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+                    backgroundBlendMode :'lighten'
+                }}
+            >
             <div className='h-[300px] flex justify-center items-center'>
-              <p className='font-bold text-5xl text-center '>How Attendees Feel</p>
+              <p className='font-bold text-3xl md:text-5xl text-center '>How Attendees Feel</p>
             </div>
           </div>
         </section>
@@ -245,21 +290,46 @@ const Home = () => {
         />
 
         <section>
-          <div id='message_from_the_organizers' className='relative mt-[10%]' style={{backgroundImage: 'url(./images/bird.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundColor: 'rgba(255, 255, 255, 0.5)', backgroundBlendMode :'lighten'}}>
+          <div id='message_from_the_organizers' className={`'relative mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                style={{
+                    backgroundImage: 'url(./images/bird.png)', 
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+                    backgroundBlendMode :'lighten'
+                }}
+            >
             <div className='h-[300px] flex justify-center items-center'>
-              <p className='font-bold text-5xl text-center '>Message from Organizers</p>
+              <p className='font-bold text-3xl md:text-5xl text-center '>Message from Organizers</p>
             </div>
           </div>
         </section>
         <MessageFromTheOrganizers/>
         <section>
-          <div id='target_participants' className='relative mt-[10%]' style={{backgroundImage: 'url(./images/firstView.png)', backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundColor: 'rgba(255, 255, 255, 0.5)', backgroundBlendMode :'lighten'}}>
+          <div id='target_participants'  className={`'relative mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                style={{
+                    backgroundImage: 'url(./images/firstView.png)', 
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+                    backgroundBlendMode :'lighten'
+                }}
+            >
             <div className='h-[300px] flex justify-center items-center'>
-              <p className='font-bold text-5xl text-center '>Target Participants</p>
+              <p className='font-bold text-3xl md:text-5xl text-center '>Target Participants</p>
             </div>
           </div>
         </section>
         <TargetParticipants/>
+          <section>
+                <div id='Details' className={`'relative mt-[10%] bg-no-repeat bg-cover ${IsMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                    style={{
+                        backgroundImage: 'url(./images/shimarisu.png)', 
+                        backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+                        backgroundBlendMode :'lighten'
+                    }}
+                >
+                    <div className='h-[300px] flex justify-center items-center'>
+                        <p className='font-bold text-3xl md:text-5xl text-center '>Details</p>
+                    </div>
+                </div>
+            </section>
         <Details/>
         <FAQ/>
         <Contact/>

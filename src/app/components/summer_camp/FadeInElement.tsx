@@ -9,7 +9,7 @@ const FadeInElement = (props: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const { inView, ref: inViewRef } = useInView({
     triggerOnce: true,
-    threshold: 0.9,
+    threshold: 0.7,
   });
 
   return (

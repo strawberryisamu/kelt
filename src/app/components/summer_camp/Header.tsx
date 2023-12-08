@@ -8,22 +8,22 @@ const Header: React.FC = () => {
     useEffect(() => {
         function ScrollAnime() {
             const elemTop = document.getElementById('area-2')?.getBoundingClientRect().top || 0;
-            const newScroll = window.pageYOffset || document.documentElement.scrollTop;
-
+            const newScroll = window.scrollY;
+    
             if (newScroll === scroll) {
                 // IE11対策で処理を入れない
-            } else if (elemTop > newScroll || 0 > newScroll - scroll) {
+            } else if (elemTop > newScroll || 0 > newScroll - scroll || newScroll === 0) {
                 setHeaderClass('DownMove');
             } else {
                 setHeaderClass('UpMove');
             }
-
+    
             setScroll(newScroll);
         }
-
+    
         window.addEventListener('scroll', ScrollAnime);
         window.addEventListener('load', ScrollAnime);
-
+    
         return () => {
             window.removeEventListener('scroll', ScrollAnime);
             window.removeEventListener('load', ScrollAnime);
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
         <header id="header" className={headerClass}>
 
                 <div className='flex-1 flex title' >
-                    <h1 className=''>Summer Camp in Rishiri </h1>
+                    <h1 className=''>Rishiri Island Summer Camp </h1>
                 </div>
                 <div className='summer_camp_header hidden lg:block'>
                     <nav>
