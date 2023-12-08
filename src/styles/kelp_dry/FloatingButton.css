@@ -11,7 +11,7 @@
 
   .floating-button-to-summer-camp {
     padding:45px 20px;
-    background-color: #2a599e; /* 例としての色 */
+    background-color: #db5518; /* 例としての色 */
     color: white;
     border: none;
     font-size: 15px;
@@ -24,11 +24,11 @@
   /* 画面サイズが小さい場合のスタイル調整 */
   @media (max-width: 765px) {
     .floating-button {
-      font-size: 8px;
-      padding: 30px 10px;
+      font-size: 10px;
+      padding: 40px 10px;
     }
     .floating-button-to-summer-camp {
-      font-size: 8px;
+      font-size: 10px;
       padding: 30px 15px;
     }
   }
