@@ -15,7 +15,7 @@ interface RishiriWithNumbersProps {
 
 const RishiriWithNumbers: React.FC<RishiriWithNumbersProps> = ({ images, texts, descriptions }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const [IsMobile, setIsMobile] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -40,7 +40,7 @@ const RishiriWithNumbers: React.FC<RishiriWithNumbersProps> = ({ images, texts, 
 
     return (
         <section>
-            {IsMobile ? (
+            {isMobile ? (
                 <div className='flex flex-col'>
                         <div
                             className={`h-full w-full relative`}
