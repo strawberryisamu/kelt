@@ -75,7 +75,7 @@ const Home = () => {
                     </div>
                     <div className='text-center w-[95%]'>
                       <p className='text-3xl md:text-5xl'>Making lifetime friends from all over the world</p>
-                      <p className='text-xl mt-5 leading-relaxed'>Young leaders gather in Rishiri island and make the best friendships through a variety of activities.</p>
+                      <p className='text-xl mt-5 leading-relaxed'>Promising young people gather in Rishiri island and make the best friendships through a variety of activities.</p>
                     </div>
                   </div>
                   </FadeInElement>
