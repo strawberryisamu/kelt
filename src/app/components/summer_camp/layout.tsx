@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import '@/styles/summer_camp/layout.css';
 import Header from '@/app/components/summer_camp/Header';
 import Footer from '@/app/components/summer_camp/Footer';
+import FloatingButton from '@/app/components/summer_camp/FloatingButton';
 import LoadingScreen from '../kelp_dry/LoadingScreen';
 import FirstView from '../summer_camp/FirstView';
 
@@ -51,6 +52,7 @@ const Layout: React.FC<LayoutProps> = ({ children , title, subtitle, imgItems}) 
         <div className={`fadeIn summer_camp font-serif` } style={{backgroundColor: 'white'}}>
             <Header/>
             <FirstView title={title} subtitle={subtitle} windowHeight={windowHeight} imgItems={imgItems}/>
+            <FloatingButton/>
             <main>
                 {children}
             </main>

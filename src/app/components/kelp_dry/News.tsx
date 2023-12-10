@@ -3,8 +3,8 @@ import '@/styles/kelp_dry/News.css';
 
 const newsItems = [
     { date: '2023.12', description: <>第１回昆布干し同窓会を開催しました。</> },
-    { date: '2023.07', description: <>北海道新聞から取材を受けました。詳しくは<a href='https://www.hokkaido-np.co.jp/article/884337/' className="border-b-[1px] border-black">こちら</a>。</> },
-    { date: '2022.02', description: <>京都大学から取材を受けました。詳しくは<a href='https://www.thats.pr.kyoto-u.ac.jp/2022/02/24/11932/' className="border-b-[1px] border-black">こちら</a>。</> }
+    { date: '2023.07', description: <>北海道新聞から取材を受けました。詳しくは<a target="_blank" rel="noopener noreferrer" href='https://www.hokkaido-np.co.jp/article/884337/' className="border-b-[1px] border-black">こちら</a>。</> },
+    { date: '2022.02', description: <>京都大学から取材を受けました。詳しくは<a target="_blank" rel="noopener noreferrer" href='https://www.thats.pr.kyoto-u.ac.jp/2022/02/24/11932/' className="border-b-[1px] border-black">こちら</a>。</> }
   ];
 
 const NewsSection = () => {

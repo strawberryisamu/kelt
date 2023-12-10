@@ -32,14 +32,14 @@ const FAQ = () => {
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                                ・Cash (for souvenirs and dining expenses)
-                                ・Passport (with visa)
+                                ・Cash (for souvenirs and dining expenses) <br />
+                                ・Passport (with visa) <br />
                                 ・Clothing  (Washing machine available. If you plan to cycle or hike, comfortable clothing and shoes are recommended.)
-                                Personal water bottle (Natural water from Rishiri Island can be consumed)
-                                ・Laptop
-                                ・Charger
-                                ・Writing utensils
-                                ・Necessary medications
+                                Personal water bottle (Natural water from Rishiri Island can be consumed) <br />
+                                ・Laptop <br />
+                                ・Charger <br />
+                                ・Writing utensils <br />
+                                ・Necessary medications <br />
 
                                 A detailed packing list will be provided after your application is confirmed.
                             </p>

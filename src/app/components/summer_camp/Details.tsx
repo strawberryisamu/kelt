@@ -9,24 +9,28 @@ const Details = () => {
                     <div className='flex-1'>
                         <div className='text-center'>
                                 <p className='text-xl md:text-3xl font-bold'>Date</p>
-                                <p className='text-lg'>XX/XX-XX/XX</p>
+                                <p className='text-lg'>① 5 August - 9 August <br />
+                                    ② 12 August - 16 August <br />
+                                    ③ 19 August - 23 August <br />
+                                    ④ 26 August - 30 August <br />
+                                    * 4 nights</p>
                                 <br />
                                 <p className='text-xl md:text-3xl font-bold'>Target Age</p>
                                 <p className='text-lg'>18-25</p>
                                 <br />
                                 <p className='text-xl md:text-3xl font-bold'>Capacity</p>
-                                <p className='text-lg'>XX people</p>
+                                <p className='text-lg'>6 people for each term</p>
                                 <br />
                                 <p className='text-xl md:text-3xl font-bold'>Actual Cost</p>
-                                <p className='text-lg'>XXX</p>
+                                <p className='text-lg'>$500 - $900/person</p>
                                 <p className='text-lg'>(Not included Transportation to and from island)</p>
                                 <br />
                                 <p className='text-xl md:text-3xl font-bold'>Accommodation</p>
-                                <p className='text-lg'>XXX</p>
+                                <p className='text-lg'>Kyodai-so</p>
                                 <p className='text-lg'>(The participants live under the same roof)</p>
                                 <br />
                                 <p className='text-xl md:text-3xl font-bold'>Deadline of application</p>
-                                <p className='text-lg'>XX/XX</p>
+                                <p className='text-lg'>The application will be closed as soon as the number of participants reaches the limit.</p>
                         </div>
                     </div>
                     {/* <div className='flex-1'>

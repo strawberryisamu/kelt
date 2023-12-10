@@ -55,7 +55,7 @@ const Home = () => {
             <div className="px-[10%] ">
               <div className="mb-[5%] pt-[10%]">
                 <h2 className='text-3xl md:text-5xl text-center mb-5'>DISCOVER THE MAGIC OF RISHIRI ISLAND <br />  A UNIQUE SUMMER CAMP EXPERIENCE</h2>
-                <p className='text-2xl text-center leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
+                <p className='text-lg md:text-2xl text-center leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
                   Our summer camp offers an extraordinary opportunity for young minds to immerse themselves in the age-old art of Kelp drying and the rich cultural heritage of this serene island. 
                   Here’s what makes our camp a must-visit:
                 </p>
@@ -74,8 +74,8 @@ const Home = () => {
                       />
                     </div>
                     <div className='text-center w-[95%]'>
-                      <p className='text-3xl md:text-5xl'>Join a Global Community</p>
-                      <p className='text-xl mt-5 leading-relaxed'>Connect with peers from around the world. Our camp is a melting pot of cultures, offering a unique chance to forge international friendships and cultural understanding.</p>
+                      <p className='text-3xl md:text-5xl'>Making lifetime friends from all over the world</p>
+                      <p className='text-xl mt-5 leading-relaxed'>Young leaders gather in Rishiri island and make the best friendships through a variety of activities.</p>
                     </div>
                   </div>
                   </FadeInElement>
@@ -93,8 +93,8 @@ const Home = () => {
                         />
                       </div>
                       <div className='text-center w-[95%]'>
-                        <p className='text-3xl md:text-5xl'>Engage in Diverse Activities</p>
-                        <p className='text-xl mt-5 leading-relaxed'>YOUR CHOICE: 30+ activities await! From hiking and kayaking to creative arts, our camp offers endless adventures amidst Rishiri's stunning nature.</p>
+                        <p className='text-3xl md:text-5xl'>Richest nature and cultures</p>
+                        <p className='text-xl mt-5 leading-relaxed'>You are able to get in touch with the deepest nature and profound culture of Japan's Northernmost Region nurtured by Ainu tribe for centuries.</p>
                       </div>
                     </div>
                     </FadeInElement>
@@ -111,8 +111,8 @@ const Home = () => {
                         />
                       </div>
                       <div className='text-center w-[95%]'>
-                        <p className='text-3xl md:text-5xl'>Learn the Art of Kelp Drying</p>
-                        <p className='text-xl mt-5 leading-relaxed'>Discover the island's heritage through Kombu drying. Engage in this traditional craft, and unveil the secrets of this ancient practice, integral to Rishiri's culture.</p>
+                        <p className='text-3xl md:text-5xl'>Rare experiences you never come across otherwise</p>
+                        <p className='text-xl mt-5 leading-relaxed'>We tailor plans of summer camp based on your requests and include interactions with islanders such as fisherman, civil servants, and CEO of local companies.</p>
                       </div>
                     </div>
                     </FadeInElement>
@@ -205,7 +205,7 @@ const Home = () => {
                   isMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div> 
-                  : <div className='text-[2vw] md:text-[1.7vw] bg-white md:bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
+                  : <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div>,
 
@@ -220,7 +220,7 @@ const Home = () => {
                   <div className='text-[3vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
                     Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
                   </div> :
-                  <div className='text-[2vw] md:text-[1.7vw] bg-white md:bg-opacity-60 mt-[60%] px-5 pt-2 pb-2  text-center'>
+                  <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2  text-center'>
                     Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
                   </div>
             ]}

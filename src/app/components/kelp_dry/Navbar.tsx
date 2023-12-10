@@ -48,13 +48,13 @@ const Navbar: React.FC = () => {
 
             <ul className="flex pt-3 gap-5 w-[35%] md:w-[15%]">
                 <li className=" flex-1 rounded-md" style={{backgroundColor: 'lightgray'}} >
-                    <a href="https://bun-kei.com/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://bun-kei.com/">
                         <Image src="/images/bunkei.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%]`} 
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                     </a>
                 </li>
                 <li className=" flex-1 rounded-md" style={{backgroundColor: 'lightgray'}}>
-                    <a href="http://rishiri-zen.jp/ ">
+                    <a target="_blank" rel="noopener noreferrer" href="http://rishiri-zen.jp/ ">
                         <Image src="/images/zen_transparent.png" width={500} height={500} alt='bunkei_logo'className={`w-[100%]`} 
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                     </a>

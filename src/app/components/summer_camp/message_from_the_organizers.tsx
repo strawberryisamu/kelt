@@ -20,7 +20,7 @@ const MessageFromTheOrganizers: React.FC = () => {
                   style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'left' }} 
                 />
               </div>
-              <p className="text-sm pb-2 text-center">Sota Imai Faculty of Literature, Kyoto University</p> 
+              <p className=" md:text-sm text-[3vw] pb-2 text-center">Sota Imai, Faculty of Literature, Kyoto University</p> 
               <div className='flex-1 w-[75%] md:w-[60%]  pt-[2.5%] pb-[5%] md:text-[1.5vw] text-[3vw]'>
                 <p className='leading-relaxed'>
                   A few years ago, I participated in a kelp drying on Rishiri Island and was fascinated by its nature. With the desire to make the Island known to more people around the world, I have organized this summer camp every summer.
@@ -48,7 +48,7 @@ const MessageFromTheOrganizers: React.FC = () => {
                     style={{ aspectRatio: "1 / 1", objectFit: "cover", objectPosition: 'left' }} 
                   />
               </div>
-              <p className="text-sm pb-2 text-center">Yukimune Oji, CEO, Bunkei Corp.</p> 
+              <p className="md:text-sm text-[3vw] pb-2 text-center">Yukimune Oji, CEO, Bunkei Corp.</p> 
               <div className='flex-1 w-[75%] md:w-[60%] pt-[2.5%] pb-[5%] md:text-[1.5vw] text-[3vw]'>
                 <p className='text-center'>【To Stop the Division in the World】</p>
                 <p className='leading-relaxed'>

@@ -1,0 +1,21 @@
+.floating-button {
+    padding:55px 15px;
+    background-color: #2a599e; /* 例としての色 */
+    color: white;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+  }
+
+
+  
+  /* 画面サイズが小さい場合のスタイル調整 */
+  @media (max-width: 765px) {
+    .floating-button {
+      font-size: 10px;
+      padding: 45px 10px;
+    }
+  }
+  

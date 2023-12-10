@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '@/styles/summer_camp/Header.css';
+import Navbar from '@/app/components/summer_camp/Navbar';
 
 const Header: React.FC = () => {
     const [scroll, setScroll] = useState(0);
@@ -77,6 +78,9 @@ const Header: React.FC = () => {
 
                 <div className='flex-1 flex title' >
                     <h1 className=''>Rishiri Island Summer Camp </h1>
+                </div>
+                <div className='block lg:hidden'>
+                    <Navbar/>
                 </div>
                 <div className='summer_camp_header hidden lg:block'>
                     <nav>

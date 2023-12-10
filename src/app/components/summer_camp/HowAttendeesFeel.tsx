@@ -25,7 +25,7 @@ const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, d
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                     </div>
                     <div className='md:text-[1.5vw] text-[3vw] w-[90%] mx-auto'>
-                        <p className="text-sm mt-[1%] pb-[5%] text-center">{description1}</p> 
+                        <p className="md:text-sm text-[3vw] mt-[1%] pb-[5%] text-center">{description1}</p> 
                         <p className='leading-relaxed '>{body1}</p> 
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, d
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
                     </div>
                     <div className='md:text-[1.5vw] text-[3vw] w-[90%] mx-auto'>
-                        <p className="text-sm mt-[1%] pb-[5%] text-center">{description2}</p>
+                        <p className="md:text-sm text-[3vw] mt-[1%] pb-[5%] text-center">{description2}</p>
                         <p className='leading-relaxed '>{body2}</p>
                     </div>
                 </div>
