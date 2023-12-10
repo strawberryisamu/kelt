@@ -56,8 +56,8 @@ const Home = () => {
               <div className="mb-[5%] pt-[10%]">
                 <h2 className='text-3xl md:text-5xl text-center mb-5'>DISCOVER THE MAGIC OF RISHIRI ISLAND <br />  A UNIQUE SUMMER CAMP EXPERIENCE</h2>
                 <p className='text-lg md:text-2xl text-center leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
-                  Our summer camp offers an extraordinary opportunity for young minds to immerse themselves in the age-old art of Kelp drying and the rich cultural heritage of this serene island. 
-                  Here’s what makes our camp a must-visit:
+                  Our summer camp offers an extraordinary opportunity for young minds to immerse themselves and the rich cultural heritage of this serene island. 
+                  Here’s what makes our camp a must-visit
                 </p>
               </div>
               <div className="block2 ">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image'
 import '@/styles/summer_camp/Navebar.css'; // 必要なスタイルをインポート
-import '@/styles/summer_camp/Header.css'; // 必要なスタイルをインポート
+
 
 const smoothScroll = (anchorId: string) => {
   const anchorElement = document.querySelector(anchorId);
@@ -16,6 +16,12 @@ const Navbar: React.FC = () => {
   const handleNavClick = (anchorId: string) => {
     smoothScroll(anchorId);
     setIsOpen(false);
+  };
+
+  const handleHasChildClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const ulElement = event.currentTarget.nextElementSibling as HTMLUListElement;
+    ulElement.style.display = ulElement.style.display === 'none' ? 'block' : 'none';
   };
 
   return (
@@ -35,8 +41,8 @@ const Navbar: React.FC = () => {
           <ul id="g-navi">
             <li><a href="/summercamp">Top</a></li>
             <li className="has-child">
-              <a href="#">About Rishiri and Us</a>
-              <ul>
+              <a href="#" onClick={handleHasChildClick}>About Rishiri and Us</a>
+              <ul style={{ display: 'none' }}>
                 <li><a onClick={() => setIsOpen(false)} href="/summercamp#Why You Participate">Why You Participate</a></li>
                 <li><a onClick={() => setIsOpen(false)}  href="/summercamp#What's Rishiri">What's Rishiri</a></li>
                 <li><a onClick={() => setIsOpen(false)} href="/summercamp#participant_testimonials">Participant Testimonials</a></li>
@@ -45,8 +51,8 @@ const Navbar: React.FC = () => {
               </ul>
             </li>
             <li className="has-child">
-              <a href="#">Details</a>
-              <ul>
+              <a href="#" onClick={handleHasChildClick}>Details</a>
+              <ul style={{ display: 'none' }}>
                 <li><a href="/summercamp#Details">Details</a></li>
                 <li><a href="/summercamp#FAQ">FAQ</a></li>
               </ul>
