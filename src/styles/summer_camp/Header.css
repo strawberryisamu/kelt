@@ -6,7 +6,7 @@
   z-index: 999;/*最前面へ*/
   /*以下はレイアウトのためのCSS*/
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   background:#333;
   color:#fff;
@@ -66,7 +66,7 @@ transform: translateY(0);
   display: block;
   text-decoration: none;
   color: #666;
-  padding:10px;
+  padding:5%;
   transition:all 0.3s;
 }
 

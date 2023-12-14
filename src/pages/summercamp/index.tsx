@@ -52,13 +52,13 @@ const Home = () => {
         <News/>
         <section id='Why You Participate'>
           <div className="pb-[5%]" >
-              <div className="px-[5%] bg-black pt-10 pb-10">
-                <h2 className='text-5xl font-bold text-start text-white'><span className='text-yellow-500'>Discover</span> The Magic of Rishiri Island   <span className='text-lg font-thin pl-5'>A Unique Summer Camp Experience</span></h2>
+              <div className="px-[5%] bg-black pt-10 pb-10 leading-none">
+                <h2 className='text-5xl font-bold text-start text-white'><span className='text-yellow-500'>Discover</span> The Magic of Rishiri <span className='pr-5'>Island</span><span className='md:hidden'><br /></span><span className='text-lg font-thin'>A Unique Summer Camp Experience</span></h2>
               </div>
               <div className=' font-extralight px-[10%] pt-2 text-lg text-start leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
                   Our summer camp offers an extraordinary opportunity for young minds to immerse themselves and the rich cultural heritage of this serene island. 
               </div>
-              <div className='  px-[10%] pt-1 pb-5 text-4xl text-start leading-relaxed'>
+              <div className='  px-[10%] pt-1 pb-5 text-4xl text-start leading-none'>
                 <span className='text-yellow-500 text-5xl'>Here’s</span> what makes our camp a <span className='font-semibold'>must-visit</span>
               </div>
               <div className='px-[10%]'>
@@ -227,7 +227,7 @@ const Home = () => {
         </section>
         <section>
           <div className='relative'>
-            <div className='absolute w-[100%]  mt-[5%]'>
+            <div className='absolute w-[100%]  mt-[5%] font-serif'>
               <p className='md:text-[2.5vw] text-[3vw] text-white bg-black bg-opacity-60 text-start px-[5%] pt-5 pb-5'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
             </div>
             <Image 
@@ -289,15 +289,15 @@ const Home = () => {
         />
 
         <section>
-          <div id='message_from_the_organizers' className={`'relative mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
+          <div id='message_from_the_organizers' className={`'relative bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
                     backgroundImage: 'url(./images/bird.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                     backgroundBlendMode :'lighten'
                 }}
             >
-            <div className='h-[300px] flex justify-center items-center'>
-              <p className='font-bold text-3xl md:text-5xl text-center '>Message from Organizers</p>
+            <div className='h-[200px] flex justify-start items-center pl-[5%]'>
+              <p className='font-bold text-3xl md:text-5xl text-start '>Message from Organizers</p>
             </div>
           </div>
         </section>
@@ -310,21 +310,21 @@ const Home = () => {
                     backgroundBlendMode :'lighten'
                 }}
             >
-            <div className='h-[300px] flex justify-center items-center'>
-              <p className='font-bold text-3xl md:text-5xl text-center '>Target Participants</p>
+            <div className='h-[200px] flex justify-start items-center'>
+              <p className='font-bold text-3xl md:text-5xl text-start pl-[5%]'>Target Participants</p>
             </div>
           </div>
         </section>
         <TargetParticipants/>
           <section>
-                <div id='Details' className={`'relative mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
+                <div id='Details' className={`relative bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                     style={{
                         backgroundImage: 'url(./images/shimarisu.png)', 
                         backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                         backgroundBlendMode :'lighten'
                     }}
                 >
-                    <div className='h-[300px] flex justify-center items-center'>
+                    <div className='h-[200px] flex justify-start  items-center pl-[5%]'>
                         <p className='font-bold text-3xl md:text-5xl text-center '>Details</p>
                     </div>
                 </div>

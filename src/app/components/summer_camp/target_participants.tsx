@@ -17,9 +17,9 @@ const TargetParticipants = () => {
   return (
     <div>
         <section>
-          <div id="Who Should Participate" className='w-full pt-[5%] '>
+          <div id="Who Should Participate" className='w-full pt-[5%] px-[5%]'>
             <div className='flex justify-center'>
-              <div className='w-3/4'>
+              <div className=''>
                 <div className='mb-8'>
                   <h2 className='text-xl md:text-3xl font-bold'>International Students in Japan</h2>
                   <p className='text-lg'>Those who are studying in Japan and wish to delve deeper into experiencing Japanese culture.</p>
@@ -33,9 +33,9 @@ const TargetParticipants = () => {
           </div>
           </section>
           <section>
-          <div className='w-full pb-[5%] pt-[2.5%]'>
+          <div className='w-full pb-[5%] pt-[2.5%] px-[5%]'>
             <div className='flex justify-center'>
-              <div className='w-3/4'>
+              <div className=''>
                 <div className='mb-8'>
                   <h2 className='text-xl md:text-3xl font-bold'>Young Professionals from Overseas</h2>
                   <p className='text-lg'>Foreigners considering a vacation in Japan, seeking deeper involvement with locals rather than regular tourism, aiming for substantial engagement with excellent businessmen nationwide and seeking deep nature experiences.</p>

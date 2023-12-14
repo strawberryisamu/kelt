@@ -3,14 +3,14 @@ import React from 'react';
 const FAQ = () => {
     return (
         <section>
-            <div id="FAQ" className="max-w-screen-xl mx-auto px-5 min-h-sceen pt-[10%] pb-[5%]">
-                <div className="flex flex-col items-center">
-                    <h2 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight">
+            <div id="FAQ" className="max-w-screen-xl px-[5%] min-h-sceen pt-[5%] pb-[5%] flex">
+                <div className="flex  items-start">
+                    <h2 className="font-bold text-3xl md:text-8xl mt-5 tracking-tight">
                         FAQ
                     </h2>
                 </div>
-                <div className="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
-                    <div className="py-5">
+                <div className="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8 text-xl">
+                    <div className="pb-5">
                         <details className="group">
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> What is the official language?</span>
