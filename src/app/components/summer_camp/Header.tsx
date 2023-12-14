@@ -74,9 +74,8 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <header id="header" className={headerClass}>
-
-                <div className='flex-1 flex title' >
+        <header id="header" className={`${headerClass} pt-[20px] pb-[20px]`}>
+                <div className='flex-1 flex title pl-[5%]' >
                     <h1 className=''>Rishiri Island Summer Camp </h1>
                 </div>
                 <div className='block lg:hidden'>

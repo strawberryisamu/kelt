@@ -123,7 +123,7 @@ const RecruitmentDetails = () => {
                   </ul>
                 </dd>
             </dl>
-            <dl className='outline_list clearfix flex flex-col md:flex-row' style={{padding: "3%"}}>
+            <dl className='outline_list clearfix flex flex-col md:flex-row leading-7' style={{padding: "3%"}}>
                 例年、学生は大学の授業の受講、島内観光、釣り、島内の飲食店でアルバイト、利尻高校との交流、バーベキューなど様々な活動をしています。また、タイミングが合えば、隣の礼文島に行ったり、利尻富士に登ったり、地元の花火大会に参加出来たりと十二分にコンテンツがある環境です。
             </dl>
             {/* その他の項目もこの形式で追加 */}

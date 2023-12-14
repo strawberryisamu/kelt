@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children , title, subtitle, imgItems}) 
     }, []);
 
     return (
-        <div className={`fadeIn summer_camp font-serif` } style={{backgroundColor: 'white'}}>
+        <div className={`fadeIn summer_camp` } style={{backgroundColor: 'white'}}>
             <Header/>
             <FirstView title={title} subtitle={subtitle} windowHeight={windowHeight} imgItems={imgItems}/>
             <FloatingButton/>

@@ -29,10 +29,10 @@ const ParentComponent: React.FC<ParentComponentProps> = ({ title, subtitle, imag
   return (
     <div className="flex h-[350px]" style={{ width: "100%", ...rightPosition}}>
       { !right && <div className='flex-1 flex flex-col items-center justify-center'><DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} /></div>}
-      <div className='w-[60%] '>
-        <ImageSlideshow images={images} currentImageIndex={currentImageIndex} />
+      <div className='w-[60%] px-5'>
+        <ImageSlideshow images={images} currentImageIndex={currentImageIndex} isRight={right}/>
       </div>
-      { right &&  <div className='flex-1'><DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} /></div>}
+      { right &&  <div className='flex-1 '><DescriptionList title={title} subtitle={subtitle} descriptions={descriptions} currentImageIndex={currentImageIndex} onDescriptionClick={handleDescriptionClick} /></div>}
     </div>
   );
 };

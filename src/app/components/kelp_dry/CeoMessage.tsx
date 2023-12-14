@@ -14,7 +14,7 @@ type CeoMessageProps = {
 const CeoMessage: React.FC<CeoMessageProps> = ({ imageUrl, title, subtitle, children }) => {
     const { ref, inView } = useInView({
         /* オプション: 閾値やトリガー条件を設定 */
-        threshold: 0.3, // 例: 要素が50%表示された時にトリガー
+        threshold: 0.5, // 例: 要素が50%表示された時にトリガー
         triggerOnce: true, 
       });
     return (

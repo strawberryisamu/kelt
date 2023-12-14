@@ -19,7 +19,7 @@ const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, d
         <div id={id} className="pb-[5%] pt-[5%]">
             {/* <h1 className="font-bold text-5xl mt-5 tracking-tight text-center">{title}</h1> */}
             <div className="flex flex-col md:flex-row">
-                <div className='flex-1 flex flex-col mx-10 pb-[5%]'>
+                <div className='flex-1 flex flex-col mx-[5%] pb-[5%]'>
                     <div className="">
                         <Image src={imageSrc1} alt={imageAlt1} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>

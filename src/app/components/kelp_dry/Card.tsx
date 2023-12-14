@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title,  title_children, children,
               <h4 className={`pt-5 mb-2 border-b-2 border-gray-400`}>{title? title : title_children}</h4>
             </div>
 
-              <p className="px-5 flex-1 h-[50%] text-[3vw] md:text-[1.1vw] text-gray-800 mt-3">{children}</p>
+              <p className="px-5 flex-1 h-[50%] text-[3vw] md:text-[1.1vw] text-gray-800 mt-3 leading-7">{children}</p>
 
         </div>
       </div>

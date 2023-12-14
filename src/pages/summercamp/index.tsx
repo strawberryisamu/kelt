@@ -52,80 +52,78 @@ const Home = () => {
         <News/>
         <section id='Why You Participate'>
           <div className="pb-[5%]" >
-            <div className="px-[10%] ">
-              <div className="mb-[5%] pt-[10%]">
-                <h2 className='text-3xl md:text-5xl text-center mb-5'>DISCOVER THE MAGIC OF RISHIRI ISLAND <br />  A UNIQUE SUMMER CAMP EXPERIENCE</h2>
-                <p className='text-lg md:text-2xl text-center leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
-                  Our summer camp offers an extraordinary opportunity for young minds to immerse themselves and the rich cultural heritage of this serene island. 
-                  Here’s what makes our camp a must-visit
-                </p>
+              <div className="px-[5%] bg-black pt-10 pb-10">
+                <h2 className='text-5xl font-bold text-start text-white'><span className='text-yellow-500'>Discover</span> The Magic of Rishiri Island   <span className='text-lg font-thin pl-5'>A Unique Summer Camp Experience</span></h2>
               </div>
-              <div className="block2 ">
-                <FadeInElement>
-                  <div className="flex flex-col justify-center items-center gap-5">
-                    <div className='flex relative items-center justify-center w-[95%] md:w-[70%] h-[300px]'>
-                      <Image 
-                      src='/images/cycling.png' 
-                      alt="cycling "
-                      fill
-                      style={{aspectRatio: "1/1", objectFit: 'cover'}}
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className='rounded-md '
+              <div className=' font-extralight px-[10%] pt-2 text-lg text-start leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
+                  Our summer camp offers an extraordinary opportunity for young minds to immerse themselves and the rich cultural heritage of this serene island. 
+              </div>
+              <div className='  px-[10%] pt-1 pb-5 text-4xl text-start leading-relaxed'>
+                <span className='text-yellow-500 text-5xl'>Here’s</span> what makes our camp a <span className='font-semibold'>must-visit</span>
+              </div>
+              <div className='px-[10%]'>
+                 <FadeInElement>
+                    <div className="flex flex-col justify-center items-start ">
+                      <div className='flex relative items-center justify-center w-[100%] h-[300px]'>
+                        <Image 
+                        src='/images/cycling.png' 
+                        alt="cycling "
+                        fill
+                        style={{aspectRatio: "1/1", objectFit: 'cover'}}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className='rounded-md '
+                        />
+                      </div>
+                      <div className='text-center w-[100%]'>
+                        <p className='text-3xl md:text-4xl text-start'><span className='text-yellow-500 text-5xl'>Making</span> lifetime friends from all over the world</p>
+                        <p className='text-xl  text-start leading-relaxed font-extralight'>Promising young people gather in Rishiri island and make the best friendships through a variety of activities.</p>
+                      </div>
+                    </div>
+                  </FadeInElement>
+                  <FadeInElement>
+                  <div className="flex flex-col justify-center items-start mt-5">
+                    <div className='flex relative items-center w-[100%] justify-center h-[300px]'>
+                      <Image               
+                        fill
+                        style={{aspectRatio: "1/1", objectFit: 'cover', objectPosition: '50% 60%'}}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        src='/images/rishiri_over_view.png' 
+                        alt="over_view" 
+                        className='rounded-md '
                       />
                     </div>
-                    <div className='text-center w-[95%]'>
-                      <p className='text-3xl md:text-5xl'>Making lifetime friends from all over the world</p>
-                      <p className='text-xl mt-5 leading-relaxed'>Promising young people gather in Rishiri island and make the best friendships through a variety of activities.</p>
+                    <div className='text-center w-[100%]'>
+                      <p className='text-3xl md:text-4xl text-start'><span className='text-yellow-500 text-5xl'>Richest</span> nature and cultures</p>
+                      <p className='text-xl leading-relaxed text-start font-extralight'>You are able to get in touch with the deepest nature and profound culture of Japan's Northernmost Region nurtured by Ainu tribe for centuries.</p>
                     </div>
                   </div>
                   </FadeInElement>
-                  <div className="flex md:flex-row flex-col justify-around items-start mt-5 gap-5">
-                    <FadeInElement>
-                    <div className="flex-1 flex flex-col justify-center items-start gap-5">
-                      <div className='flex relative items-center justify-center w-[95%] h-[300px]'>
-                        <Image               
-                          fill
-                          style={{aspectRatio: "1/1", objectFit: 'cover'}}
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          src='/images/rishiri_over_view.png' 
-                          alt="over_view" 
-                          className='rounded-md '
-                        />
-                      </div>
-                      <div className='text-center w-[95%]'>
-                        <p className='text-3xl md:text-5xl'>Richest nature and cultures</p>
-                        <p className='text-xl mt-5 leading-relaxed'>You are able to get in touch with the deepest nature and profound culture of Japan's Northernmost Region nurtured by Ainu tribe for centuries.</p>
-                      </div>
-                    </div>
-                    </FadeInElement>
-                    <FadeInElement>
-                    <div className="flex-1 flex flex-col justify-center items-start gap-5">
-                      <div className='flex relative items-center justify-center w-[95%] h-[300px]'>
+                  <FadeInElement>
+                    <div className="flex flex-col justify-center items-start mt-5">
+                      <div className='flex relative items-center justify-center w-[100%] h-[300px]'>
                         <Image 
                         src='/images/introduce.png' 
                         alt='introduce'
                         fill
-                        style={{aspectRatio: "1/1", objectFit: 'cover'}}
+                        style={{aspectRatio: "1/1", objectFit: 'cover', objectPosition: '50% 0%'}}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className='rounded-md'
                         />
                       </div>
-                      <div className='text-center w-[95%]'>
-                        <p className='text-3xl md:text-5xl'>Rare experiences you never come across otherwise</p>
-                        <p className='text-xl mt-5 leading-relaxed'>We tailor plans of summer camp based on your requests and include interactions with islanders such as fisherman, civil servants, and CEO of local companies.</p>
+                      <div className='text-center w-[100%]'>
+                        <p className='text-3xl md:text-4xl text-start'><span className='text-yellow-500 text-5xl'>Rare</span> experiences you never come across otherwise</p>
+                        <p className='text-xl leading-relaxed text-start font-extralight'>We tailor plans of summer camp based on your requests and include interactions with islanders such as fisherman, civil servants, and CEO of local companies.</p>
                       </div>
                     </div>
-                    </FadeInElement>
-                  </div>
+                  </FadeInElement>
               </div>
-            </div>
           </div>
         </section>
 
         <div className='hidden md:block'>
         <Wave 
           index={1}
-          color='#2a599e'
+          color='black'
           height={200}
         />
         </div>
@@ -172,31 +170,31 @@ const Home = () => {
             ]}
             texts={[
               isMobile ?
-                (<div className='text-[8vw]  text-yellow-500 ' >
+                (<div className='text-[8vw]  text-yellow-500 font-serif' >
                     <div className=' absolute text-[30vw]  pt-[30%]'>183</div>
                     <div className=' absolute text-[15vw] pt-[100%] pl-[25%]'>㎢  </div>
                 </div> ):
-                (<div className='text-[8vw]  text-yellow-500 ' >
+                (<div className='text-[8vw]  text-yellow-500 font-serif' >
                     <div className=' absolute text-[20vw]  pt-[30%]'>183</div>
                     <div className=' absolute pt-[100%] pl-[25%]'>㎢  </div>
                 </div>),
 
               isMobile ?
-                <div className=' text-[8vw] font-thin text-white ' >
+                <div className=' text-[8vw] font-thin text-white font-serif' >
                     <div className=' text-[20vw] absolute pl-[10%]'>150,000 </div>
                     <div className=' absolute pl-[50%] pt-[30%]'>tourists </div>
                 </div> :
-                <div className=' text-[8vw] font-thin text-white ' >
+                <div className=' text-[8vw] font-thin text-white font-serif' >
                     <div className=' text-[9vw] absolute pt-[20%]'>150,000 </div>
                     <div className=' absolute pt-[100%] pl-[15%]'>tourists </div>
                 </div>,
 
                 isMobile ?
-                <div className='text-[8vw] font-thin text-white '>
+                <div className='text-[8vw] font-thin text-white font-serif'>
                     <div className=' text-[30vw] absolute text-yellow-500 pb-[10%] pl-[15%]'>4 </div>
                     <div className=' text-[15vw] absolute text-yellow-500 pt-[70%] pl-[25%]'>hours </div>
                 </div> :
-                <div className='text-[8vw] font-thin text-white '>
+                <div className='text-[8vw] font-thin text-white font-serif'>
                     <div className=' text-[20vw] absolute text-yellow-500 pb-[10%] pl-[5%]'>4 </div>
                     <div className=' absolute text-yellow-500 pt-[80%] pl-[25%]'>hours </div>
                 </div>,
@@ -205,31 +203,32 @@ const Home = () => {
                   isMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div> 
-                  : <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
-                    Rishiri Island has an area of 183㎢ and is registered as a national park.
+                  : <div className='text-[2vw] md:text-3xl bg-black text-white bg-opacity-60 mt-[60%] px-[10%] pt-2 pb-2 text-start'>
+                    Rishiri Island has an area of <span className='text-yellow-500 text-5xl font-semibold'>183㎢ </span>
+                      and is registered as a <span className='font-semibold text-5xl'>national park.</span>
                   </div>,
 
                   isMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[10%] ml-[15%] w-[70%]'>
-                    During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
+                    During summer, Rishiri island welcomes domestic tourists about 150,000.
                   </div> :
-                  <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2 text-center'>
-                    During summer, Rishiri island welcomes domestic tourists about 150,000 but not yet discovered by foreign visitors.
+                  <div className='text-[2vw] md:text-3xl bg-black text-white bg-opacity-60 mt-[60%] px-[10%] pt-2 pb-2 text-start'>
+                    During summer, Rishiri island welcomes <span className='text-yellow-500 text-5xl font-semibold'>150,000</span> <span className='text-5xl font-semibold'>tourists</span>.
                   </div>,
 
                   isMobile ? 
                   <div className='text-[3vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[20%] ml-[15%] w-[70%]'>
                     Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
                   </div> :
-                  <div className='text-[2vw] md:text-[1.7vw] bg-white bg-opacity-60 mt-[60%] px-5 pt-2 pb-2  text-center'>
-                    Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
+                  <div className='text-[2vw] md:text-[1.7vw] bg-black text-white bg-opacity-60 mt-[60%] px-[10%] pt-2 pb-2  text-start'>
+                    Rishiri island is located at Japan's <span className='text-yellow-500 text-5xl font-semibold'>northernmost </span> point.  It takes <span className='text-yellow-500 text-5xl font-semibold'>4 hours </span>by airplane from Tokyo.
                   </div>
             ]}
           />
         </section>
         <section>
           <div className='relative'>
-            <div className='absolute w-[70%] ml-[25%] mt-[5%]'>
-              <p className='md:text-[2.5vw] text-[3vw] bg-white bg-opacity-60 px-10 text-center'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
+            <div className='absolute w-[100%]  mt-[5%]'>
+              <p className='md:text-[2.5vw] text-[3vw] text-white bg-black bg-opacity-60 text-start px-[5%] pt-5 pb-5'>The kelp produced on Rishiri Island constitutes a vital ingredient in Japan's broth(Dashi) culture. For centuries, it has been transported by ships to various parts of Japan nationwide.</p>
             </div>
             <Image 
               src='/images/kelp_dry.png' 
@@ -263,8 +262,8 @@ const Home = () => {
                     backgroundBlendMode :'lighten'
                 }}
             >
-            <div className='h-[300px] flex justify-center items-center'>
-              <p className='font-bold text-3xl md:text-5xl text-center '>How Attendees Feel</p>
+            <div className='h-[200px] flex justify-start items-center'>
+              <p className='font-bold text-3xl md:text-5xl text-center pl-[5%] pt-2'>How Attendees Feel</p>
             </div>
           </div>
         </section>
