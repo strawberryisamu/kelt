@@ -79,17 +79,15 @@ const Contact = () => {
                     backgroundBlendMode :'lighten'
                 }}
             >
-                <div className="mx-auto md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
-                    <div className="flex items-center justify-center pb-7 md:pb-9 mt-7 md:-mt-1.5">
-                        <h4 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight hidden md:block text-center">
-                            Contact/Apply Now
-                        </h4>
-                        <h4 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight block md:hidden text-center">
+                <div className="flex  md:w-full px-[5%]">
+                    <div className="w-[400px] ">
+                        <h4 className="font-bold text-3xl md:text-7xl tracking-tight  ">
                             Contact <br /> Apply Now
                         </h4>
                     </div>
-                    <form className="w-full mx-auto flex flex-col justify-center" noValidate onSubmit={handleSubmit}>
-                        <div className="flex flex-col space-y-5 mx-5">
+                    <div className='flex-1'>
+                    <form className=" w-full  flex flex-col justify-center" noValidate onSubmit={handleSubmit}>
+                        <div className="flex flex-col space-y-5">
                             <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 gap-4">
                                 <div className="w-full md:w-1/2">
                                     <label
@@ -219,6 +217,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </section>
