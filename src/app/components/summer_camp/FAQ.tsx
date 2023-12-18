@@ -15,7 +15,7 @@ const FAQ = () => {
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> What is the official language?</span>
                                 <span className="transition group-open:rotate-180">
-                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn leading-7">
@@ -28,7 +28,7 @@ const FAQ = () => {
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> What should I pack?</span>
                                 <span className="transition group-open:rotate-180">
-                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn leading-7">
@@ -50,7 +50,7 @@ const FAQ = () => {
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> What is the transportation option to Rishiri Island?</span>
                                 <span className="transition group-open:rotate-180">
-                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn leading-7">
@@ -63,7 +63,7 @@ const FAQ = () => {
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> What is the weather like in Rishiri?</span>
                                 <span className="transition group-open:rotate-180">
-                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn leading-7">
@@ -76,7 +76,7 @@ const FAQ = () => {
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> What is the food like?</span>
                                 <span className="transition group-open:rotate-180">
-                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn leading-7">
@@ -90,7 +90,7 @@ const FAQ = () => {
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                                 <span> Do I need to bring a backpack, or can I bring a rolling suitcase on the summer camp?</span>
                                 <span className="transition group-open:rotate-180">
-                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                 </span>
                             </summary>
                             <p className="text-neutral-600 mt-3 group-open:animate-fadeIn leading-7">

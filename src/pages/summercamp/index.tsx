@@ -32,7 +32,7 @@ const Home = () => {
     const currentURL = router.asPath;
 
     // Define the expected URL
-    const expectedURL = '/summercamp';
+    const expectedURL = '/summercamp/';
     console.log(currentURL);
     // Check if the current URL matches the expected URL
     if (currentURL === expectedURL) {
