@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image'
 import '@/styles/kelp_dry/Navbar.css'; // 必要なスタイルをインポート
+import Link from 'next/link';
 
 const smoothScroll = (anchorId: string) => {
   const anchorElement = document.querySelector(anchorId);
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
             <li className="mb-4"><a href="#accomplishment" onClick={() => handleNavClick('#accomplishment')}>実績</a></li>
             <li className="mb-4"><a href="#comment-kyodaisei" onClick={() => handleNavClick('#comment-kyodaisei')}>京大生の声</a></li>
             <li className="mb-4"><a href="#contact" onClick={() => handleNavClick('#contact')}>話を聞いてみる</a></li>
-            <li className="mb-4"><a href="/summercamp" >サマーキャンプに興味のある方はこちら</a></li>
+            <li className="mb-4"><Link href="/summercamp/" >サマーキャンプに興味のある方はこちら</Link></li>
             {/* <button> <Link href="/summercamp">サマーキャンプへ</Link> </button> */}
             <li className="">
               <a href="https://www.instagram.com/oji_japon/" target="_blank" rel="noopener noreferrer">

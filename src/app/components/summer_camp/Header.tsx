@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '@/styles/summer_camp/Header.css';
 import Navbar from '@/app/components/summer_camp/Navbar';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
     const [scroll, setScroll] = useState(0);
@@ -84,25 +85,25 @@ const Header: React.FC = () => {
                 <div className='summer_camp_header hidden lg:block'>
                     <nav>
                         <ul id="g-navi">
-                            <li><a href="/summercamp">Top</a></li>
+                            <li><Link href="/summercamp/">Top</Link></li>
                             <li className="has-child">
                                 <a href="#">About Rishiri and Us</a>
                                 <ul>
-                                    <li><a href="/summercamp#Why You Participate">Why You Participate</a></li>
-                                    <li><a href="/summercamp#What's Rishiri">What's Rishiri</a></li>
-                                    <li><a href="/summercamp#participant_testimonials">Participant Testimonials</a></li>
-                                    <li><a href="/summercamp#message_from_the_organizers">Message from the Organizers</a></li>
-                                    <li><a href="/summercamp#target_participants">Target Participants</a></li>
+                                    <li><Link href="/summercamp#Why You Participate">Why You Participate</Link></li>
+                                    <li><Link href="/summercamp#What's Rishiri">What's Rishiri</Link></li>
+                                    <li><Link href="/summercamp#participant_testimonials">Participant Testimonials</Link></li>
+                                    <li><Link href="/summercamp#message_from_the_organizers">Message from the Organizers</Link></li>
+                                    <li><Link href="/summercamp#target_participants">Target Participants</Link></li>
                                 </ul>
                             </li>
                             <li className="has-child">
                                 <a href="#">Details</a>
                                 <ul>
-                                    <li><a href="/summercamp#Details">Details</a></li>
-                                    <li><a href="/summercamp#FAQ">FAQ</a></li>
+                                    <li><Link href="/summercamp#Details">Details</Link></li>
+                                    <li><Link href="/summercamp#FAQ">FAQ</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="/summercamp#Contact/Apply Now">Contact/Apply Now</a></li>
+                            <li><Link href="/summercamp#Contact/Apply Now">Contact/Apply Now</Link></li>
                         </ul>
                     </nav>
                 </div>

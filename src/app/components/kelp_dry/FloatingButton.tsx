@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import '@/styles/kelp_dry/FloatingButton.css'; // Assuming you have your CSS saved in this file
+import Link from 'next/link';
 
 const FloatingButton = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -15,7 +16,7 @@ const FloatingButton = () => {
   };
 
   const toSummerCamp = () => {
-    window.location.href = '/summercamp'; // Add the implementation to navigate to the summercamp page
+    window.location.href = '/summercamp/'; // Add the implementation to navigate to the summercamp page
   };
 
   useEffect(() => {
@@ -50,15 +51,17 @@ const FloatingButton = () => {
 
   return (
     <div className={`flex flex-col justify-center items-center fixed z-50 right-0 bottom-0 ${buttonClass}`} style={{...buttonStyle}}>
-      <div className='flex flex-1 floating-button w-full' onClick={toSummerCamp} >
+      <Link href="/summercamp/" >
+      <div className='flex flex-1 floating-button w-full'  >
         <div className='w-[150px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 relative runded'>
           <Image fill  style={{aspectRatio: "1 / 1", objectFit: 'cover'}} sizes="(max-width: 768px) 100vw, 50vw" src="/images/international.png" alt="Logo" />
         </div>
-        <div className='w-[75px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 text-center  justify-center flex items-center'>
-          <a>サマーキャンプに <br /> 興味のある方は<br />
-          こちらへ</a>
-        </div>
+          <div className='w-[75px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 text-center  justify-center flex items-center'>
+            サマーキャンプに <br /> 興味のある方は<br />
+            こちらへ
+          </div>
       </div>
+      </Link>
       <div className='flex flex-1 floating-button' onClick={scrollToContact}>
         <div className='w-[150px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 relative'>
           <Image fill className='' style={{aspectRatio: "1 / 2", objectFit: 'cover'}} sizes="(max-width: 768px) 100vw, 50vw"  src="/images/firstView.png" alt="Logo"  />

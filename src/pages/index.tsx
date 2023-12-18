@@ -19,6 +19,7 @@ import ContactForm from '@/app/components/kelp_dry/ContactForm';
 import Footer from '@/app/components/kelp_dry/Footer';
 import Link from 'next/link';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 // #228ed4,#208d78,#db5518
 const Home = () => {
@@ -26,6 +27,26 @@ const Home = () => {
   const pageContentClass = isLoading ? "opacity-0" : "fadeIn";
   const [windowHeight, setWindowHeight] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    // Get the current URL
+    const currentURL = router.asPath;
+
+    // Define the expected URL
+    const expectedURL = '/';
+    console.log(currentURL);
+    // Check if the current URL matches the expected URL
+    if (currentURL === expectedURL) {
+      // The URLs match, you can perform actions here
+      console.log('Current URL matches expected URL');
+    } else {
+      // The URLs don't match
+      console.log('Current URL does not match expected URL');
+      router.push(currentURL);
+    }
+  }, [router.asPath]); 
 
   useEffect(() => {
     // モバイルデバイスかどうかをチェック

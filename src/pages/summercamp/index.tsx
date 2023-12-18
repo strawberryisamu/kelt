@@ -13,6 +13,7 @@ import Details from '@/app/components/summer_camp/Details';
 import Contact from '@/app/components/summer_camp/Contact';
 import FAQ from '@/app/components/summer_camp/FAQ';
 import TargetParticipants from '@/app/components/summer_camp/target_participants';
+import { useRouter } from 'next/router';
 
 const imgItems = [
   {src: '/images/friends.png', alt: 'friends'},
@@ -24,6 +25,25 @@ const imgItems = [
 // #228ed4,#208d78,#db5518
 const Home = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    // Get the current URL
+    const currentURL = router.asPath;
+
+    // Define the expected URL
+    const expectedURL = '/summercamp';
+    console.log(currentURL);
+    // Check if the current URL matches the expected URL
+    if (currentURL === expectedURL) {
+      // The URLs match, you can perform actions here
+      console.log('Current URL matches expected URL');
+    } else {
+      // The URLs don't match
+      console.log('Current URL does not match expected URL');
+      router.push(currentURL);
+    }
+  }, [router.asPath]); 
 
   useEffect (() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -54,9 +74,6 @@ const Home = () => {
           <div className="pb-[5%]" >
               <div className="px-[5%] bg-black pt-10 pb-10 leading-none">
                 <h2 className='text-5xl font-bold text-start text-white'><span className='text-yellow-500'>Discover</span> The Magic of Rishiri <span className='pr-5'>Island</span><span className='md:hidden'><br /></span><span className='text-lg font-thin'>A Unique Summer Camp Experience</span></h2>
-              </div>
-              <div className=' font-extralight px-[10%] pt-2 text-lg text-start leading-relaxed'>Embark on a journey to Rishiri Island, where tradition meets adventure. 
-                  Our summer camp offers an extraordinary opportunity for young minds to immerse themselves and the rich cultural heritage of this serene island. 
               </div>
               <div className='  px-[10%] pt-1 pb-5 text-4xl text-start leading-none'>
                 <span className='text-yellow-500 text-5xl'>Here’s</span> what makes our camp a <span className='font-semibold'>must-visit</span>
@@ -163,6 +180,7 @@ const Home = () => {
                 objectPosition: '50%'
               },
               {
+
                 src: '/images/4hours.png',
                 alt: '4hours',
                 objectPosition: '20%'
@@ -277,11 +295,15 @@ const Home = () => {
             I enjoyed having a brief exchange with Hokkaidō Rishiri High School students and teaching them Chinese.
             The ramen noodles soup made with Rishiri kombu are the best ones I have ever eaten in Japan! Everyone should definitely try it!
             '
-            description1='Santiago Poveda Gutiérrez from Spain
-            Graduate School of Informatics
-            '
-            description2='Yu Suu Meng from China
-            Graduate School of Law'
+            description1={<p className='text-lg'>
+            <span className='w-[80px] inline-block text-sm font-serif'>Name</span><span className='inline-block text-2xl font-serif'>Santiago Poveda Gutiérrez</span> 
+            <br /><span className='w-[80px] inline-block text-sm font-serif'>Nationality</span><span className='inline-block text-2xl font-serif pr-5'>Spain</span>
+            <br /><span className='w-[80px] inline-block text-sm font-serif'>University</span><span className='inline-block text-2xl font-serif'>Graduate School of Informatics</span></p>}
+
+            description2={<p className='text-lg'>
+            <span className='w-[80px] inline-block text-sm font-serif'>Name</span><span className='inline-block text-2xl font-serif'>Yu Suu Meng</span> 
+            <br /><span className='w-[80px] inline-block text-sm font-serif'>Nationality</span><span className='inline-block text-2xl font-serif pr-5'>China</span>
+            <br /><span className='w-[80px] inline-block text-sm font-serif'>University</span><span className='inline-block text-2xl font-serif'>Graduate School of Law</span></p>}
             imageSrc1='/images/santi.png'
             imageAlt1='santi'
             imageSrc2='/images/feel2.png'

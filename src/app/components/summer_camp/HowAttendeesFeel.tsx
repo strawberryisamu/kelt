@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
+import Fade from '@mui/material/Fade';
 
 
 const style = {
@@ -11,18 +13,16 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  height: '80%',
-  width: '80%',
+  height: '90%',
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  border: '2px solid black',
   boxShadow: 24,
-  p: 4,
 };
 
 interface ChildModalProps {
     imageSrc: string;
     imageAlt: string;
-    description: string;
+    description: ReactNode;
     children: React.ReactNode;
 }
 
@@ -36,22 +36,42 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
     };
   
     return (
-      <React.Fragment>
-        <div className="" onClick={handleOpen}>
+        <React.Fragment>
+        <div onClick={handleOpen}>
             <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
-            <p className="md:text-sm text-[3vw] mt-[1%] pb-[5%] text-center">{description}</p> 
+            {description}
         </div>
         <Modal
           open={open}
           onClose={handleClose}
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
         >
-          <Box sx={{ ...style, width: '90%' }}>
-            {children}
-            <Button onClick={handleClose}>Close</Button>
-          </Box>
+            <Fade in={open}>
+                <Box sx={{ ...style, width: '90%' }}>
+                    <div className='flex mt-[5%] gap-5 px-5 flex-col md:flex-row'>
+                        <div className='flex-1'>
+                        <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                            style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
+                            {description}
+                        </div>
+                        <div className='w-[100%] md:w-[50%] text-lg md:text-2xl leading-[2rem] font-serif'>
+                            {children}
+                        </div>
+                    </div>
+                    <div className='absolute flex items-center justify-end pr-5 md:justify-center w-[100%] bottm-5 md:bottom-10 '>
+                        <Button onClick={handleClose}><span className='text-xl text-black rounded-md'>Close</span></Button>
+                    </div>
+                </Box>
+          </Fade>
         </Modal>
       </React.Fragment>
     );
@@ -71,18 +91,38 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
         <div onClick={handleOpen}>
             <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
                 style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
-            <p className="md:text-sm text-[3vw] mt-[1%] pb-[5%] text-center">{description}</p>
+            {description}
         </div>
         <Modal
           open={open}
           onClose={handleClose}
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
         >
+            <Fade in={open}>
           <Box sx={{ ...style, width: '90%' }}>
-            {children}
-            <Button onClick={handleClose}>Close</Button>
+            <div className='flex mt-[5%] gap-5 px-5 flex-col md:flex-row'>
+                <div className='flex-1'>
+                <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                    style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
+                    {description}
+                </div>
+                <div className='w-[100%] md:w-[50%] text-lg md:text-2xl leading-[2rem] font-serif'>
+                    {children}
+                </div>
+            </div>
+            <div className='absolute flex items-center justify-end pr-5 md:justify-center w-[100%] bottm-5 md:bottom-10 '>
+                <Button onClick={handleClose}><span className='text-xl text-black rounded-md'>Close</span></Button>
+            </div>
           </Box>
+          </Fade>
         </Modal>
       </React.Fragment>
     );
@@ -91,8 +131,8 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
 interface HowAttendeesFeelProps {
     id?: string;
     title: string;
-    description1: string;
-    description2: string;
+    description1: ReactNode;
+    description2: ReactNode;
     body1: string;
     body2: string;
     imageSrc1: string;
@@ -107,24 +147,28 @@ const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, d
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     return (
-        <div id={id} className="pb-[5%] pt-[5%]">
+        <div id={id} className="pb-[5%] pt-5">
             {/* <h1 className="font-bold text-5xl mt-5 tracking-tight text-center">{title}</h1> */}
-            <div className="flex flex-col md:flex-row">
+            <h2 className='text-5xl px-[5%] font-thin'>These are the voices of the participants. <br /> Please <span className='text-yellow-500 font-normal'>click</span> on the photo to read.</h2>
+            <div className="flex flex-col md:flex-row pt-10">
                 <div className='flex-1 flex flex-col mx-[5%] pb-[5%]'>
                     <ChildModal1 
                     imageSrc={imageSrc1}
                     imageAlt={imageAlt1}
                     description={description1}
-                    children={body1}
-                    />
+
+                    >
+                        {body1}
+                    </ChildModal1>
                 </div>
                 <div className='flex-1 flex flex-col mx-10'>
                     <ChildModal2
                     imageSrc={imageSrc2}
                     imageAlt={imageAlt2}
                     description={description2}
-                    children={body2}
-                    />
+                    >
+                    {body2}
+                    </ChildModal2>
                 </div>
             </div>
         </div>
