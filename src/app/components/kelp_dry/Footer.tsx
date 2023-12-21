@@ -32,7 +32,7 @@ function Footer (){
                     </li>
                 </ul>
             </nav>
-            <p className="footer-002__copyright">@ 2023 株式会社文継 All rights reserved.</p>
+            <p className="footer-002__copyright ">@ 2023 株式会社文継 All rights reserved.</p>
         </footer>
     )
 }

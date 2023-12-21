@@ -18,14 +18,14 @@ const CeoMessage: React.FC<CeoMessageProps> = ({ imageUrl, title, subtitle, chil
         triggerOnce: true, 
       });
     return (
-        <div ref={ref} className={`relative gap-2 flex w-full ceo-content  ${inView ? 'animate' : ''}`} >
-            <div className="w-1/2 flex justify-center items-center left">
-                <Image width={500} height={500} src={imageUrl} alt="Description" className="w-full h-auto" />
+        <div ref={ref} className={`relative gap-2 flex w-full flex-col lg:flex-row gap-5 ${inView ? 'animate' : ''}`} >
+            <div className="flex-1 flex justify-center items-start left ">
+                <Image width={500} height={500} src={imageUrl} alt="Description" className="w-full h-[300px] lg:h-[500px]" style={{objectFit: 'cover', aspectRatio: '2/1', objectPosition:'10% '}}/>
             </div>
-            <div className="w-1/2 pt-4 right">
-                <h2 className=" text-[5vw] md:text-[2vw]">{title}</h2>
-                {subtitle && <p className={`mt-1 text-[2.5vw] md:text-[0.95vw] `}>{subtitle}</p>}
-                <div className={`mt-8 text-[3vw] md:text-[1.1vw] `}>{children}</div>
+            <div className="flex-1 right">
+                <h2 className="text-2xl lg:text-3xl font-bold">{title}</h2>
+                {subtitle && <p className={`text-md lg:text-lg leading-relaxed`}>{subtitle}</p>}
+                <div className={`text-md lg:text-lg mt-5`}>{children}</div>
             </div>
         </div>
     );

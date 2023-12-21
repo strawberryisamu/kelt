@@ -106,13 +106,11 @@
     margin-bottom: 2.1904761905%;
     display: inline-block;
     position: relative;
-    font-size: 2em;
     color: #000;
 }
 
 .subtitle {
   position: relative;
-  font-size: 1.25em;
 }
 
 
@@ -173,13 +171,13 @@
 
 @media (max-width: 765px){
   .animated-title {
-    font-size: 5vw;
+
     margin-top: 6.9523809524%;
     margin-bottom: 2.1904761905%;
 
   }
   .subtitle {
-    font-size: 3vw;
+
     margin-bottom: 5px;
     line-height: 1.5;
 

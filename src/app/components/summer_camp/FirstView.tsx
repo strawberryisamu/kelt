@@ -31,7 +31,7 @@ const FirstView: React.FC<Props> = (props: Props) => {
 
   return (
     <div id="Top" style={{height: `${props.windowHeight}px`}}>
-      <div className='slideshow-container'>
+      <div className='slideshow-container mx-0 max-w-none'>
         {props.imgItems.map((item, index) => (
           <div
             key={index}
@@ -49,7 +49,7 @@ const FirstView: React.FC<Props> = (props: Props) => {
               <img src='/images/kkrn_icon_saisei_11.svg' alt="Play" style={{ width: '120px', height: '120px' }} />
             </button>
           </div>
-              <Image fill sizes='100vw' objectFit='cover' src={item.src} alt={item.alt} />
+              <Image fill sizes='100vw' style={{objectFit: 'cover'}} src={item.src} alt={item.alt} />
           </div>
         ))}
       </div>

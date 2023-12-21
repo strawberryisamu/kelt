@@ -53,8 +53,8 @@ const SectionWithBackground: React.FC<SectionWithBackgroundProps> = ({
           <div style={{...slideFromleft , backgroundColor: 'lightgray'}}></div>
       </div>}
         <div ref={ref} className={`top-0 left-0 ${back? 'visionsss': ''}` } style={{zIndex: 10 ,padding: '0 10%'}}>
-            <h1  className={`animated-title ${inView ? 'animate' : ''}`}>{title}</h1>
-            {subtitle && <p  className={`subtitle ${inView ? 'animate' : ''}`}>{subtitle}</p>}
+            <h1  className={`animated-title font-bold text-xl lg:text-3xl  ${inView ? 'animate' : ''}`}>{title}</h1>
+            {subtitle && <p  className={`subtitle leading-relaxed mb-4 lg:text-xl text-lg ${inView ? 'animate' : ''} `}>{subtitle}</p>}
             <div className={`${subtitle ? 'children' : ''} `}>
               {children}
             </div>
@@ -64,7 +64,6 @@ const SectionWithBackground: React.FC<SectionWithBackgroundProps> = ({
   );
 };
 
-{/* <h2 ref={titleRef} className="text-2xl title-with-underline"><span>{title}</span></h2> */}
 
 export default SectionWithBackground;
 

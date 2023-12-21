@@ -39,7 +39,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 const DescriptionSection: React.FC<DescriptionSectionProps> = ({ text, title }) => {
   return (
     <div className="fullscreen description-section">
-      {title && <h2 className='text-[4vw] md:text-[2.5vw]'>{title}</h2>}
+      {title && <h2 className='text-[4vw] md:text-[2.5vw] font-bold mt-2 mb-1;'>{title}</h2>}
       {text}
     </div>
   );

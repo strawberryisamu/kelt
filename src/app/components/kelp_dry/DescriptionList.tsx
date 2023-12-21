@@ -12,12 +12,12 @@ interface DescriptionListProps {
 
     return (
       <div className="w-full flex flex-col justify-around " style={{backgroundColor: 'lightgray'}}>
-        <h2 style={{}}>{title}</h2>
-        <h3>{subtitle}</h3>
+        <h2 className='text-lg font-bold mt-2 mb-1'>{title}</h2>
+        <h3 className='text-lg font-normal mt-2 mb-1 text-gray-600'>{subtitle}</h3>
         {descriptions.map((description, index) => (
           <p
             key={index}
-            className={`bg-white p-4 shadow-md cursor-pointer transition-all duration-500 ${index === currentImageIndex ? 'text-lg opacity-100' : 'text-base opacity-50'}`}
+            className={`leading-relaxed mb-4 bg-white p-4 shadow-md cursor-pointer transition-all duration-500 ${index === currentImageIndex ? 'text-lg opacity-100' : 'text-base opacity-50'}`}
             onClick={() => onDescriptionClick(index)}
           >
             {description}

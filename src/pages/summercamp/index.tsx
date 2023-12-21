@@ -46,6 +46,7 @@ const Home = () => {
   }, [router.asPath]); 
 
   useEffect (() => {
+
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if(isMobile) {
       setIsMobile(true);
@@ -275,7 +276,7 @@ const Home = () => {
         <section>
           <div id='participant_testimonials' className={`'relative  bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
-                    backgroundImage: 'url(./images/rishiri_from_above.png)', 
+                    backgroundImage: 'url(/images/rishiri_from_above.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                     backgroundBlendMode :'lighten'
                 }}
@@ -313,7 +314,7 @@ const Home = () => {
         <section>
           <div id='message_from_the_organizers' className={`'relative bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
-                    backgroundImage: 'url(./images/bird.png)', 
+                    backgroundImage: 'url(/images/bird.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                     backgroundBlendMode :'lighten'
                 }}
@@ -327,7 +328,7 @@ const Home = () => {
         <section>
           <div id='target_participants'  className={`'relative mt-[10%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
-                    backgroundImage: 'url(./images/firstView.png)', 
+                    backgroundImage: 'url(/images/firstView.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                     backgroundBlendMode :'lighten'
                 }}
@@ -341,7 +342,7 @@ const Home = () => {
           <section>
                 <div id='Details' className={`relative bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                     style={{
-                        backgroundImage: 'url(./images/shimarisu.png)', 
+                        backgroundImage: 'url(/images/shimarisu.png)', 
                         backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                         backgroundBlendMode :'lighten'
                     }}

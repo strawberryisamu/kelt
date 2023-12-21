@@ -10,6 +10,8 @@ import Fade from '@mui/material/Fade';
 
 const style = {
   position: 'absolute' as 'absolute',
+  overflowY: "scroll", 
+  maxHeight: "90%",
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
@@ -49,6 +51,9 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
           aria-describedby="child-modal-description"
           closeAfterTransition
           slots={{ backdrop: Backdrop }}
+          sx={{ 
+            height:'100%',
+            overflow:'scroll',}}
           slotProps={{
             backdrop: {
               timeout: 500,
@@ -100,6 +105,9 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
           aria-describedby="child-modal-description"
           closeAfterTransition
           slots={{ backdrop: Backdrop }}
+          sx={{ 
+            height:'100%',
+            overflow:'scroll',}}
           slotProps={{
             backdrop: {
               timeout: 500,

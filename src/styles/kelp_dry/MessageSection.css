@@ -13,7 +13,7 @@
 }
 
 .message-title {
-    font-size: 5vw;
+
     line-height: 1.3235294118;
     letter-spacing: 0.08em;
 }
@@ -21,7 +21,7 @@
 
 .message-content {
     padding-top: 45px;
-    font-size: 3vw;
+
     line-height: 1.7692307692;
     letter-spacing: 0.06em;
 }
@@ -35,7 +35,7 @@
     }
 
     .message-title {
-        font-size: 2.5vw;
+
         line-height: 1.4117647059;
         color: #333333;
     }
@@ -46,7 +46,7 @@
     
     .message-content {
         padding-top: 45px;
-        font-size: 1.1vw;
+
         line-height: 2.25;
         color: #333333;
     }

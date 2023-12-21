@@ -9,7 +9,9 @@ import Fade from '@mui/material/Fade';
 
 const style = {
   position: 'absolute' as 'absolute',
-  top: '50%',
+  overflowY: "scroll", 
+  maxHeight: "90%",
+  top: `350px`,
   left: '50%',
   transform: 'translate(-50%, -50%)',
   height: '80%',
@@ -17,10 +19,11 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p:  4,
 };
 
 function ChildModalOrganizer() {
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -31,28 +34,28 @@ function ChildModalOrganizer() {
 
   return (
     <React.Fragment>
-        <div className='w-[75%] md:w-[100%]' onClick={handleOpen}>
-          <div className='flex'>
-            <div className='w-[40%]  text-3xl md:text-8xl mt-5  text-start ' >
-              <h1 className='font-bold tracking-tight'>Organizer</h1>
-              <div className=" md:text-5xl text-5xl pb-2 text-start font-serif">
+        <div className='w-[75%] md:w-[100%]' >
+        <div className='flex' onClick={handleOpen}>
+          <div className='flex-1  text-3xl md:text-8xl mt-5  text-start ' >
+            <h1 className='font-bold tracking-tight'>Organizer</h1>
+            <div className=" md:text-5xl text-5xl pb-2 text-start font-serif">
               <p>Sota Imai</p>
-              <p>Faculty of Literature</p> 
+              <p>Faculty of Literature</p>
               <p>Kyoto University</p>
-              </div> 
-              <div className='text-3xl mt-5 flex justify-start font-thin '>
-                <p className='border-2 p-2 inline-block cursor-pointer'>Click Here</p>
-              </div>
             </div>
-            <Image 
-              src='/images/imai.png' 
-              alt='imai' 
-              width={500} 
-              height={500} 
-              className={`flex-1 w-[100%] rounded-md border-2 border-gray-300 `} 
-              style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'left' }} 
-            />
+            <div className='text-3xl mt-5 flex justify-start font-thin '>
+              <p className='border-2 p-2 inline-block cursor-pointer'>Click Here</p>
+            </div>
           </div>
+          <Image 
+            src='/images/imai.png' 
+            alt='imai' 
+            width={500} 
+            height={500} 
+            className={`w-[60%] rounded-md border-2 border-gray-300 `} 
+            style={{ aspectRatio: "2 / 1", objectFit: "cover",  }} 
+          />
+        </div>
         </div>
         <Modal
           open={open}
@@ -69,16 +72,26 @@ function ChildModalOrganizer() {
         >
           <Fade in={open}>
             <Box sx={style}>
-              <div className='flex'>
-                <Image 
-                  src='/images/imai.png' 
-                  alt='imai' 
-                  width={500} 
-                  height={500} 
-                  className={`flex-1 w-[100%] rounded-md border-2 border-gray-300 `} 
-                  style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'left' }} 
-                />
-                <div className='md:text-[1.5vw] text-[3vw] w-[90%] mx-auto'>
+              <div className='flex flex-col lg:flex-row gap-5' style={{overflow: 'hidden'}}>
+                <div className='flex-1 flex lg:flex-col flex-row '>
+                  <Image 
+                    src='/images/imai.png' 
+                    alt='imai' 
+                    width={500} 
+                    height={500} 
+                    className={`lg:w-full w-1/2 h-[300px] rounded-md border-2 border-gray-300 `} 
+                    style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'left' }} 
+                  />
+                  <div className='flex-1 m-auto'>
+                    <h1 className='font-bold tracking-tight'>Organizer</h1>
+                    <div className=" md:text-xl text-md pb-2 text-start font-serif">
+                      <p>Sota Imai</p>
+                      <p>Faculty of Literature</p>
+                      <p>Kyoto University</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='md:text-xl leading-relaxed text-lg w-[100%] lg:w-[60%] mx-auto'>
                   <p className='font-light'>
                     A few years ago, I participated in a kelp drying on Rishiri Island and was fascinated by its nature. With the desire to make the Island known to more people around the world, I have organized this summer camp every summer.
                     We are well-acquainted with Rishiri Island, so we can tailor the best tour to accommodate the participants. But if you come all the way to Japan's northernmost island, you shouldn't be satisfied with just sightseeing. 
@@ -87,7 +100,7 @@ function ChildModalOrganizer() {
                   </p>
                 </div>
               </div>
-                <div className='absolute flex items-center justify-end pr-5 md:justify-center w-[100%] bottm-5 md:bottom-10 '>
+                <div className='flex items-center justify-end md:justify-center bottom-0 md:bottom-10 '>
                     <Button onClick={handleClose}><span className='text-xl text-black rounded-md'>Close</span></Button>
                 </div>
             </Box>

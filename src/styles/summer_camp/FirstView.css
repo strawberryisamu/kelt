@@ -2,6 +2,7 @@
 .slideshow-container {
     height: inherit;
     overflow: hidden; /* コンテナ外の要素は非表示に */
+    width: 100vw;
   }
 
 .first_title {

@@ -24,7 +24,7 @@ import { useRouter } from 'next/router';
 // #228ed4,#208d78,#db5518
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const pageContentClass = isLoading ? "opacity-0" : "fadeIn";
+  const pageContentClass = isLoading ? 'opacity-0': 'opacity-100 transition-opacity duration-1000' ;
   const [windowHeight, setWindowHeight] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -105,17 +105,28 @@ const Home = () => {
               imageUrl="/images/ceomessage.png"
               title="利尻島は、若いうちに行け"
               subtitle="今しかできない、大切な何かを求めて"
-          ><>
-          <Link href="https://note.com/doors_hokkaido/n/n4026f2b09a77"><h2 className=' text-[3.3vw] md:text-[1.3vw]'>株式会社 膳  　　代表取締役　<span className="border-b-[1px] border-black">小坂 善一</span>  <span className='text-[1.7vw] md:text-[0.6vw]'>*写真左側</span></h2></Link>
-            <p>利尻島で20年間昆布漁師をしています。これから各産業で世界のリーダーになっていく京都大学の学生にこそ、学生の間に一次産業のド現場を見てほしいと思っています。心も体もしっかり鍛えますので、私の胸に飛び込んできてください。
-            </p>
-
-
-          <Link href="https://bun-kei.com/company/"><h2 className='text-[3.3vw] md:text-[1.3vw]'>株式会社 文継 　代表取締役　<span className="border-b-[1px] border-black">​大路 幸宗</span>  <span className='text-[1.7vw] md:text-[0.6vw]'>*写真右側</span></h2></Link>
-            <p>
-            京都大学文学部を卒業後、三菱商事に入社しました。政治家・官僚・商社マンなど様々な方と仕事をする中で、現場を知らずに物事を進める現実を問題視するようになりました。大学生には、自然に振り回され合理がまかり通らない生産現場、その現場で働く生産者の精神から、多くのことを感じてほしいと思っています。
-            </p>
-          </></CeoMessage>
+          >
+          <div className='flex flex-col gap-5'>
+            <div className='flex-1 '>
+              <div className='pb-2'>
+                <Link href="https://note.com/doors_hokkaido/n/n4026f2b09a77">
+                <h2 className='text-lg md:text-xl  font-semibold'>株式会社 膳  　代表取締役　<span className="border-b-[1px] border-black text-3xl"><span className='sm:hidden'><br /></span>小坂 善一</span>  <span className='text-xs md:text-md font-normal pl-5'>*写真左側</span>
+                </h2></Link>
+              </div>
+              <p className='leading-relaxed '>利尻島で20年間昆布漁師をしています。これから各産業で世界のリーダーになっていく京都大学の学生にこそ、学生の間に一次産業のド現場を見てほしいと思っています。心も体もしっかり鍛えますので、私の胸に飛び込んできてください。
+              </p>
+            </div>
+            <div className='flex-1'>
+              <div className='pb-2'>
+                <Link href="https://bun-kei.com/company/">
+                <h2 className='text-lg md:text-xl  font-semibold'>株式会社 文継 　代表取締役　<span className="border-b-[1px] border-black text-3xl"><span className='sm:hidden'><br /></span>​大路 幸宗</span>  <span className='text-xs md:text-md font-normal pl-5'>*写真右側</span>
+                </h2></Link>
+              </div>
+              <p className='leading-relaxed '>京都大学文学部を卒業後、三菱商事に入社しました。政治家・官僚・商社マンなど様々な方と仕事をする中で、現場を知らずに物事を進める現実を問題視するようになりました。大学生には、自然に振り回され合理がまかり通らない生産現場、その現場で働く生産者の精神から、多くのことを感じてほしいと思っています。
+              </p>
+            </div>
+          </div>
+          </CeoMessage>
         </SectionWithBackground>
       </div>
 
@@ -125,7 +136,7 @@ const Home = () => {
           color='lightgray'
         >
           <div>
-          <p style={{paddingTop: 10, paddingBottom: 30}}>労働力不足という長年の課題を抱える利尻島の漁師のため、毎年6月〜7月の昆布漁最盛期に、京都大学の学生やその友人までを対象に2019年から実施している昆布干しのプロジェクトです。利尻島に住み込みで昆布干し作業に従事しながら漁師の親方の漁業に向き合う姿勢を学び、島民との様々な交流を通じて本州では得られない一生ものの経験をしていただきます。</p>
+          <p className='leading-relaxed mb-4' style={{paddingTop: 10, paddingBottom: 30}}>労働力不足という長年の課題を抱える利尻島の漁師のため、毎年6月〜7月の昆布漁最盛期に、京都大学の学生やその友人までを対象に2019年から実施している昆布干しのプロジェクトです。利尻島に住み込みで昆布干し作業に従事しながら漁師の親方の漁業に向き合う姿勢を学び、島民との様々な交流を通じて本州では得られない一生ものの経験をしていただきます。</p>
           
           <div className="hidden md:block">
             <CarouselType1Section 
@@ -136,7 +147,11 @@ const Home = () => {
             />
           </div>
           <div className="block md:hidden">
-          <Gallery images={[{src: '/images/interest_in_1st.png', alt:'recomenndation1'}, {src:'/images/challenge_many_things.png', alt: 'recomenndation2'},{src: '/images/friends_forever.png', alt: 'recomenndation3'}]} text={<><p>一次産業や地方創生に興味がある</p><p> 学生時代に色々な事に挑戦したい </p><p> 一生付き合える最高の仲間が欲しい</p></>} title="こんな京大生におすすめ" />
+            <Gallery images={[{src: '/images/interest_in_1st.png', alt:'recomenndation1'}, {src:'/images/challenge_many_things.png', alt: 'recomenndation2'},{src: '/images/friends_forever.png', alt: 'recomenndation3'}]} 
+            text={<><p className='leading-relaxed mb-4'>一次産業や地方創生に興味がある</p>
+            <p className='leading-relaxed mb-4'> 学生時代に色々な事に挑戦したい </p>
+            <p className='leading-relaxed mb-4'> 一生付き合える最高の仲間が欲しい</p></>} 
+            title="こんな京大生におすすめ" />
           </div>
 
           <div className="hidden md:block">
@@ -149,7 +164,10 @@ const Home = () => {
             />
           </div>
           <div className="block md:hidden">
-            <Gallery images={[{src: '/images/fisherman_student.png', alt:'temptaion1'}, {src:'/images/breakfast.png', alt: 'temptaion2'},{src: '/images/kelt_dry.png', alt: 'temptaion3'}]} text={<><p>非合理な自然と対峙する漁業の現場での魅力的な漁師との協働</p><p> 早朝に働いた後振る舞って頂く朝食の格別な美味しさ </p> <p> 昆布干しに共に従事する島民や他の京大生との交流</p> </>} title="昆布干しバイトの魅力" />
+            <Gallery images={[{src: '/images/fisherman_student.png', alt:'temptaion1'}, {src:'/images/breakfast.png', alt: 'temptaion2'},{src: '/images/kelt_dry.png', alt: 'temptaion3'}]} 
+            text={<><p className='leading-relaxed mb-4'>非合理な自然と対峙する漁業の現場での魅力的な漁師との協働</p>
+            <p className='leading-relaxed mb-4'> 早朝に働いた後振る舞って頂く朝食の格別な美味しさ </p> 
+            <p className='leading-relaxed mb-4'> 昆布干しに共に従事する島民や他の京大生との交流</p> </>} title="昆布干しバイトの魅力" />
           </div>
           </div>
 
@@ -300,7 +318,7 @@ const Home = () => {
         title='話を聞いてみる'
         subtitle='次回の利尻島京大昆布干しに興味がある方はこちら'
         >
-          <p>募集の案内など昆布干しに関するメルマガを発信しますので、登録お願いします。募集を見逃したくない方は登録がおすすめです！</p>
+          <p className='leading-relaxed mb-4'>募集の案内など昆布干しに関するメルマガを発信しますので、登録お願いします。募集を見逃したくない方は登録がおすすめです！</p>
           <ContactForm/>
         </SectionWithBackground>
       </div>

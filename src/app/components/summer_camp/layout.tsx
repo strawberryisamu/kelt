@@ -6,8 +6,6 @@ import FloatingButton from '@/app/components/summer_camp/FloatingButton';
 import LoadingScreen from '../kelp_dry/LoadingScreen';
 import FirstView from '../summer_camp/FirstView';
 
-
-
 interface ImgItem {
     src: string;
     alt: string;
@@ -23,6 +21,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children , title, subtitle, imgItems}) => {
     const [windowHeight, setWindowHeight] = useState<number>(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
     useEffect(() => {
         // モバイルデバイスかどうかをチェック
@@ -48,8 +47,12 @@ const Layout: React.FC<LayoutProps> = ({ children , title, subtitle, imgItems}) 
         }
     }, []);
 
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
+
     return (
-        <div className={`fadeIn summer_camp` } style={{backgroundColor: 'white'}}>
+        <div className={`summer_camp  ${isLoaded ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`} style={{backgroundColor: 'white' }}>
             <Header/>
             <FirstView title={title} subtitle={subtitle} windowHeight={windowHeight} imgItems={imgItems}/>
             <FloatingButton/>

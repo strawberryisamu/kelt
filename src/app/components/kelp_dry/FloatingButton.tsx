@@ -2,11 +2,20 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import '@/styles/kelp_dry/FloatingButton.css'; // Assuming you have your CSS saved in this file
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 const FloatingButton = () => {
   const [isFixed, setIsFixed] = useState(false);
   const [buttonHeight, setButtonHeight] = useState(0);
   const [isTransparent, setIsTransparent] = useState(true); // Add state for transparency
+  const router = useRouter();
+
+  const handleNavigation = async () => {
+      await router.push('/summercamp'); // クライアントサイドでのナビゲーション
+      // window.location.reload(); // ページの強制リロード
+  };
+
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -51,17 +60,15 @@ const FloatingButton = () => {
 
   return (
     <div className={`flex flex-col justify-center items-center fixed z-50 right-0 bottom-0 ${buttonClass}`} style={{...buttonStyle}}>
-      <Link href="/summercamp/" >
-      <div className='flex flex-1 floating-button w-full'  >
-        <div className='w-[150px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 relative runded'>
-          <Image fill  style={{aspectRatio: "1 / 1", objectFit: 'cover'}} sizes="(max-width: 768px) 100vw, 50vw" src="/images/international.png" alt="Logo" />
-        </div>
+      <div className='flex flex-1 floating-button w-full' onClick={handleNavigation} >
+          <div className='w-[150px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 relative runded'>
+            <Image fill  style={{aspectRatio: "1 / 1", objectFit: 'cover'}} sizes="(max-width: 768px) 100vw, 50vw" src="/images/international.png" alt="Logo" />
+          </div>
           <div className='w-[75px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 text-center  justify-center flex items-center'>
             サマーキャンプに <br /> 興味のある方は<br />
             こちらへ
           </div>
       </div>
-      </Link>
       <div className='flex flex-1 floating-button' onClick={scrollToContact}>
         <div className='w-[150px] h-[60px] md:w-[220px] md:h-[110px]  flex-1 relative'>
           <Image fill className='' style={{aspectRatio: "1 / 2", objectFit: 'cover'}} sizes="(max-width: 768px) 100vw, 50vw"  src="/images/firstView.png" alt="Logo"  />
