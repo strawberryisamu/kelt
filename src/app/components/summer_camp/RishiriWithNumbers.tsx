@@ -41,7 +41,7 @@ const RishiriWithNumbers: React.FC<RishiriWithNumbersProps> = ({ images, texts, 
     return (
         <section>
             {isMobile ? (
-                <div className='flex flex-col'>
+                <div className='flex flex-col '>
                         <div
                             className={`h-full w-full relative`}
                         >

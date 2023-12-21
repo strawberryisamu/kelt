@@ -15,7 +15,6 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  height: '90%',
   bgcolor: 'background.paper',
   border: '2px solid black',
   boxShadow: 24,
@@ -25,10 +24,11 @@ interface ChildModalProps {
     imageSrc: string;
     imageAlt: string;
     description: ReactNode;
+    description2?: ReactNode;
     children: React.ReactNode;
 }
 
-const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, description, children }) => {
+const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, description, description2 ,  children }) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
       setOpen(true);
@@ -66,13 +66,13 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
                         <div className='flex-1'>
                         <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
                             style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
-                            {description}
+                            {description2}
                         </div>
                         <div className='w-[100%] md:w-[50%] text-lg md:text-2xl leading-[2rem] font-serif'>
                             {children}
                         </div>
                     </div>
-                    <div className='absolute flex items-center justify-end pr-5 md:justify-center w-[100%] bottm-5 md:bottom-10 '>
+                    <div className='flex items-center justify-end pr-5 md:justify-center w-[100%] mb-5 '>
                         <Button onClick={handleClose}><span className='text-xl text-black rounded-md'>Close</span></Button>
                     </div>
                 </Box>
@@ -82,7 +82,7 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
     );
   };
 
-  const ChildModal2: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, description, children }) => {
+  const ChildModal2: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, description,description2 , children }) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
       setOpen(true);
@@ -95,7 +95,7 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
       <React.Fragment>
         <div onClick={handleOpen}>
             <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
-                style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
+            style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
             {description}
         </div>
         <Modal
@@ -118,15 +118,15 @@ const ChildModal1: React.FC<ChildModalProps> = ({ imageSrc, imageAlt, descriptio
           <Box sx={{ ...style, width: '90%' }}>
             <div className='flex mt-[5%] gap-5 px-5 flex-col md:flex-row'>
                 <div className='flex-1'>
-                <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
-                    style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
-                    {description}
+                  <Image src={imageSrc} alt={imageAlt} width={500} height={500} className={`w-[100%] rounded-md border-2 border-gray-300 `} 
+                  style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'right' }}/>
+                  {description2}
                 </div>
                 <div className='w-[100%] md:w-[50%] text-lg md:text-2xl leading-[2rem] font-serif'>
                     {children}
                 </div>
             </div>
-            <div className='absolute flex items-center justify-end pr-5 md:justify-center w-[100%] bottm-5 md:bottom-10 '>
+            <div className=' flex items-center justify-end md:justify-center w-[100%] mb-5 pr-5 '>
                 <Button onClick={handleClose}><span className='text-xl text-black rounded-md'>Close</span></Button>
             </div>
           </Box>
@@ -141,6 +141,8 @@ interface HowAttendeesFeelProps {
     title: string;
     description1: ReactNode;
     description2: ReactNode;
+    descriptionInModal1: ReactNode;
+    descriptionInModal2: ReactNode;
     body1: string;
     body2: string;
     imageSrc1: string;
@@ -149,7 +151,7 @@ interface HowAttendeesFeelProps {
     imageAlt2: string;
 }
 
-const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, description1,description2, body2, imageSrc1, imageAlt1, imageSrc2, imageAlt2 }) => {
+const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, description1,description2,descriptionInModal1, descriptionInModal2, body2, imageSrc1, imageAlt1, imageSrc2, imageAlt2 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -158,22 +160,23 @@ const HowAttendeesFeel: React.FC<HowAttendeesFeelProps> = ({ id, title, body1, d
         <div id={id} className="pb-[5%] pt-5">
             {/* <h1 className="font-bold text-5xl mt-5 tracking-tight text-center">{title}</h1> */}
             <h2 className='text-5xl px-[5%] font-thin'>These are the voices of the participants. <br /> Please <span className='text-yellow-500 font-normal'>click</span> on the photo to read.</h2>
-            <div className="flex flex-col md:flex-row pt-10">
-                <div className='flex-1 flex flex-col mx-[5%] pb-[5%]'>
+            <div className="flex flex-col lg:flex-row pt-10 gap-5 px-[5%]">
+                <div className='flex-1 flex flex-col  pb-[5%]'>
                     <ChildModal1 
                     imageSrc={imageSrc1}
                     imageAlt={imageAlt1}
                     description={description1}
-
+                    description2={descriptionInModal1}
                     >
                         {body1}
                     </ChildModal1>
                 </div>
-                <div className='flex-1 flex flex-col mx-10'>
+                <div className='flex-1 flex flex-col '>
                     <ChildModal2
                     imageSrc={imageSrc2}
                     imageAlt={imageAlt2}
                     description={description2}
+                    description2={descriptionInModal2}
                     >
                     {body2}
                     </ChildModal2>

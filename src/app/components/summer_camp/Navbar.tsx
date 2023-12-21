@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         <nav className='flex flex-col justify-center items-center pt-5 pb-5'>
           <ul id="g-navi flex flex-col gap-5">
             <li><Link href="/summercamp/">Top</Link></li>
-            <li className="has-child">
+            <li className="">
               <a href="#" onClick={() => {setHasChild1(!hasChild1);console.log(hasChild1);}}>About Rishiri and Us</a>
               <ul className={`${hasChild1 ? 'hidden' : ''}`}>
                 <li><Link onClick={() => setIsOpen(false)} href="/summercamp/#Why You Participate">Why You Participate</Link></li>
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                 <li><Link onClick={() => setIsOpen(false)} href="/summercamp/#target_participants">Target Participants</Link></li>
               </ul>
             </li>
-            <li className="has-child">
+            <li className="">
               <a href="#" onClick={() => {setHasChild2(!hasChild2);console.log(hasChild2);}}>Details</a>
               <ul className={`${hasChild2 ? 'hidden' : ''}  `}>
                 <li><Link  onClick={() => setIsOpen(false)} href="/summercamp/#Details">Details</Link></li>
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
 
-          <ul className="flex pt-3 gap-5 w-[35%] md:w-[15%]">
+          <ul className="flex pt-3 gap-5 w-[200px]">
             <li className=" flex-1 rounded-md" style={{ backgroundColor: 'lightgray' }} >
               <Link target="_blank" rel="noopener noreferrer" href="https://bun-kei.com/">
                 <Image src="/images/bunkei.png" width={500} height={500} alt='bunkei_logo' className={`w-[100%]`}

@@ -32,47 +32,7 @@ const Header: React.FC = () => {
         };
     }, [scroll]);
 
-    useEffect(() => {
-        function mediaQueriesWin() {
-            const width = window.innerWidth;
-            if (width <= 765) {
-                const hasChildLinks = document.querySelectorAll('.has-child > a');
-                hasChildLinks.forEach((link) => {
-                    link.addEventListener('click', (event) => {
-                        event.preventDefault();
-                        const parentElem = link.parentElement;
-                        if (parentElem) {
-                            parentElem.classList.toggle('active');
-                            const childUl = parentElem.querySelector('ul');
-                            if (childUl) {
-                                childUl.style.display = childUl.style.display === 'none' ? '' : 'none';
-                            }
-                        }
-                    });
-                });
-            } else {
-                const hasChildLinks = document.querySelectorAll('.has-child > a');
-                hasChildLinks.forEach((link) => {
-                    link.removeEventListener('click', () => {});
-                });
-                const hasChildItems = document.querySelectorAll('.has-child');
-                hasChildItems.forEach((item) => {
-                    item.classList.remove('active');
-                    const childUl = item.querySelector('ul');
-                    if (childUl) {
-                        childUl.style.display = '';
-                    }
-                });
-            }
-        }
 
-        mediaQueriesWin();
-        window.addEventListener('resize', mediaQueriesWin);
-
-        return () => {
-            window.removeEventListener('resize', mediaQueriesWin);
-        };
-    }, []);
 
     return (
         <header id="header" className={`${headerClass} pt-[20px] pb-[20px] `}>

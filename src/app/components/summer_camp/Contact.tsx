@@ -72,15 +72,15 @@ const Contact = () => {
 
     return (
         <section>
-            <div id="Contact/Apply Now" className={`relative mb-[200px] pt-[5%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
+            <div id="Contact/Apply Now" className={`relative pb-[150px] pb-5 pt-[5%] bg-no-repeat bg-cover ${isMobile ? ' bg-scroll' : 'bg-fixed'}`}
                 style={{
-                    backgroundImage: 'url(./images/sea_kayack.png)', 
+                    backgroundImage: 'url(/images/sea_kayack.png)', 
                     backgroundColor: 'rgba(255, 255, 255, 0.5)', 
                     backgroundBlendMode :'lighten'
                 }}
             >
-                <div className="flex  md:w-full px-[5%]">
-                    <div className="w-[400px] ">
+                <div className="flex md:flex-row flex-col md:w-full px-[5%]">
+                    <div className="md:w-[400px] w-full md:mb-0 mb-5">
                         <h4 className="font-bold text-3xl md:text-7xl tracking-tight  ">
                             Contact <br /> Apply Now
                         </h4>

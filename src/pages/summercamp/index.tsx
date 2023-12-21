@@ -199,11 +199,11 @@ const Home = () => {
                 </div>),
 
               isMobile ?
-                <div className=' text-[8vw] font-thin text-white font-serif' >
+                <div className=' text-[8vw] font-thin text-yellow-500 font-serif' >
                     <div className=' text-[20vw] absolute pl-[10%]'>150,000 </div>
                     <div className=' absolute pl-[50%] pt-[30%]'>tourists </div>
                 </div> :
-                <div className=' text-[8vw] font-thin text-white font-serif' >
+                <div className=' text-[8vw] font-thin text-yellow-500 font-serif' >
                     <div className=' text-[9vw] absolute pt-[20%]'>150,000 </div>
                     <div className=' absolute pt-[100%] pl-[15%]'>tourists </div>
                 </div>,
@@ -214,8 +214,8 @@ const Home = () => {
                     <div className=' text-[15vw] absolute text-yellow-500 pt-[70%] pl-[25%]'>hours </div>
                 </div> :
                 <div className='text-[8vw] font-thin text-white font-serif'>
-                    <div className=' text-[20vw] absolute text-yellow-500 pb-[10%] pl-[5%]'>4 </div>
-                    <div className=' absolute text-yellow-500 pt-[80%] pl-[25%]'>hours </div>
+                    <div className=' text-[20vw] absolute text-yellow-500 pb-[10%] pl-[5%] inline'>4 </div>
+                    <div className=' absolute text-yellow-500 pt-[80%] pl-[25%] inline'>hours </div>
                 </div>,
             ]}
             descriptions={[
@@ -223,15 +223,15 @@ const Home = () => {
                     Rishiri Island has an area of 183㎢ and is registered as a national park.
                   </div> 
                   : <div className='text-[2vw] md:text-3xl bg-black text-white bg-opacity-60 mt-[60%] px-[10%] pt-2 pb-2 text-start'>
-                    Rishiri Island has an area of <span className='text-yellow-500 text-5xl font-semibold'>183㎢ </span>
-                      and is registered as a <span className='font-semibold text-5xl'>national park.</span>
+                    Rishiri Island has an area of <span className='text-yellow-500 text-[2vw] md:text-[1.7vw] font-semibold'>183㎢ </span>
+                      and is registered as a <span className='font-semibold text-[2vw] md:text-[1.7vw]'>national park.</span>
                   </div>,
 
                   isMobile ? <div className='text-[4vw] md:text-[1.7vw] bg-white bg-opacity-60 px-5 mt-[10%] ml-[15%] w-[70%]'>
                     During summer, Rishiri island welcomes domestic tourists about 150,000.
                   </div> :
                   <div className='text-[2vw] md:text-3xl bg-black text-white bg-opacity-60 mt-[60%] px-[10%] pt-2 pb-2 text-start'>
-                    During summer, Rishiri island welcomes <span className='text-yellow-500 text-5xl font-semibold'>150,000</span> <span className='text-5xl font-semibold'>tourists</span>.
+                    During summer, Rishiri island welcomes <span className='text-yellow-500 text-[2vw] md:text-[1.7vw] font-semibold'>150,000</span> <span className='text-[2vw] md:text-[1.7vw] font-semibold'>tourists</span>.
                   </div>,
 
                   isMobile ? 
@@ -239,7 +239,7 @@ const Home = () => {
                     Rishiri island is a remote island located about 50 kilometers west of Japan's northernmost point, Wakkanai.  It takes four hours by airplane from Tokyo.
                   </div> :
                   <div className='text-[2vw] md:text-[1.7vw] bg-black text-white bg-opacity-60 mt-[60%] px-[10%] pt-2 pb-2  text-start'>
-                    Rishiri island is located at Japan's <span className='text-yellow-500 text-5xl font-semibold'>northernmost </span> point.  It takes <span className='text-yellow-500 text-5xl font-semibold'>4 hours </span>by airplane from Tokyo.
+                    Rishiri island is located at Japan's <span className='text-yellow-500 text-[2vw] md:text-[1.7vw] font-semibold'>northernmost </span> point.  It takes <span className='text-yellow-500 text-[2vw] md:text-[1.7vw] font-semibold'>4 hours </span>by airplane from Tokyo.
                   </div>
             ]}
           />
@@ -305,6 +305,8 @@ const Home = () => {
             <span className='w-[80px] inline-block text-sm font-serif'>Name</span><span className='inline-block text-2xl font-serif'>Yu Suu Meng</span> 
             <br /><span className='w-[80px] inline-block text-sm font-serif'>Nationality</span><span className='inline-block text-2xl font-serif pr-5'>China</span>
             <br /><span className='w-[80px] inline-block text-sm font-serif'>University</span><span className='inline-block text-2xl font-serif'>Graduate School of Law</span></p>}
+            descriptionInModal1={<p className='text-sm lg:text-lg font-serif'>Santiago Poveda Gutiérrez, Spain, Graduate School of Informatics</p>}
+            descriptionInModal2={<p className='text-sm lg:text-lg font-serif'>Yu Suu Meng, China, Graduate School of Law</p>}
             imageSrc1='/images/santi.png'
             imageAlt1='santi'
             imageSrc2='/images/feel2.png'
@@ -334,7 +336,7 @@ const Home = () => {
                 }}
             >
             <div className='h-[200px] flex justify-start items-center'>
-              <p className='font-bold text-3xl md:text-5xl text-start pl-[5%]'>Target Participants</p>
+              <p className='font-bold text-3xl md:text-5xl text-start pl-[5%]'>Who should participate</p>
             </div>
           </div>
         </section>

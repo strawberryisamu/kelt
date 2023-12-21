@@ -6,7 +6,7 @@ const Details = () => {
                 <div id="Details" className='w-full text-white bg-black px-[5%] pb-[5%] pt-[5%]'>
                 {/* <h2 className='font-bold text-3xl md:text-5xl mt-5 mb-[30px] text-center'>Details</h2> */}
                 <div className='w-full '>
-                        <div className='flex  justify-between items-start flex-wrap gap-10'>
+                        <div className='flex  justify-between items-start flex-col lg:flex-row lg:flex-wrap gap-10'>
                             <div className='flex-[1_1_33%]'>
                                 <p className='text-xl md:text-5xl font-bold'><span className='border-b-2 text-yellow-500'>Date</span></p>
                                 <p className='text-lg'>

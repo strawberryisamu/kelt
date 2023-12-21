@@ -11,13 +11,14 @@ const style = {
   position: 'absolute' as 'absolute',
   overflowY: "scroll", 
   maxHeight: "90%",
-  top: `350px`,
+  top: `50%`,
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  height: '80%',
+
   width: '80%',
   bgcolor: 'background.paper',
   border: '2px solid #000',
+  borderRadius: '10px',
   boxShadow: 24,
   p:  4,
 };
@@ -34,10 +35,20 @@ function ChildModalOrganizer() {
 
   return (
     <React.Fragment>
-        <div className='w-[75%] md:w-[100%]' >
-        <div className='flex' onClick={handleOpen}>
-          <div className='flex-1  text-3xl md:text-8xl mt-5  text-start ' >
+        <div className='w-[100%]' >
+        <div className='flex gap-2' onClick={handleOpen}>
+          <div className='lg:w-[500px] text-3xl md:text-8xl  text-start ' >
             <h1 className='font-bold tracking-tight'>Organizer</h1>
+            <div className='lg:hidden'>
+              <Image 
+                src='/images/imai.png' 
+                alt='imai' 
+                width={500} 
+                height={500} 
+                className={`lg:hidden w-[100%] lg:flex-1 rounded-md border-2 border-gray-300 `} 
+                style={{ aspectRatio: "2 / 1", objectFit: "cover",  }} 
+              />
+            </div>
             <div className=" md:text-5xl text-5xl pb-2 text-start font-serif">
               <p>Sota Imai</p>
               <p>Faculty of Literature</p>
@@ -52,7 +63,7 @@ function ChildModalOrganizer() {
             alt='imai' 
             width={500} 
             height={500} 
-            className={`w-[60%] rounded-md border-2 border-gray-300 `} 
+            className={`hidden lg:block flex-1 rounded-md border-2 border-gray-300 `} 
             style={{ aspectRatio: "2 / 1", objectFit: "cover",  }} 
           />
         </div>
@@ -79,10 +90,10 @@ function ChildModalOrganizer() {
                     alt='imai' 
                     width={500} 
                     height={500} 
-                    className={`lg:w-full w-1/2 h-[300px] rounded-md border-2 border-gray-300 `} 
+                    className={`lg:w-full w-1/2 lg:h-[300px] h-[200px] rounded-md border-2 border-gray-300 `} 
                     style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: 'left' }} 
                   />
-                  <div className='flex-1 m-auto'>
+                  <div className='flex-1 m-auto lg:m-0'>
                     <h1 className='font-bold tracking-tight'>Organizer</h1>
                     <div className=" md:text-xl text-md pb-2 text-start font-serif">
                       <p>Sota Imai</p>
@@ -121,7 +132,9 @@ function ChildModal1() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>【To Stop the Division in the World】</Button>
+      <div className='mt-[5%]'>
+        <Button onClick={handleOpen}><span className='text-yellow-500 border-b-[1px] text-[2vw]  normal-case font-serif '>To Stop the Division in the World</span></Button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -137,11 +150,12 @@ function ChildModal1() {
       >
         <Fade in={open}>
           <Box sx={{ ...style, width: '90%' }}>
+            <h1>To Stop the Division in the World</h1>
                     <p className='font-light '>
                     Conflicts fueling global division continue to arise in various regions. When considering what can be done at the grassroots level, the idea of fostering exchanges among young people who will shape the future, regardless of their nationality, emerged.
                     In this summer camp, young individuals from diverse nationalities and cultures come together on remote islands in Japan for profound interactions. Through this, we hope to advance cross-cultural understanding and multicultural coexistence, even if just a little, aspiring for a more peaceful world.
                     </p>
-            <Button onClick={handleClose}>Close</Button>
+            <Button onClick={handleClose}><span className='text-black'>Close</span></Button>
           </Box>
         </Fade>
       </Modal>
@@ -160,7 +174,9 @@ function ChildModal2() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>【To Promote Local Revitalization Models Globally】</Button>
+      <div className=' mt-[5%] mb-[5%]'>
+        <Button onClick={handleOpen}><span className='text-yellow-500 border-b-[1px] text-[2vw] normal-case font-serif '>To Promote Local Revitalization Models Globally</span></Button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -176,15 +192,16 @@ function ChildModal2() {
       >
         <Fade in={open}>
           <Box sx={{ ...style, width: '90%' }}>
-            <div>
+            <div className='flex flex-col lg:flex-row'>
 
+              <div className='flex-1'>
+                <h1>To Promote Local Revitalization Models Globally</h1>
+                  <p className='font-light'>
+                  The challenge of revitalizing local communities is not exclusive to Japan; it is a universal concern. I believe that young people from different countries can breathe new life into local areas and present fresh approaches for the next generation. Consequently, I am committed to sharing Japan's models for regional revitalization with the beautiful towns and villages worldwide.
+                  </p>
+              </div>
             </div>
-            <div>
-                <p className='font-light'>
-                The challenge of revitalizing local communities is not exclusive to Japan; it is a universal concern. I believe that young people from different countries can breathe new life into local areas and present fresh approaches for the next generation. Consequently, I am committed to sharing Japan's models for regional revitalization with the beautiful towns and villages worldwide.
-                </p>
-            </div>
-            <Button onClick={handleClose}>Close</Button>
+            <Button onClick={handleClose}><span className='text-black'>Close</span></Button>
           </Box>
         </Fade>
       </Modal>
@@ -207,11 +224,21 @@ const MessageFromTheOrganizers: React.FC = () => {
               <ChildModalOrganizer/>
             </div>
           </div>
-          <div className='pt-[3%] px-[5%] '>
-            <div className='md:flex-row pt-[1%] justify-center items-start gap-5'>
-              <div className='flex' onClick={handleOpen}>
-                <div className='w-[40%]  text-3xl md:text-8xl mt-5  text-start ' >
+          <div className='pt-[3%] '>
+            <div className='md:flex-row pt-[1%] justify-center items-start gap-5 '>
+              <div className='flex flex-col lg:flex-row gap-2 mx-[5%]' onClick={handleOpen} >
+                <div className='lg:w-[500px] w-[100%] text-3xl md:text-8xl  text-start ' >
                   <h1 className='font-bold tracking-tight'>Supervisor</h1>
+                  <div className='lg:hidden'>
+                    <Image 
+                      src='/images/oji.png' 
+                      alt='oji' 
+                      width={500} 
+                      height={500} 
+                      className={`w-[100%] lg:flex-1 rounded-md border-2 border-gray-300 `} 
+                      style={{ objectFit: "cover", aspectRatio: "2 / 1", objectPosition: '10% 10%' }} 
+                    />
+                  </div>
                   <div className=" md:text-5xl text-5xl pb-2 text-start font-serif">
                     <p>Yukimune Oji</p>
                     <p>CEO</p>
@@ -223,11 +250,11 @@ const MessageFromTheOrganizers: React.FC = () => {
                 </div>
                 <Image 
                   src='/images/oji.png' 
-                  alt='imai' 
+                  alt='oji' 
                   width={500} 
                   height={500} 
-                  className={`flex-1 w-[100%] rounded-md border-2 border-gray-300 `} 
-                  style={{ aspectRatio: "2 / 1", objectFit: "cover", objectPosition: '10% 10%' }} 
+                  className={`hidden lg:block flex-1 rounded-md border-2 border-gray-300 `} 
+                  style={{ objectFit: "cover", aspectRatio: "2 / 1", objectPosition: '10% 10%' }} 
                 />
               </div>
               <Modal
@@ -244,8 +271,8 @@ const MessageFromTheOrganizers: React.FC = () => {
                   }}
               >
                 <Fade in={open}>
-                  <Box sx={style}>
-                      <div className='md:text-[1.5vw] text-[3vw] w-[90%] mx-auto'>
+                  <Box sx={{...style, backgroundColor: 'black'}}>
+                      <div className='md:text-[1.5vw] text-[3vw] w-[90%] mx-auto '>
                         <ChildModal1/>
                         <ChildModal2/>
                       </div>

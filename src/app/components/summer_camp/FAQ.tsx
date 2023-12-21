@@ -3,8 +3,8 @@ import React from 'react';
 const FAQ = () => {
     return (
         <section>
-            <div id="FAQ" className="max-w-screen-xl px-[5%] min-h-sceen pt-[5%] pb-[5%] flex">
-                <div className="w-[400px]  items-start">
+            <div id="FAQ" className="max-w-screen-xl px-[5%] min-h-sceen pt-[5%] pb-[5%] flex md:flex-row flex-col">
+                <div className="md:w-[400px] w-full items-start">
                     <h2 className="font-bold text-3xl md:text-8xl mt-5 tracking-tight">
                         FAQ
                     </h2>
